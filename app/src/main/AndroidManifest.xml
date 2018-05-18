@@ -20,8 +20,10 @@
         </activity>
         <activity
             android:name=".Timer"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".Trial"></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".WaitingLobby"
+            android:label="@string/title_activity_waiting_lobby"></activity>
     </application>
 
 </manifest>

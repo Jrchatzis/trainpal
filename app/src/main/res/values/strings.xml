@@ -3,10 +3,10 @@
     <string name="going_to">Going to:</string>
 
     <string-array name="End">
-        <item>Haymarket</item>
         <item>Waverley station</item>
+        <item>Haymarket</item>
         <item>Edinburgh Gateway</item>
-        <item>Edinburgh Park1</item>
+        <item>Edinburgh Park</item>
     </string-array>
 
     <string name="time_range">Time range:</string>
@@ -53,4 +53,23 @@
         <item>Edinburgh Park</item>
     </string-array>
     <string name="Proceed">Proceed</string>
+    <string name="train_schedules">Train schedules</string>
+    <string-array name="Schedules">
+        <item>15:00</item>
+        <item>16:00</item>
+        <item>17:00</item>
+        <item>18:00</item>
+        <item>19:00</item>
+        <item>20:00</item>
+        <item>21:00</item>
+        <item>22:00</item>
+        <item>23:00</item>
+        <item>00:00</item>
+        <item>01:00</item>
+        <item>02:00</item>
+    </string-array>
+    <string name="title_activity_waiting_lobby">WaitingLobby</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

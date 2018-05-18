@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
         firstAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFirst.setAdapter(firstAdapter);
 
+        spinnerFirst.setSelection(0);
+
+        //Keep selection
+        final String startingLocation = spinnerFirst.getSelectedItem().toString();
+
         //2nd spinner - Ending station
         Spinner spinnerSecond = (Spinner) findViewById(R.id.planets_spinner);
 
@@ -33,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
 
         secondAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerSecond.setAdapter(secondAdapter);
+        spinnerSecond.setSelection(1);
+
+        //Keep selection
+        final String endingLocation = spinnerFirst.getSelectedItem().toString();
 
         //3nd spinner - Starting time
         Spinner spinnerThird = (Spinner) findViewById(R.id.planets_spinner3);
@@ -45,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerThird.setSelection(0);
 
+        //Keep selection
+        final String departureTime = spinnerFirst.getSelectedItem().toString();
+
         //4th spinner - Ending time
         Spinner spinnerFourth = (Spinner) findViewById(R.id.planets_spinner4);
 
@@ -54,14 +67,27 @@ public class MainActivity extends AppCompatActivity {
         fourthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFourth.setAdapter(fourthAdapter);
 
+        spinnerFourth.setSelection(1);
+
+        //Keep selection
+        final String arrivalTime = spinnerFirst.getSelectedItem().toString();
+
+
         //Proceed button
         Button advanceToTimeTables = (Button) findViewById(R.id.button_proceed);
         advanceToTimeTables.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, Timer.class);
-                startActivity(intent);
-            }
-        });
-    }
+
+                //if ((!startingLocation.equals(endingLocation)) && (!departureTime.equals(arrivalTime))){
+                    Intent intent = new Intent(MainActivity.this, Timer.class);
+                    startActivity(intent);
+                //} else if((startingLocation.equals(endingLocation))&&(!departureTime.equals(arrivalTime))){
+                   // Toast.makeText(MainActivity.this, "You can't have the same departure and arrival location. Please change your selection", Toast.LENGTH_SHORT).show();
+                //} else if ((departureTime.equals(arrivalTime)) && (!startingLocation.equals(endingLocation))){
+                    //Toast.makeText(MainActivity.this, "You can't have the same departure and arrival time. Please change your selection", Toast.LENGTH_SHORT).show();
+                //}
+        }
+    });
+}
 }
