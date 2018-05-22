@@ -61,7 +61,7 @@ public class WaitingLobby extends AppCompatActivity {
         String instantTime = realTime.format(new Date());
         String instantTimeNew=selection.replace(":","");
 
-        TextView textViewTime = (TextView)findViewById(R.id.timeDifference);
+        TextView textViewTime = (TextView)findViewById(R.id.remainingTime);
         boolean interruption = true;
     }
 }

@@ -72,4 +72,8 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="your_train_departs_at">Your train departs at:</string>
+    <string name="selectedTime">selectedTime</string>
+    <string name="you_still_have">You still have:</string>
+    <string name="remainingTime">remainingTime</string>
 </resources>

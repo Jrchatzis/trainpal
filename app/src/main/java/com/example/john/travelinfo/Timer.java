@@ -26,7 +26,7 @@ public class Timer extends AppCompatActivity {
 
         //List creation
         listView=(ListView)findViewById(R.id.Schedules);
-        textView=(TextView)findViewById(R.id.textView);
+        textView=(TextView)findViewById(R.id.trainSchedulesText);
         listItem = getResources().getStringArray(R.array.Schedules);
         final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, android.R.id.text1, listItem);

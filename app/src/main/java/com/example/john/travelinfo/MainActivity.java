@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //1st spinner - Starting station
-        Spinner spinnerFirst = (Spinner) findViewById(R.id.planets_spinner2);
+        Spinner spinnerFirst = (Spinner) findViewById(R.id.startingSpinner);
 
         ArrayAdapter<String> firstAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Start));
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         final String startingLocation = spinnerFirst.getSelectedItem().toString();
 
         //2nd spinner - Ending station
-        Spinner spinnerSecond = (Spinner) findViewById(R.id.planets_spinner);
+        Spinner spinnerSecond = (Spinner) findViewById(R.id.goingSpinner);
 
         ArrayAdapter<String> secondAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.End));
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         final String endingLocation = spinnerFirst.getSelectedItem().toString();
 
         //3nd spinner - Starting time
-        Spinner spinnerThird = (Spinner) findViewById(R.id.planets_spinner3);
+        Spinner spinnerThird = (Spinner) findViewById(R.id.beforeSpinner);
 
         ArrayAdapter<String> thirdAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.StartingTime));
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         final String departureTime = spinnerFirst.getSelectedItem().toString();
 
         //4th spinner - Ending time
-        Spinner spinnerFourth = (Spinner) findViewById(R.id.planets_spinner4);
+        Spinner spinnerFourth = (Spinner) findViewById(R.id.afterSpinner);
 
         ArrayAdapter<String> fourthAdapter = new ArrayAdapter<String>(MainActivity.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.EndingTime));
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Proceed button
-        Button advanceToTimeTables = (Button) findViewById(R.id.button_proceed);
+        Button advanceToTimeTables = (Button) findViewById(R.id.buttonProceed);
         advanceToTimeTables.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
