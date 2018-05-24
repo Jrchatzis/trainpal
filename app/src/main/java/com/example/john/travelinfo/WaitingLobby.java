@@ -1,5 +1,6 @@
 package com.example.john.travelinfo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -19,25 +20,33 @@ public class WaitingLobby extends AppCompatActivity {
 
     private TextView mTextMessage;
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+    {
+        mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        mTextMessage.setText("Home");
+                        return true;
+                    case R.id.navigation_preference:
+                        //mTextMessage.setText("Profile");
+                        Intent goToPreferences = new Intent(WaitingLobby.this, MainActivity.class);
+                        startActivity(goToPreferences);
+                        return true;
+                    case R.id.navigation_schedule:
+                        mTextMessage.setText("Schedule");
+                        return true;
+                    case R.id.navigation_about:
+                        mTextMessage.setText("About");
+                        return true;
+                }
+                return false;
             }
-            return false;
-        }
-    };
+        };
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +72,7 @@ public class WaitingLobby extends AppCompatActivity {
 
         TextView textViewTime = (TextView)findViewById(R.id.remainingTime);
         boolean interruption = true;
+
     }
 }
 
