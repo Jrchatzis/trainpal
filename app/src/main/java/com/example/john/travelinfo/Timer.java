@@ -1,7 +1,5 @@
 package com.example.john.travelinfo;
 
-
-
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+import com.example.testSoap.wcf.*;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class Timer extends AppCompatActivity {
@@ -24,6 +24,30 @@ public class Timer extends AppCompatActivity {
         //Back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        //Get selections from MainActivity activity
+        Bundle recDataDep = getIntent().getExtras();
+        String selectionDep = recDataDep.getString("departure");
+
+        Bundle recDataArr = getIntent().getExtras();
+        String selectionArr = recDataArr.getString("arrival");
+
+        Bundle recDataTime = getIntent().getExtras();
+        String selectionTime = recDataTime.getString("time");
+
+        String src;
+        public static void ExtractTrainInfo(){
+            for (TrainStationInfo station : TrainStationInfo.values()){
+                if
+            }
+        }
+        //Get data from database
+        @Override
+        public void getAvailableTrains() {
+            DAADeparturesBoardWithDetails request = new DAADeparturesBoardWithDetails();
+            request.numRows = 10;
+
+            getPropertyInfo
+        }
         //List creation
         listView=(ListView)findViewById(R.id.Schedules);
         textView=(TextView)findViewById(R.id.trainSchedulesText);
@@ -42,6 +66,7 @@ public class Timer extends AppCompatActivity {
             }
         });
     }
+
 }
 
 

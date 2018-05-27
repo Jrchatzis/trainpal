@@ -48,16 +48,6 @@
         app:layout_constraintTop_toBottomOf="@+id/startingSpinner"
         app:layout_constraintVertical_bias="0.525" />
 
-    <Spinner
-        android:id="@+id/afterSpinner"
-        android:layout_width="166dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/afterText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/beforeText" />
-
     <TextView
         android:id="@+id/goingText"
         android:layout_width="110dp"
@@ -125,39 +115,40 @@
 
     <TextView
         android:id="@+id/afterText"
-        android:layout_width="40dp"
-        android:layout_height="25dp"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:text="@string/after"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/beforeSpinner"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Hint: The application will start searching for services within a 2 hours time window of the time you inserted"
+        android:textAlignment="viewStart"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/buttonback"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/beforeText"
         app:layout_constraintTop_toBottomOf="@+id/beforeText" />
 
     <TextView
         android:id="@+id/beforeText"
-        android:layout_width="55dp"
+        android:layout_width="95dp"
         android:layout_height="26dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="@string/before"
+        android:text="Starting time:"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/afterSpinner"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rangeText" />
 
     <Spinner
         android:id="@+id/beforeSpinner"
-        android:layout_width="166dp"
-        android:layout_height="28dp"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
         android:layout_marginEnd="132dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/beforeText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/beforeText"
         app:layout_constraintTop_toBottomOf="@+id/rangeText" />
 </android.support.constraint.ConstraintLayout>
