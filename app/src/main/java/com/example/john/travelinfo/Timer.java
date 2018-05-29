@@ -61,7 +61,7 @@ public class Timer extends AppCompatActivity {
                 }
             }
         }
-        //List creation
+        //List creation for the selected time
         listView=(ListView)findViewById(R.id.Schedules);
         textView=(TextView)findViewById(R.id.trainSchedulesText);
         listItem = getResources().getStringArray(R.array.Schedules);
