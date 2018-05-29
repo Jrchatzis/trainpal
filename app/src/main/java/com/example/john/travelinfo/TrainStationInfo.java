@@ -18,14 +18,22 @@ public enum TrainStationInfo {
     }
 
     public String getStation() {
+
         return station;
     }
 
     public String getLat() {
+
         return lat;
     }
 
     public String getLon() {
+
         return lon;
+    }
+
+    @Override
+    public String toString() {
+        return station;
     }
 }

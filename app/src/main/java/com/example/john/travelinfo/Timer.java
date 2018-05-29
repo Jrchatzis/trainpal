@@ -17,6 +17,8 @@ public class Timer extends AppCompatActivity {
     ListView listView;
     TextView textView;
     String[] listItem;
+    TrainStationInfo selectionDep;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class Timer extends AppCompatActivity {
 
         //Get selections from MainActivity activity
         Bundle recDataDep = getIntent().getExtras();
-        String selectionDep = recDataDep.getString("departure");
+        selectionDep = (TrainStationInfo)recDataDep.get("departure");
 
         Bundle recDataArr = getIntent().getExtras();
         String selectionArr = recDataArr.getString("arrival");
@@ -45,8 +47,19 @@ public class Timer extends AppCompatActivity {
         public void getAvailableTrains() {
             DAADeparturesBoardWithDetails request = new DAADeparturesBoardWithDetails();
             request.numRows = 10;
-
-            getPropertyInfo
+            String departureCode = selectionDep.name();
+            DAAStationBoardWithDetails_2 result = new DAALDBServiceSoap12().GetArrBoardWithDetails(...);
+            result.trainServices
+            String destination = destination;
+            List<TrainService> KeepList = new ArrayList<>();
+            for (DAAServiceItemWithCallingPoints_2 trainService : result.trainServices) {
+                for (CallingPoint point:trainService.subsequentCallingPoints){
+                    if (point.crs.equals(destination)) {
+                        keepList.add(trainService);
+                        break;
+                    }
+                }
+            }
         }
         //List creation
         listView=(ListView)findViewById(R.id.Schedules);

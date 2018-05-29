@@ -32,7 +32,7 @@ public class WaitingLobby extends AppCompatActivity {
                         mTextMessage.setText("Home");
                         return true;
                     case R.id.navigation_preference:
-                        //mTextMessage.setText("Profile");
+                        mTextMessage.setText("Profile");
                         Intent goToPreferences = new Intent(WaitingLobby.this, MainActivity.class);
                         startActivity(goToPreferences);
                         return true;

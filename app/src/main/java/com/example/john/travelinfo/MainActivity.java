@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         //1st spinner - Starting station
         final Spinner spinnerFirst = (Spinner) findViewById(R.id.startingSpinner);
 
-        ArrayAdapter<String> firstAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.Start));
+        ArrayAdapter<TrainStationInfo> firstAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this,
+                android.R.layout.simple_list_item_1, TrainStationInfo.values());
 
         firstAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFirst.setAdapter(firstAdapter);
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         spinnerFirst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object obj = spinnerFirst.getAdapter().getItem(position);
-                String value = obj.toString();
+                TrainStationInfo obj = (TrainStationInfo)spinnerFirst.getAdapter().getItem(position);
+
                 Intent selection = new Intent(view.getContext(),WaitingLobby.class);
-                selection.putExtra("departure",value);
+                selection.putExtra("departure",obj);
             }
         });
 
