@@ -8,8 +8,6 @@
     <string name="starting_from">Starting from:</string>
     <string name="after">After:</string>
     <string name="before">Before:</string>
-    <string-array name="Start">
-    </string-array>
     <string name="Proceed">Proceed</string>
     <string name="train_schedules">Train schedules</string>
     <string name="title_activity_waiting_lobby">WaitingLobby</string>
@@ -28,4 +26,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_wait_lobby">WaitLobby</string>
+    <color name="green">#39d06a</color>
+
 </resources>

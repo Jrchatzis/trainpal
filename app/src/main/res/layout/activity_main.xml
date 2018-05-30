@@ -121,7 +121,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="Hint: The application will start searching for services within a 2 hours time window of the time you inserted"
+        android:text="Hint: The application will start searching for services within a 2 hours timeString window of the timeString you inserted"
         android:textAlignment="viewStart"
         android:textSize="14sp"
         android:textStyle="italic"
@@ -136,7 +136,7 @@
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Starting time:"
+        android:text="Starting timeString:"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rangeText" />

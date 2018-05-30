@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import java.time.LocalTime;
 import java.util.List;
-import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -21,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     TrainStationInfo destination;
     TrainStationInfo departure;
-    DepartureTime departureTime;
-
+    TimeString timeString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         departureSpinner.setAdapter(departureAdapter);
         departureSpinner.setSelection(0);
         departureSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 departure = (TrainStationInfo)departureSpinner.getAdapter().getItem(position);
@@ -48,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // destination station
-        final Spinner destinationSpinner = (Spinner) findViewById(R.id.goingSpinner);
+        final Spinner destinationSpinner = findViewById(R.id.goingSpinner);
         ArrayAdapter<TrainStationInfo> destinationAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this, android.R.layout.simple_list_item_1, TrainStationInfo.values());
         destinationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         destinationSpinner.setAdapter(destinationAdapter);
@@ -65,19 +63,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Departure time
-        final Spinner departureTimeSpinner = (Spinner)findViewById(R.id.beforeSpinner);
-        DepartureTimeSupplier departureTimeSupplier = new DepartureTimeSupplier(30);
-        List<DepartureTime> departureTimes = Stream.generate(departureTimeSupplier).limit(4).collect(Collectors.toList());
+        //Departure timeString
+        final Spinner departureTimeSpinner = findViewById(R.id.beforeSpinner);
+        TimeWithIntervalSupplier timeWithIntervalSupplier = new TimeWithIntervalSupplier(30);
+        List<TimeString> timeStrings = Stream.generate(timeWithIntervalSupplier).limit(4).collect(Collectors.toList());
 
-        ArrayAdapter<DepartureTime> departureTimeAdapter = new ArrayAdapter<DepartureTime>(MainActivity.this, android.R.layout.simple_list_item_1, departureTimes);
+        ArrayAdapter<TimeString> departureTimeAdapter = new ArrayAdapter<TimeString>(MainActivity.this, android.R.layout.simple_list_item_1, timeStrings);
         departureTimeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         departureTimeSpinner.setAdapter(departureTimeAdapter);
         departureTimeSpinner.setSelection(0);
         departureTimeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                departureTime = (DepartureTime)departureTimeSpinner.getAdapter().getItem(position);
+                timeString = (TimeString)departureTimeSpinner.getAdapter().getItem(position);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -86,22 +84,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Proceed button
-        Button proceedButton = (Button) findViewById(R.id.buttonProceed);
-        proceedButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Button proceedButton = findViewById(R.id.buttonProceed);
+        proceedButton.setOnClickListener(view -> {
                 String dep = TrainStationInfo.class.cast(departureSpinner.getSelectedItem()).name();
                 String dest = TrainStationInfo.class.cast(destinationSpinner.getSelectedItem()).name();
-                if (!dep.equals(dest)){
-                    Intent intent = new Intent(MainActivity.this, Timer.class);
-                    intent.putExtra("departureTime", departureTime);
+                if (!dep.equals(dest)) {
+                    Intent intent = new Intent(MainActivity.this, AvailableServicesActivity.class);
+                    intent.putExtra("timeString", timeString);
                     intent.putExtra("destination", destination);
                     intent.putExtra("departure", departure);
                     startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "You can't have the same departure and arrival location. Please change your selection", Toast.LENGTH_SHORT).show();
                 }
-        }
-    });
-}
+        });
+    }
 }

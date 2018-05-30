@@ -20,15 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Timer"
+            android:name=".AvailableServicesActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".WaitingLobby"
+            android:name=".WaitingLobbyActivity"
             android:label="@string/title_activity_waiting_lobby" />
-        <activity
-            android:name=".WaitLobby"
-            android:label="@string/title_activity_wait_lobby"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".WaitLobby"></activity>
     </application>
 
 </manifest>

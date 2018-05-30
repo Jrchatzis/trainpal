@@ -2,24 +2,21 @@ package com.example.john.travelinfo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
-
-public class WaitingLobby extends AppCompatActivity {
+public class WaitingLobbyActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
-
+    private TrainService selectedTrain;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
 
     {
@@ -33,7 +30,7 @@ public class WaitingLobby extends AppCompatActivity {
                         return true;
                     case R.id.navigation_preference:
                         mTextMessage.setText("Profile");
-                        Intent goToPreferences = new Intent(WaitingLobby.this, MainActivity.class);
+                        Intent goToPreferences = new Intent(WaitingLobbyActivity.this, MainActivity.class);
                         startActivity(goToPreferences);
                         return true;
                     case R.id.navigation_schedule:
@@ -53,26 +50,24 @@ public class WaitingLobby extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting_lobby);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        mTextMessage = findViewById(R.id.message);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        Bundle recData = getIntent().getExtras();
-        String selection = recData.getString("Time");
+        Bundle bundle = getIntent().getExtras();
+        selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));
 
-        TextView textView = (TextView)findViewById(R.id.selectedTime);
-        textView.setText(selection);
+        TextView sta = findViewById(R.id.selectedTime);
+        sta.setText(selectedTrain.getSta().toString());
 
-        String transformedSelection = selection.replace(":","");
-        int tranSelectionToUse = Integer.parseInt(transformedSelection);
+        Chronometer countdown = findViewById(R.id.countdown);
+        countdown.setCountDown(true);
+        countdown.setBase(SystemClock.elapsedRealtime() + millisUntilArrival());
+        countdown.start();
+    }
 
-        SimpleDateFormat realTime= new SimpleDateFormat("HH:mm", Locale.getDefault());
-        String instantTime = realTime.format(new Date());
-        String instantTimeNew=selection.replace(":","");
-
-        TextView textViewTime = (TextView)findViewById(R.id.remainingTime);
-        boolean interruption = true;
-
+    protected long millisUntilArrival() {
+        return ChronoUnit.MILLIS.between(LocalTime.now(), selectedTrain.getSta().getTime());
     }
 }
 

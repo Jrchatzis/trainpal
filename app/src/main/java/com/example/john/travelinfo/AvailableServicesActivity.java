@@ -12,17 +12,15 @@ import android.widget.ListView;
 import com.example.travelinfo.ldbws.*;
 
 import java.time.LocalTime;
-import java.time.Period;
 import java.time.temporal.ChronoUnit;
 import java.util.Collections;
 import java.util.List;
-import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-import static java.util.concurrent.TimeUnit.MINUTES;
 
+public class AvailableServicesActivity extends AppCompatActivity {
 
-public class Timer extends AppCompatActivity {
+    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,44 +35,43 @@ public class Timer extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         TrainStationInfo departure = (TrainStationInfo)bundle.get("departure");
         TrainStationInfo destination = (TrainStationInfo)bundle.get("destination");
-        DepartureTime departureTime = (DepartureTime)bundle.get("departureTime");
+        TimeString timeString = (TimeString)bundle.get("timeString");
 
-        List<AvailableTrain> availableTrains = getAvailableTrains(departure, destination, departureTime);
+        List<TrainService> trainServices = getAvailableTrains(departure, destination, timeString);
 
-        //List creation for the selected time
-        final ListView listView = (ListView)findViewById(R.id.Schedules);
-        final ArrayAdapter<AvailableTrain> adapter = new ArrayAdapter<AvailableTrain>(this, android.R.layout.simple_list_item_1, android.R.id.text1, availableTrains);
+        //List creation for the selected timeString
+        final ListView listView = findViewById(R.id.Schedules);
+        final ArrayAdapter<TrainService> adapter = new ArrayAdapter<TrainService>(this, android.R.layout.simple_list_item_1, android.R.id.text1, trainServices);
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                AvailableTrain selectedTrain = (AvailableTrain)adapter.getItem(position);
-                Intent selection = new Intent(view.getContext(), WaitingLobby.class);
-                selection.putExtra("selectedTrain", selectedTrain);
-                startActivity(selection);
-            }
-        });
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+                TrainService selectedTrain = adapter.getItem(position);
+                Intent intent = new Intent(view.getContext(), WaitingLobbyActivity.class);
+                intent.putExtra("selectedTrain", selectedTrain);
+                startActivity(intent);
+            });
     }
 
-    public List<AvailableTrain> getAvailableTrains(TrainStationInfo departure, TrainStationInfo destination, DepartureTime departureTime){
+    public List<TrainService> getAvailableTrains(TrainStationInfo departure, TrainStationInfo destination, TimeString timeString){
         DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
         int offset = 0;
         LocalTime now = LocalTime.now();
-        if (departureTime.getTime().isAfter(now)) {
-            offset = (int)ChronoUnit.MINUTES.between(now, departureTime.getTime());
+        if (timeString.getTime().isAfter(now)) {
+            offset = (int)ChronoUnit.MINUTES.between(now, timeString.getTime());
         }
         DAAAccessToken accessToken = new DAAAccessToken();
-        accessToken.TokenValue = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+        accessToken.TokenValue = ACCESS_TOKEN;
         try {
             DAAStationBoardWithDetails_2 soapResponse = soapClient.GetArrBoardWithDetails(10, departure.name(), destination.name(), DAAEnums.FilterType.to, offset, 120, accessToken);
-
+            if (soapResponse.trainServices == null) {
+                return Collections.emptyList();
+            }
             return soapResponse.trainServices.stream()
                     .map( serviceItem -> {
-                        AvailableTrain availableTrain = new AvailableTrain();
-                        availableTrain.setId(serviceItem.serviceID);
-                        availableTrain.setSta(serviceItem.sta);
-                        availableTrain.setEta(serviceItem.eta);
-                        return availableTrain;
+                        TrainService trainService = new TrainService();
+                        trainService.setId(serviceItem.serviceID);
+                        trainService.setSta(new TimeString(serviceItem.sta));
+                        trainService.setEta(new TimeString(serviceItem.eta));
+                        return trainService;
                     })
                     .collect(Collectors.toList());
 
