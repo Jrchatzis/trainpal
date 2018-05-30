@@ -10,94 +10,95 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.time.LocalTime;
+import java.util.List;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    TrainStationInfo destination;
+    TrainStationInfo departure;
+    DepartureTime departureTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //1st spinner - Starting station
-        final Spinner spinnerFirst = (Spinner) findViewById(R.id.startingSpinner);
-
-        ArrayAdapter<TrainStationInfo> firstAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this,
-                android.R.layout.simple_list_item_1, TrainStationInfo.values());
-
-        firstAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerFirst.setAdapter(firstAdapter);
-        spinnerFirst.setSelection(0);
-
-        //Keep selection
-        final String startingLocation = spinnerFirst.getSelectedItem().toString();
-
-        spinnerFirst.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // departing station
+        final Spinner departureSpinner = Spinner.class.cast(findViewById(R.id.startingSpinner));
+        ArrayAdapter<TrainStationInfo> departureAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this, android.R.layout.simple_list_item_1, TrainStationInfo.values());
+        departureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        departureSpinner.setAdapter(departureAdapter);
+        departureSpinner.setSelection(0);
+        departureSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                TrainStationInfo obj = (TrainStationInfo)spinnerFirst.getAdapter().getItem(position);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                departure = (TrainStationInfo)departureSpinner.getAdapter().getItem(position);
+            }
 
-                Intent selection = new Intent(view.getContext(),WaitingLobby.class);
-                selection.putExtra("departure",obj);
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // no-op
             }
         });
 
-        //2nd spinner - Ending station
-        final Spinner spinnerSecond = (Spinner) findViewById(R.id.goingSpinner);
-
-        ArrayAdapter<String> secondAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.End));
-
-        secondAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerSecond.setAdapter(secondAdapter);
-        spinnerSecond.setSelection(1);
-
-        //Keep selection
-        final String endingLocation = spinnerSecond.getSelectedItem().toString();
-
-        spinnerSecond.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // destination station
+        final Spinner destinationSpinner = (Spinner) findViewById(R.id.goingSpinner);
+        ArrayAdapter<TrainStationInfo> destinationAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this, android.R.layout.simple_list_item_1, TrainStationInfo.values());
+        destinationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        destinationSpinner.setAdapter(destinationAdapter);
+        destinationSpinner.setSelection(1);
+        destinationSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object obj = spinnerSecond.getAdapter().getItem(position);
-                String value = obj.toString();
-                Intent selection = new Intent(view.getContext(),WaitingLobby.class);
-                selection.putExtra("arrival",value);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                destination = (TrainStationInfo) destinationSpinner.getAdapter().getItem(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // no-op
             }
         });
 
-        //3nd spinner - Starting time
-        final Spinner spinnerThird = (Spinner) findViewById(R.id.beforeSpinner);
+        //Departure time
+        final Spinner departureTimeSpinner = (Spinner)findViewById(R.id.beforeSpinner);
+        DepartureTimeSupplier departureTimeSupplier = new DepartureTimeSupplier(30);
+        List<DepartureTime> departureTimes = Stream.generate(departureTimeSupplier).limit(4).collect(Collectors.toList());
 
-        ArrayAdapter<String> thirdAdapter = new ArrayAdapter<String>(MainActivity.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.StartingTime));
-
-        thirdAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerThird.setAdapter(thirdAdapter);
-
-        spinnerThird.setSelection(0);
-
-        //Keep selection
-        final String departureTime = spinnerFirst.getSelectedItem().toString();
-
-        spinnerThird.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        ArrayAdapter<DepartureTime> departureTimeAdapter = new ArrayAdapter<DepartureTime>(MainActivity.this, android.R.layout.simple_list_item_1, departureTimes);
+        departureTimeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        departureTimeSpinner.setAdapter(departureTimeAdapter);
+        departureTimeSpinner.setSelection(0);
+        departureTimeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Object obj = spinnerThird.getAdapter().getItem(position);
-                String value = obj.toString();
-                Intent selection = new Intent(view.getContext(),WaitingLobby.class);
-                selection.putExtra("time",value);
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                departureTime = (DepartureTime)departureTimeSpinner.getAdapter().getItem(position);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // no-op
             }
         });
 
         //Proceed button
-        Button advanceToTimeTables = (Button) findViewById(R.id.buttonProceed);
-        advanceToTimeTables.setOnClickListener(new View.OnClickListener() {
+        Button proceedButton = (Button) findViewById(R.id.buttonProceed);
+        proceedButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (!startingLocation.equals(endingLocation)){
+                String dep = TrainStationInfo.class.cast(departureSpinner.getSelectedItem()).name();
+                String dest = TrainStationInfo.class.cast(destinationSpinner.getSelectedItem()).name();
+                if (!dep.equals(dest)){
                     Intent intent = new Intent(MainActivity.this, Timer.class);
+                    intent.putExtra("departureTime", departureTime);
+                    intent.putExtra("destination", destination);
+                    intent.putExtra("departure", departure);
                     startActivity(intent);
-                } else if(startingLocation.equals(endingLocation)){
+                } else {
                     Toast.makeText(MainActivity.this, "You can't have the same departure and arrival location. Please change your selection", Toast.LENGTH_SHORT).show();
                 }
         }
