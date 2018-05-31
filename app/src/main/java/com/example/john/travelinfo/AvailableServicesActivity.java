@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.travelinfo.ldbws.*;
 
@@ -65,6 +66,10 @@ public class AvailableServicesActivity extends AppCompatActivity {
             if (soapResponse.trainServices == null) {
                 return Collections.emptyList();
             }
+            // TODO: delete this after testing the toaster
+            if (true) {
+                throw new RuntimeException("testing");
+            }
             return soapResponse.trainServices.stream()
                     .map( serviceItem -> {
                         TrainService trainService = new TrainService();
@@ -76,7 +81,10 @@ public class AvailableServicesActivity extends AppCompatActivity {
                     .collect(Collectors.toList());
 
         } catch (Exception e) {
+
             e.printStackTrace();
+            // TODO: show toaster message in application
+            Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences.", Toast.LENGTH_SHORT).show();
             return Collections.emptyList();
         }
     }
