@@ -56,7 +56,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));
-
+        //TODO:Giving value to text
         TextView sta = findViewById(R.id.selectedTime);
         sta.setText(selectedTrain.getSta().toString());
 
@@ -64,6 +64,11 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         countdown.setCountDown(true);
         countdown.setBase(SystemClock.elapsedRealtime() + millisUntilArrival());
         countdown.start();
+
+        //trial
+        TextView eta = findViewById(R.id.estimatedTime);
+        eta.setText(selectedTrain.getEta().toString());
+
     }
 
     protected long millisUntilArrival() {

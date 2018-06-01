@@ -66,10 +66,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
             if (soapResponse.trainServices == null) {
                 return Collections.emptyList();
             }
-            // TODO: delete this after testing the toaster
-            if (true) {
-                throw new RuntimeException("testing");
-            }
+
             return soapResponse.trainServices.stream()
                     .map( serviceItem -> {
                         TrainService trainService = new TrainService();
@@ -83,8 +80,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
         } catch (Exception e) {
 
             e.printStackTrace();
-            // TODO: show toaster message in application
-            Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences. Please change them on the previous screen.", Toast.LENGTH_LONG).show();
             return Collections.emptyList();
         }
     }
