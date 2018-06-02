@@ -9,15 +9,25 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.Chronometer;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.travelinfo.ldbws.DAAAccessToken;
+import com.example.travelinfo.ldbws.DAAEnums;
+import com.example.travelinfo.ldbws.DAALDBServiceSoap12;
+import com.example.travelinfo.ldbws.DAAServiceDetails;
+import com.example.travelinfo.ldbws.DAAStationBoardWithDetails_2;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
 public class WaitingLobbyActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
     private TrainService selectedTrain;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
+    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
 
     {
         mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -73,6 +83,27 @@ public class WaitingLobbyActivity extends AppCompatActivity {
 
     protected long millisUntilArrival() {
         return ChronoUnit.MILLIS.between(LocalTime.now(), selectedTrain.getSta().getTime());
+    }
+
+    public String getEstimatedTime(TrainService estimatedTime){
+        DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
+        DAAAccessToken accessToken = new DAAAccessToken();
+        accessToken.TokenValue = ACCESS_TOKEN;
+        String serviceId = trainService.getId();
+        try {
+            DAAServiceDetails soapResponse = soapClient.GetServiceDetails(serviceId, accessToken);
+            if (soapResponse.trainServices == null) {
+                return null;
+            }
+
+            return ;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+
+
     }
 }
 

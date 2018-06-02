@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("departure", departure);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(MainActivity.this, "You can't have the same departure and arrival selection.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "You can't have the same departure and arrival selection.Please change one of them.", Toast.LENGTH_LONG).show();
                 }
         });
     }

@@ -77,8 +77,8 @@ public class AvailableServicesActivity extends AppCompatActivity {
                     })
                     .collect(Collectors.toList());
 
-        } catch (Exception e) {
 
+        } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences. Please change them on the previous screen.", Toast.LENGTH_LONG).show();
             return Collections.emptyList();
