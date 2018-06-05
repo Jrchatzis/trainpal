@@ -6,6 +6,7 @@ import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Chronometer;
 import android.widget.TextView;
@@ -20,14 +21,19 @@ import com.example.travelinfo.ldbws.DAAStationBoardWithDetails_2;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Collections;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.stream.Collectors;
 
 public class WaitingLobbyActivity extends AppCompatActivity {
 
+    private Timer timer;
     private TextView mTextMessage;
     private TrainService selectedTrain;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
-    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    //public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
+
 
     {
         mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,7 +72,6 @@ public class WaitingLobbyActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));
-        //TODO:Giving value to text
         TextView sta = findViewById(R.id.selectedTime);
         sta.setText(selectedTrain.getSta().toString());
 
@@ -74,36 +79,64 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         countdown.setCountDown(true);
         countdown.setBase(SystemClock.elapsedRealtime() + millisUntilArrival());
         countdown.start();
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                updateService();
+            }
+        }, 0L, 600L);
+    }
 
-        //trial
-        TextView eta = findViewById(R.id.estimatedTime);
-        eta.setText(selectedTrain.getEta().toString());
-
+    @Override
+    protected void onDestroy() {
+        timer.cancel();
+        super.onDestroy();
     }
 
     protected long millisUntilArrival() {
         return ChronoUnit.MILLIS.between(LocalTime.now(), selectedTrain.getSta().getTime());
     }
 
-    public String getEstimatedTime(TrainService estimatedTime){
+    private void updateService() {
+
+        try {
+            TrainService serviceUpdate = getTrainServiceUpdate();
+            runOnUiThread(()->{
+                TextView eta = findViewById(R.id.estimatedTime);
+                if (serviceUpdate.isArrived()) {
+                    timer.cancel();
+                    eta.setText("arrived: " + serviceUpdate.getAta());
+                } else if (serviceUpdate.isDelayed()) {
+                    timer.cancel();
+                    eta.setText("delayed: " + serviceUpdate.getDelayReason());
+                } else {
+                    eta.setText(serviceUpdate.getEta());
+                }
+
+            });
+
+            Log.d(getClass().getName(),"eta updated");
+        } catch (Exception e) {
+            e.printStackTrace();
+            runOnUiThread(()-> {
+                Toast.makeText(this, "There was an error contacting train service", Toast.LENGTH_LONG).show();
+            });
+        }
+    }
+
+    private TrainService getTrainServiceUpdate() throws Exception {
         DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
         DAAAccessToken accessToken = new DAAAccessToken();
         accessToken.TokenValue = ACCESS_TOKEN;
-        String serviceId = trainService.getId();
-        try {
-            DAAServiceDetails soapResponse = soapClient.GetServiceDetails(serviceId, accessToken);
-            if (soapResponse.trainServices == null) {
-                return null;
-            }
-
-            return ;
-
-        } catch (Exception e) {
-            e.printStackTrace();
-            return -1;
-        }
-
-
+        DAAServiceDetails soapResponse = soapClient.GetServiceDetails(selectedTrain.getId(), accessToken);
+        TrainService result = new TrainService();
+        result.setAta(soapResponse.ata);
+        result.setEta(soapResponse.eta);
+        result.setDelayReason(soapResponse.delayReason);
+        result.setId(selectedTrain.getId());
+        result.setSta(new TimeString(soapResponse.sta));
+        return result;
     }
 }
 

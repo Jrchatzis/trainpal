@@ -21,7 +21,8 @@ import java.util.stream.Collectors;
 
 public class AvailableServicesActivity extends AppCompatActivity {
 
-    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    //public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +65,8 @@ public class AvailableServicesActivity extends AppCompatActivity {
         try {
             DAAStationBoardWithDetails_2 soapResponse = soapClient.GetArrBoardWithDetails(10, departure.name(), destination.name(), DAAEnums.FilterType.to, offset, 120, accessToken);
             if (soapResponse.trainServices == null) {
+                Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences. Please change them on the previous screen.", Toast.LENGTH_LONG).show();
+
                 return Collections.emptyList();
             }
 
@@ -72,7 +75,8 @@ public class AvailableServicesActivity extends AppCompatActivity {
                         TrainService trainService = new TrainService();
                         trainService.setId(serviceItem.serviceID);
                         trainService.setSta(new TimeString(serviceItem.sta));
-                        trainService.setEta(new TimeString(serviceItem.eta));
+                        trainService.setEta(serviceItem.eta);
+                        trainService.setDelayReason(serviceItem.delayReason);
                         return trainService;
                     })
                     .collect(Collectors.toList());
@@ -80,7 +84,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             e.printStackTrace();
-            Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences. Please change them on the previous screen.", Toast.LENGTH_LONG).show();
+            Toast.makeText(AvailableServicesActivity.this, "There was an error contacting train service. Please try again later.", Toast.LENGTH_LONG).show();
             return Collections.emptyList();
         }
     }
