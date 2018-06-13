@@ -48,10 +48,6 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                         mTextMessage.setText("Profile");
                         Intent goToPreferences = new Intent(WaitingLobbyActivity.this, MainActivity.class);
                         startActivity(goToPreferences);
-                        return true;
-                    case R.id.navigation_schedule:
-                        mTextMessage.setText("Schedule");
-                        return true;
                     case R.id.navigation_about:
                         mTextMessage.setText("About");
                         return true;
