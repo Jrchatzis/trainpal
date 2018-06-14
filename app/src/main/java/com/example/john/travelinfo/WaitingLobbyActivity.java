@@ -42,15 +42,16 @@ public class WaitingLobbyActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
-                        mTextMessage.setText("Home");
+                        mTextMessage.setText("Lobby");
                         return true;
                     case R.id.navigation_preference:
-                        mTextMessage.setText("Profile");
+                        mTextMessage.setText("Preferences");
                         Intent goToPreferences = new Intent(WaitingLobbyActivity.this, MainActivity.class);
                         startActivity(goToPreferences);
                     case R.id.navigation_about:
-                        mTextMessage.setText("About");
-                        return true;
+                        mTextMessage.setText("Starting Screen");
+                        Intent goToStart = new Intent(WaitingLobbyActivity.this, HomeActivity.class);
+                        startActivity(goToStart);
                 }
                 return false;
             }

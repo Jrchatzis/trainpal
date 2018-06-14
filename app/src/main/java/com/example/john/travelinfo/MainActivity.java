@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -83,6 +84,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         //Proceed button
         Button proceedButton = findViewById(R.id.buttonProceed);
         proceedButton.setOnClickListener(view -> {
@@ -98,5 +103,11 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "You can't have the same departure and arrival selection.Please change one of them.", Toast.LENGTH_LONG).show();
                 }
         });
+    }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
     }
 }

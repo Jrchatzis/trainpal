@@ -4,17 +4,17 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home"/>
+        android:title="Lobby"/>
 
     <item
         android:id="@+id/navigation_preference"
         android:icon="@drawable/ic_preference"
-        android:title="Profile" />
+        android:title="Preferences" />
 
 
     <item
         android:id="@+id/navigation_about"
         android:icon="@drawable/ic_about"
-        android:title="Guide" />
+        android:title="Starting screen" />
 
 </menu>
