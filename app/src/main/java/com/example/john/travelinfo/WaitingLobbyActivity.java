@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -43,15 +44,17 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.navigation_home:
                         mTextMessage.setText("Lobby");
-                        return true;
+                        break;
                     case R.id.navigation_preference:
                         mTextMessage.setText("Preferences");
                         Intent goToPreferences = new Intent(WaitingLobbyActivity.this, MainActivity.class);
                         startActivity(goToPreferences);
+                        break;
                     case R.id.navigation_about:
                         mTextMessage.setText("Starting Screen");
                         Intent goToStart = new Intent(WaitingLobbyActivity.this, HomeActivity.class);
                         startActivity(goToStart);
+                        break;
                 }
                 return false;
             }
@@ -103,10 +106,15 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 TextView eta = findViewById(R.id.estimatedTime);
                 if (serviceUpdate.isArrived()) {
                     timer.cancel();
-                    eta.setText("arrived: " + serviceUpdate.getAta());
+                    eta.setText("Arrived: " + serviceUpdate.getAta());
                 } else if (serviceUpdate.isDelayed()) {
                     timer.cancel();
-                    eta.setText("delayed: " + serviceUpdate.getDelayReason());
+                    eta.setText("Delayed: " + serviceUpdate.getDelayReason());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(WaitingLobbyActivity.this)
+                    builder.setCancelable(true);
+                    builder.setTitle("Train delay update");
+                    builder.setMessage("Delayed: " + serviceUpdate.getDelayReason());
+
                 } else {
                     eta.setText(serviceUpdate.getEta());
                 }
