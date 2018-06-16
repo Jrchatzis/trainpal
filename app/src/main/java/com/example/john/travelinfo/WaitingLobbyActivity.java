@@ -1,5 +1,6 @@
 package com.example.john.travelinfo;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -32,8 +33,8 @@ public class WaitingLobbyActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private TrainService selectedTrain;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
-    //public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
-    public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
+    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    //public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
 
 
     {
@@ -86,8 +87,14 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 updateService();
             }
         }, 0L, 600L);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
-
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
     @Override
     protected void onDestroy() {
         timer.cancel();
@@ -110,11 +117,35 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 } else if (serviceUpdate.isDelayed()) {
                     timer.cancel();
                     eta.setText("Delayed: " + serviceUpdate.getDelayReason());
-                    AlertDialog.Builder builder = new AlertDialog.Builder(WaitingLobbyActivity.this)
-                    builder.setCancelable(true);
-                    builder.setTitle("Train delay update");
-                    builder.setMessage("Delayed: " + serviceUpdate.getDelayReason());
 
+                    AlertDialog.Builder builderDelay = new AlertDialog.Builder(WaitingLobbyActivity.this);
+                    builderDelay.setCancelable(true);
+                    builderDelay.setTitle("Train delay update");
+                    builderDelay.setMessage(serviceUpdate.getDelayReason()+"."+"\nWhat would you like to do?");
+                    builderDelay.setPositiveButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                    moveTaskToBack(true);
+                                }
+                            });
+                    builderDelay.setNeutralButton("Reroute",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent intent = new Intent(WaitingLobbyActivity.this, RouteAnalysisActivity.class);
+                                    startActivity(intent);
+                                }
+                            });
+                    builderDelay.setNegativeButton("Stay",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    builderDelay.create().show();
                 } else {
                     eta.setText(serviceUpdate.getEta());
                 }
@@ -142,6 +173,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         result.setId(selectedTrain.getId());
         result.setSta(new TimeString(soapResponse.sta));
         return result;
+
     }
 }
 

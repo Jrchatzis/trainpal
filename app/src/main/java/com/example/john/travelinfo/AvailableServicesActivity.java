@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
 
 public class AvailableServicesActivity extends AppCompatActivity {
 
-    //public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
-    public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
+    public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
+    //public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
