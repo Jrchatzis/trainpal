@@ -28,7 +28,8 @@
             android:name=".WaitingLobbyActivity"
             android:label="@string/title_activity_waiting_lobby" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".RouteAnalysisActivity"></activity>
+        <activity android:name=".RouteAnalysisActivity" />
+        <activity android:name=".ReportActivity"></activity>
     </application>
 
 </manifest>
