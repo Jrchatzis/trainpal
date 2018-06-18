@@ -1,9 +1,11 @@
 package com.example.john.travelinfo;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
@@ -146,6 +148,10 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                                 }
                             });
                     builderDelay.create().show();
+
+                    Vibrator vibrator;
+                    vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                    vibrator.vibrate(500);
                 } else {
                     eta.setText(serviceUpdate.getEta());
                 }
