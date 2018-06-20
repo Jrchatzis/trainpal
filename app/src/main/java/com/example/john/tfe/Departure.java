@@ -15,7 +15,7 @@ public class Departure {
 
     private int day;
 
-    @JsonProperty("service_name")
+    @JsonProperty("note_id")
     private String noteId;
 
     @JsonProperty("valid_from")

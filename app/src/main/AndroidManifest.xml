@@ -12,6 +12,7 @@
     <application
         android:name=".SplashDelayActivity"
         android:allowBackup="true"
+        android:icon = "@drawable/logo"
         android:label="Trainpal"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

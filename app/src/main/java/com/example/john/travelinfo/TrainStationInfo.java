@@ -2,16 +2,16 @@ package com.example.john.travelinfo;
 
 public enum TrainStationInfo {
 
-    EDB("Waverley station","55.951962","-3.189944"),
-    HYM("Haymarket station","55.945598","-3.218281"),
-    EDP("Edinburgh Park","55.927663","-3.307743"),
-    EGY("Edinburgh Gateway", "55.940933","-3.320274");
+    EDB("Waverley station", 55.951962f,-3.189944f),
+    HYM("Haymarket station",55.945598f,-3.218281f),
+    EDP("Edinburgh Park", 55.927663f,-3.307743f),
+    EGY("Edinburgh Gateway", 55.940933f,-3.320274f);
 
     private String station;
-    private String lat;
-    private String lon;
+    private float lat;
+    private float lon;
 
-    TrainStationInfo(String station,String lat, String lon) {
+    TrainStationInfo(String station, float lat, float lon) {
         this.station = station;
         this.lat = lat;
         this.lon = lon;
@@ -22,12 +22,12 @@ public enum TrainStationInfo {
         return station;
     }
 
-    public String getLat() {
+    public float getLat() {
 
         return lat;
     }
 
-    public String getLon() {
+    public float getLon() {
 
         return lon;
     }

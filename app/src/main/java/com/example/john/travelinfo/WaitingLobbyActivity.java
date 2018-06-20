@@ -117,6 +117,18 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 if (serviceUpdate.isArrived()) {
                     timer.cancel();
                     eta.setText("Arrived: " + serviceUpdate.getAta());
+                    AlertDialog.Builder builderDelay = new AlertDialog.Builder(WaitingLobbyActivity.this);
+                    builderDelay.setCancelable(true);
+                    builderDelay.setTitle("Train update");
+                    builderDelay.setMessage("Your train has just arrived!");
+                    builderDelay.setPositiveButton("Ok",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    finish();
+                                    moveTaskToBack(true);
+                                }
+                            });
                 } else if (serviceUpdate.isDelayed()) {
                     timer.cancel();
                     eta.setText("Delayed: " + serviceUpdate.getDelayReason());
@@ -176,6 +188,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         result.setAta(soapResponse.ata);
         result.setEta(soapResponse.eta);
         result.setDelayReason(soapResponse.delayReason);
+        result.setDelayReason("delayed");
         result.setId(selectedTrain.getId());
         result.setSta(new TimeString(soapResponse.sta));
         return result;
