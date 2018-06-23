@@ -49,6 +49,8 @@ public class AvailableServicesActivity extends AppCompatActivity {
                 TrainService selectedTrain = adapter.getItem(position);
                 Intent intent = new Intent(view.getContext(), WaitingLobbyActivity.class);
                 intent.putExtra("selectedTrain", selectedTrain);
+                intent.putExtra("destination", destination);
+                intent.putExtra("departure", departure);
                 startActivity(intent);
             });
     }

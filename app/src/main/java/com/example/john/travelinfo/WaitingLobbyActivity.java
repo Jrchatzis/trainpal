@@ -35,6 +35,9 @@ public class WaitingLobbyActivity extends AppCompatActivity {
     private Timer timer;
     private TextView mTextMessage;
     private TrainService selectedTrain;
+    private TrainStationInfo departure;
+    private TrainStationInfo destination;
+
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener;
     public static final String ACCESS_TOKEN = "b57a223e-9ab3-4a91-977d-7071e0434a16";
     //public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
@@ -76,6 +79,8 @@ public class WaitingLobbyActivity extends AppCompatActivity {
 
         Bundle bundle = getIntent().getExtras();
         selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));
+        departure = (TrainStationInfo)bundle.get("departure");
+        destination = (TrainStationInfo)bundle.get("destination");
         TextView sta = findViewById(R.id.selectedTime);
         sta.setText(selectedTrain.getSta().toString());
 
@@ -150,6 +155,8 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     Intent intent = new Intent(WaitingLobbyActivity.this, RouteAnalysisActivity.class);
+                                    intent.putExtra("destination", destination);
+                                    intent.putExtra("departure", departure);
                                     startActivity(intent);
                                 }
                             });

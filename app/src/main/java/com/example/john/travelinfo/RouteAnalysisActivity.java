@@ -31,6 +31,8 @@ import java.util.TimerTask;
 
 public class RouteAnalysisActivity extends AppCompatActivity {
 
+    private TrainStationInfo departure;
+    private TrainStationInfo destination;
     private Timer timer;
     private MapView mMapView;
     private LocationDisplay mLocationDisplay;
@@ -44,6 +46,9 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_route_analysis);
+        Bundle bundle = getIntent().getExtras();
+        departure = (TrainStationInfo)bundle.get("departure");
+        destination = (TrainStationInfo)bundle.get("destination");
 
         //AlertDialog.Builder builderDelay = new AlertDialog.Builder(RouteAnalysisActivity.this);
         //builderDelay.setCancelable(true);
@@ -193,19 +198,21 @@ public class RouteAnalysisActivity extends AppCompatActivity {
             }
         }, 0L);
 
+        /*
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 drawAlternativeRoute(new TaxiRoutingService(getResources(), getApplicationContext()));
             }
         }, 0L);
+        */
 
     }
 
     private void drawAlternativeRoute(RoutingService routingService) {
         // TODO: find departure and destination Stations from previous screens
         try {
-            RoutingResult route = routingService.route(null, null);
+            RoutingResult route = routingService.route(departure, destination);
             runOnUiThread(()->{
                 SimpleLineSymbol routeSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 2.0f);
 

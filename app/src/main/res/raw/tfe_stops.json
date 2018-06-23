@@ -1,0 +1,22 @@
+{
+  "stops": [
+    {
+      "stop_id": 36235736,
+      "name": "Fishmarket Square",
+      "latitude": 55.98071,
+      "longitude": -3.19447,
+      "service_type": "bus",
+      "destinations": [
+        "Hyvots Bank",
+        "Silverknowes"
+      ],
+      "services": [
+        "11",
+        "16",
+        "N16"
+      ],
+      "atco_latitude": 55.98073,
+      "atco_longitude": -3.19446
+    }
+  ]
+}
