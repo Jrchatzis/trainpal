@@ -1,5 +1,6 @@
 package com.example.john.tfe;
 
+import android.content.Context;
 import android.content.res.Resources;
 
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class TfeOpenDataServiceFactory {
         return retrofit.create(TfeOpenDataService.class);
     }
 
-    public static TfeOpenDataService getLocalService(Resources res) {
-        return new TfeOpenDataServiceLocal(res);
+    public static TfeOpenDataService getLocalService(Context ctx) {
+        return new TfeOpenDataServiceLocal(ctx.getResources());
     }
 }

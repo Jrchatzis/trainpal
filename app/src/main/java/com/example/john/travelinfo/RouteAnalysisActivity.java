@@ -15,15 +15,14 @@ import android.widget.Toast;
 
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
-import com.esri.arcgisruntime.mapping.view.Graphic;
 import com.esri.arcgisruntime.mapping.view.GraphicsOverlay;
 import com.esri.arcgisruntime.mapping.view.LocationDisplay;
 import com.esri.arcgisruntime.mapping.view.MapView;
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol;
-import com.example.john.routing.BusRoutingService;
-import com.example.john.routing.RoutingResult;
-import com.example.john.routing.RoutingService;
-import com.example.john.routing.TaxiRoutingService;
+import com.example.john.config.TrainStationInfo;
+import com.example.john.routing.services.BusRoutingService;
+import com.example.john.routing.api.RoutingResult;
+import com.example.john.routing.api.RoutingService;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -93,7 +92,6 @@ public class RouteAnalysisActivity extends AppCompatActivity {
                 //mMapView.setMap(navigationMap);
             //}
         //});
-
 
         // Listen to changes in the status of the location data source.
         mLocationDisplay.addDataSourceStatusChangedListener(new LocationDisplay.DataSourceStatusChangedListener() {
@@ -194,7 +192,7 @@ public class RouteAnalysisActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                drawAlternativeRoute(new BusRoutingService(getResources(), getApplicationContext()));
+                drawAlternativeRoute(new BusRoutingService(getApplicationContext()));
             }
         }, 0L);
 
@@ -202,26 +200,17 @@ public class RouteAnalysisActivity extends AppCompatActivity {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                drawAlternativeRoute(new TaxiRoutingService(getResources(), getApplicationContext()));
+                drawAlternativeRoute(new TaxiRoutingService(getApplicationContext()));
             }
         }, 0L);
         */
-
     }
 
     private void drawAlternativeRoute(RoutingService routingService) {
-        // TODO: find departure and destination Stations from previous screens
         try {
             RoutingResult route = routingService.route(departure, destination);
             runOnUiThread(()->{
-                SimpleLineSymbol routeSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 2.0f);
-
-                // add a new graphic to display the route (in a graphics overlay)
-                GraphicsOverlay resultOverlay = new GraphicsOverlay();
-                resultOverlay.getGraphics().add(new Graphic(route.getRoute().getRouteGeometry(), routeSymbol));
-
-                // add the new graphic to a map view
-                mMapView.getGraphicsOverlays().add(resultOverlay);
+                mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
             });
         } catch (Exception e) {
             e.printStackTrace();

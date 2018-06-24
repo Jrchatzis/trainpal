@@ -1,155 +1,61 @@
 package com.example.john.tfe;
 
+import android.support.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import org.immutables.value.Value;
 
 import java.util.List;
+import java.util.Objects;
 
+@Value.Immutable
+@JsonDeserialize(builder = StopBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Stop {
+public interface Stop {
 
     @JsonProperty("stop_id")
-    private int stopId;
+    int getStopId();
 
-    @JsonProperty("atco_code")
-    private String atcoCode;
+    @Nullable @Value.Auxiliary @JsonProperty("atco_code")
+    String getAtcoCode();
 
-    private String name;
+    @Nullable @Value.Auxiliary
+    String getName();
 
-    private String identifier;
+    @Nullable @Value.Auxiliary
+    String getIdentifier();
 
-    private String locality;
+    @Nullable @Value.Auxiliary
+    String getLocality();
 
-    private int orientation;
+    @Value.Auxiliary
+    int getOrientation();
 
-    private String direction;
+    @Nullable @Value.Auxiliary
+    String getDirection();
 
-    private float latitude;
+    @Value.Auxiliary
+    float getLatitude();
 
-    private float longitude;
+    @Value.Auxiliary
+    float getLongitude();
 
-    @JsonProperty("service_type")
-    private String serviceType;
+    @Nullable @Value.Auxiliary @JsonProperty("service_type")
+    String getServiceType();
 
-    private List<String> destinations;
+    @Value.Auxiliary
+    List<String> getDestinations();
 
-    private List<String> services;
+    @Value.Auxiliary
+    List<String> getServices();
 
-    @JsonProperty("atco_latitude")
-    private float atcoLatitude;
+    @Value.Auxiliary @JsonProperty("atco_latitude")
+    float getAtcoLatitude();
 
-    @JsonProperty("atco_longitude")
-    private float atcoLongitude;
+    @Value.Auxiliary @JsonProperty("atco_longitude")
+    float getAtcoLongitude();
 
-    public int getStopId() {
-        return stopId;
-    }
-
-    public void setStopId(int stopId) {
-        this.stopId = stopId;
-    }
-
-    public String getAtcoCode() {
-        return atcoCode;
-    }
-
-    public void setAtcoCode(String atcoCode) {
-        this.atcoCode = atcoCode;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getIdentifier() {
-        return identifier;
-    }
-
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
-    }
-
-    public String getLocality() {
-        return locality;
-    }
-
-    public void setLocality(String locality) {
-        this.locality = locality;
-    }
-
-    public int getOrientation() {
-        return orientation;
-    }
-
-    public void setOrientation(int orientation) {
-        this.orientation = orientation;
-    }
-
-    public String getDirection() {
-        return direction;
-    }
-
-    public void setDirection(String direction) {
-        this.direction = direction;
-    }
-
-    public float getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(float latitude) {
-        this.latitude = latitude;
-    }
-
-    public float getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(float longitude) {
-        this.longitude = longitude;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-    }
-
-    public List<String> getDestinations() {
-        return destinations;
-    }
-
-    public void setDestinations(List<String> destinations) {
-        this.destinations = destinations;
-    }
-
-    public List<String> getServices() {
-        return services;
-    }
-
-    public void setServices(List<String> services) {
-        this.services = services;
-    }
-
-    public float getAtcoLatitude() {
-        return atcoLatitude;
-    }
-
-    public void setAtcoLatitude(float atcoLatitude) {
-        this.atcoLatitude = atcoLatitude;
-    }
-
-    public float getAtcoLongitude() {
-        return atcoLongitude;
-    }
-
-    public void setAtcoLongitude(float atcoLongitude) {
-        this.atcoLongitude = atcoLongitude;
-    }
 }

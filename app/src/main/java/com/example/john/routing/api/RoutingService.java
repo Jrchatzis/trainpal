@@ -1,6 +1,6 @@
-package com.example.john.routing;
+package com.example.john.routing.api;
 
-import com.example.john.travelinfo.TrainStationInfo;
+import com.example.john.config.TrainStationInfo;
 
 public interface RoutingService {
 

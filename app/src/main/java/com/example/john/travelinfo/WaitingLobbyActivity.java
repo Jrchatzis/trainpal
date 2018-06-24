@@ -17,18 +17,15 @@ import android.widget.Chronometer;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.john.config.TrainStationInfo;
 import com.example.travelinfo.ldbws.DAAAccessToken;
-import com.example.travelinfo.ldbws.DAAEnums;
 import com.example.travelinfo.ldbws.DAALDBServiceSoap12;
 import com.example.travelinfo.ldbws.DAAServiceDetails;
-import com.example.travelinfo.ldbws.DAAStationBoardWithDetails_2;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Collections;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.stream.Collectors;
 
 public class WaitingLobbyActivity extends AppCompatActivity {
 

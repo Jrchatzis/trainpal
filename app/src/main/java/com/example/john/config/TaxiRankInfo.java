@@ -1,4 +1,4 @@
-package com.example.john.travelinfo;
+package com.example.john.config;
 
 public enum TaxiRankInfo {
     
