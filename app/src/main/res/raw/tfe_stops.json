@@ -1,22 +1,199 @@
 {
   "stops": [
     {
-      "stop_id": 36235736,
-      "name": "Fishmarket Square",
-      "latitude": 55.98071,
-      "longitude": -3.19447,
-      "service_type": "bus",
+      "stop_id": 36290131,
+      "name": "Edinburgh Park",
+      "latitude": 55.927382,
+      "longitude": -3.306856,
+      "service_type": "tram",
       "destinations": [
-        "Hyvots Bank",
-        "Silverknowes"
+        "Airport",
+        "York Place"
       ],
       "services": [
-        "11",
-        "16",
-        "N16"
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36237927,
+      "name": "Maybury",
+      "latitude": 55.940713,
+      "longitude": -3.311433,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Hopefield",
+        "East Craigs"
       ],
-      "atco_latitude": 55.98073,
-      "atco_longitude": -3.19446
+      "services": [
+        "100",
+        "31"
+      ]
+    },
+    {
+      "stop_id": 362379299,
+      "name": "Edinburgh Park Street",
+      "latitude": 55.927810,
+      "longitude": -3.308246,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36232635,
+      "name": "Haymarket Station",
+      "latitude": 55.945571,
+      "longitude": -3.217324,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36232639,
+      "name": "Haymarket",
+      "latitude": 55.945854,
+      "longitude": -3.219333,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36232638,
+      "name": "Haymarket",
+      "latitude": 55.945854,
+      "longitude": -3.219333,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26",
+        "31",
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36232657,
+      "name": "Haymarket",
+      "latitude": 55.945932,
+      "longitude": -3.218205,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26",
+        "31",
+        "12",
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36232493,
+      "name": "Waverley Bridge",
+      "latitude": 55.951644,
+      "longitude": -3.191663,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36243252,
+      "name": "Princess street",
+      "latitude": 55.952255,
+      "longitude": -3.194950,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Leith Street",
+        "Riccarton",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26",
+        "12",
+        "31",
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36290134,
+      "name": "Princess Street",
+      "latitude": 55.9517810,
+      "longitude": -3.197810,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36235892,
+      "name": "Northe Bridge",
+      "latitude": 55.952675,
+      "longitude": -3.188903,
+      "service_type": "bus",
+      "destinations": [
+        "Hopefield",
+        "East Craigs"
+      ],
+      "services": [
+        "31"
+      ]
+    },
+    {
+      "stop_id": 36235975,
+      "name": "Waverley Street",
+      "latitude": 55.953048,
+      "longitude": -3.190529,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
     }
   ]
 }

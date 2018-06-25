@@ -47,6 +47,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -82,24 +83,20 @@ public class BusRoutingService implements RoutingService {
         this.res = ctx.getResources();
         this.ctx = ctx;
         this.esriService = new EsriService(ctx);
+        this.busService = TfeOpenDataServiceFactory.getLocalService(ctx);
         try (InputStream is = res.openRawResource(R.raw.bus_services)) {
-
-            this.busService = TfeOpenDataServiceFactory.getLocalService(ctx);
-
             this.servicesByStationPair = (Map<String,List<String>>)new ObjectMapper().readValue(is, Map.class);
-
-
-            this.allServices = busService.getServices().getServices()
-                    .stream()
-                    .collect(toMap(Service::getName, java.util.function.Function.identity()));
-
-            this.allStops = busService.getStops().getStops()
-                    .stream()
-                    .collect(toMap(Stop::getStopId, java.util.function.Function.identity()));
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+        this.allServices = busService.getServices().getServices()
+                .stream()
+                .collect(toMap(Service::getName, java.util.function.Function.identity()));
+
+        this.allStops = busService.getStops().getStops()
+                .stream()
+                .collect(toMap(Stop::getStopId, java.util.function.Function.identity()));
     }
 
     @Override
@@ -115,13 +112,35 @@ public class BusRoutingService implements RoutingService {
         List<String> allowedServiceNames = servicesByStationPair.get(stationPairKey);
         Predicate<Service> allowedServiceFilter = service -> allowedServiceNames.contains(service.getName());
         Map<String,Service> allowedServices = allServices.values().stream().filter(allowedServiceFilter).collect(toMap(Service::getName, java.util.function.Function.identity()));
-        List<Integer> allowedStopIds = allowedServices.values().stream().flatMap(Service::getStopIds).collect(toList());
-
+        List<Integer> allowedStopIds = allowedServices.values().stream().flatMap(Service::getStopIds).distinct().collect(toList());
         List<Stop> allowedStops = allStops.values().stream()
                 .filter(stop -> allowedStopIds.contains(stop.getStopId()))
                 .collect(toList());
 
+        Map<Integer,Integer> stopIdToStopIndex = new HashMap<>();
+        for (int i=0; i<allowedStops.size(); i++) {
+            stopIdToStopIndex.put(allowedStops.get(i).getStopId(), i);
+        }
+
+        ClosestFacilityResult closestFacilityResult = esriService.getClosestFacilityResult(
+                // incidents
+                Stream.of(departureStation, destinationStation)
+                        .map(si -> new Point(
+                                si.getLon(),
+                                si.getLat(),
+                                SpatialReferences.getWebMercator()))
+                        ::iterator,
+                // facilities
+                allowedStops.stream()
+                        .map(s -> new Point(
+                                s.getLongitude(),
+                                s.getLatitude(),
+                                SpatialReferences.getWebMercator()))
+                        ::iterator);
+
         List<DepartureFacility> departures = new ArrayList<>();
+
+        List<Stop> rankedDestinationStops = closestFacilityResult.getRankedFacilityIndexes(1).stream().map(allowedStops::get).collect(Collectors.toList());
 
         for (int i=0; i<allowedStops.size(); i++) {
             Stop stop = allowedStops.get(i);
@@ -129,7 +148,7 @@ public class BusRoutingService implements RoutingService {
                     .stream()
                     .filter(allowedServiceNames::contains)
                     .map(allowedServices::get)
-                    .map(service -> toDepartingService(service, stop, allowedStops))
+                    .map(service -> toDepartingService(service, stop, rankedDestinationStops))
                     .filter(Objects::nonNull)
                     .collect(toList());
 
@@ -142,31 +161,11 @@ public class BusRoutingService implements RoutingService {
                 departures.add(f);
             }
         }
-        Map<Integer,Integer> stopIdToStopIndex = departures
-                .stream()
-                .collect(
-                        toMap(
-                                df -> df.getStop().getStopId(),
-                                DepartureFacility::getIndex));
+
         // Hydrate departures list with departure and arrival times using ESRI's service and timetables
         List<DepartureFacility> hydratedDepartures = departures
                 .stream()
                 .map(departureFacility -> {
-                    ClosestFacilityResult closestFacilityResult = esriService.getClosestFacilityResult(
-                            // incidents
-                            Stream.of(departureStation, destinationStation)
-                                    .map(si -> new Point(
-                                                        si.getLon(),
-                                                        si.getLat(),
-                                                        SpatialReferences.getWebMercator()))
-                                    ::iterator,
-                            // facilities
-                            departures.stream()
-                                    .map(d -> new Point(
-                                                        d.getStop().getLongitude(),
-                                                        d.getStop().getLatitude(),
-                                                        SpatialReferences.getWebMercator()))
-                                    ::iterator);
 
                     ClosestFacilityRoute route  = closestFacilityResult.getRoute(departureFacility.getIndex(), 0);
                     LocalDateTime arrivalTimeToFacility = toLocalDateTime(route.getEndTime());
@@ -186,8 +185,8 @@ public class BusRoutingService implements RoutingService {
                                         .from(departingService)
                                         .firstRoute(route)
                                         .departureTime(departureTime)
-                                        .secondRoute(route2)
                                         .arrivalTime(arrivalTime)
+                                        .secondRoute(route2)
                                         .build();
 
                             })
@@ -231,6 +230,7 @@ public class BusRoutingService implements RoutingService {
                 .concat(
                     // directions for walking to the closest bus station
                     fastestDeparture.getFastestDepartingService().getFirstRoute().getDirectionManeuvers().stream(),
+                    // TODO: add custom direction maneuvers, eg. 'take bus service 12 arriving at 12:00'
                     // directions for walking from the bus station to the destination train station
                     fastestDeparture.getFastestDepartingService().getSecondRoute().getDirectionManeuvers().stream()
                 )
@@ -254,11 +254,11 @@ public class BusRoutingService implements RoutingService {
         Departure departure = timetable.getDepartures().stream()
                 .filter(d -> d.getServiceName().equals(departingService.getName()))
                 .filter(d -> d.getDestination().equals(departingService.getDestination()))
-                .filter(d -> {
-                    // TODO: 0-6?
-                    int day = LocalDate.now().getDayOfWeek().ordinal();
-                    return d.getDay() == day;
-                })
+                //.filter(d -> {
+                //    // TODO: 0-6?
+                //    int day = LocalDate.now().getDayOfWeek().ordinal();
+                //    return d.getDay() == day;
+                //})
                 .filter(d -> LocalTime.parse(d.getTime(), dtf).isAfter(nbf))
                 .findFirst()
                 .get();
@@ -278,11 +278,17 @@ public class BusRoutingService implements RoutingService {
     private DepartingService toDepartingService(Service service, Stop departure, List<Stop> allowedDestinations) {
         for (Service.Route route : service.getRoutes()) {
             // start from the next point after the departure
-            Stream<Service.Point> pointStream = StreamUtils.skipUntilInclusive(route.getPoints().stream(), point -> point.getStopId() == departure.getStopId());
-            // take until a stop is encountered which is in our destinations list
-            List<Stop> stops = StreamUtils.takeUntilInclusive(pointStream, point -> allowedDestinations.stream().map(Stop::getStopId).anyMatch(sid -> sid.equals(point.getStopId())))
+            List<Stop> stops = StreamUtils.skipUntilInclusive(route.getPoints().stream(), point -> point.getStopId() == departure.getStopId())
                     .map(point -> allStops.get(point.getStopId()))
                     .collect(toList());
+
+            for (Stop allowedDestination : allowedDestinations) {
+                if (stops.indexOf(allowedDestination) != -1) {
+                    stops = stops.subList(0, stops.indexOf(allowedDestination));
+                    break;
+                }
+            }
+
             // the last stop should be contained in our destinations list, otherwise this route cannot be selected
             if (!stops.isEmpty() && allowedDestinations.contains(stops.get(stops.size()-1))) {
                 DepartingService result = new DepartingServiceBuilder()

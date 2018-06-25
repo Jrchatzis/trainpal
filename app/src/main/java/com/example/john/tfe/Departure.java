@@ -23,13 +23,14 @@ public interface Departure {
     @Nullable
     String getDestination();
 
-    int getDay();
+    @Nullable
+    Integer getDay();
 
     @Nullable
     @JsonProperty("note_id")
     String getNoteId();
 
-    @JsonProperty("valid_from")
-    int getValidFrom();
+    @Nullable @JsonProperty("valid_from")
+    Integer getValidFrom();
 
 }

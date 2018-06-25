@@ -3,6 +3,7 @@ package com.example.john.routing.services;
 import android.content.Context;
 
 import com.esri.arcgisruntime.geometry.Point;
+import com.esri.arcgisruntime.loadable.LoadStatus;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityParameters;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityResult;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityTask;
@@ -32,10 +33,15 @@ public class EsriService {
         try {
             final ClosestFacilityTask closestFacilityTask = new ClosestFacilityTask(ctx, URL);
             AtomicBoolean loaded = new AtomicBoolean(false);
-            closestFacilityTask.addDoneLoadingListener(() -> loaded.set(true));
+            closestFacilityTask.addDoneLoadingListener(() -> {
+                loaded.set(true);
+            });
             closestFacilityTask.loadAsync();
             while (!loaded.get()) {
                 Thread.sleep(100);
+            }
+            if (closestFacilityTask.getLoadStatus() != LoadStatus.LOADED) {
+                throw new RuntimeException("got load status " + closestFacilityTask.getLoadStatus());
             }
             ClosestFacilityParameters closestFacilityParameters = closestFacilityTask.createDefaultParametersAsync().get();
             closestFacilityParameters.setReturnDirections(true);
@@ -46,7 +52,7 @@ public class EsriService {
             closestFacilityParameters.setFacilities(StreamSupport.stream(facilities.spliterator(), false).map(Facility::new)::iterator);
             return closestFacilityTask.solveClosestFacilityAsync(closestFacilityParameters).get();
         } catch (Exception e) {
-            e.printStackTrace();
+            e.getCause().printStackTrace();
             throw new RuntimeException(e);
         }
     }

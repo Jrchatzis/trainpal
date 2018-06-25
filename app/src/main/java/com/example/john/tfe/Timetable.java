@@ -16,7 +16,7 @@ import java.util.List;
 public interface Timetable {
 
     @JsonProperty("stop_id")
-    int getStopId();
+    Integer getStopId();
 
     @Nullable @Value.Auxiliary @JsonProperty("stop_name")
     String getStopName();

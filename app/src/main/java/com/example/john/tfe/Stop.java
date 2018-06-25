@@ -17,7 +17,7 @@ import java.util.Objects;
 public interface Stop {
 
     @JsonProperty("stop_id")
-    int getStopId();
+    Integer getStopId();
 
     @Nullable @Value.Auxiliary @JsonProperty("atco_code")
     String getAtcoCode();
@@ -31,8 +31,8 @@ public interface Stop {
     @Nullable @Value.Auxiliary
     String getLocality();
 
-    @Value.Auxiliary
-    int getOrientation();
+    @Nullable @Value.Auxiliary
+    Integer getOrientation();
 
     @Nullable @Value.Auxiliary
     String getDirection();
@@ -52,10 +52,10 @@ public interface Stop {
     @Value.Auxiliary
     List<String> getServices();
 
-    @Value.Auxiliary @JsonProperty("atco_latitude")
-    float getAtcoLatitude();
+    @Nullable @Value.Auxiliary @JsonProperty("atco_latitude")
+    Float getAtcoLatitude();
 
-    @Value.Auxiliary @JsonProperty("atco_longitude")
-    float getAtcoLongitude();
+    @Nullable @Value.Auxiliary @JsonProperty("atco_longitude")
+    Float getAtcoLongitude();
 
 }
