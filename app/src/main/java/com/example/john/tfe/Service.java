@@ -1,113 +1,70 @@
 package com.example.john.tfe;
 
+import android.support.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import org.immutables.value.Value;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Stream;
 
+@Value.Immutable
+@JsonDeserialize(builder = ServiceBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Service {
+public interface Service {
 
-    private String name;
-    private String description;
+    @Nullable
+    String getName();
 
+    @Nullable @Value.Auxiliary
+    String getDescription();
+
+    @Nullable @Value.Auxiliary
     @JsonProperty("service_type")
-    private String serviceType;
+    String getServiceType();
 
-    private List<Route> routes;
+    @Value.Auxiliary
+    List<Route> getRoutes();
 
-    public String getName() {
-        return name;
+    @Value.Lazy
+    default Stream<Integer> getStopIds() {
+        return getRoutes().stream()
+                .map(Route::getStops)
+                .flatMap(List::stream);
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-    }
-
-    public List<Route> getRoutes() {
-        return routes;
-    }
-
-    public void setRoutes(List<Route> routes) {
-        this.routes = routes;
-    }
-
+    @Value.Immutable
+    @JsonDeserialize(builder = RouteBuilder.class)
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Route {
-        private String destination;
-        private List<Point> points;
-        private List<Integer> stops;
 
-        public String getDestination() {
-            return destination;
-        }
+    public static interface Route {
 
-        public void setDestination(String destination) {
-            this.destination = destination;
-        }
+        String getDestination();
 
-        public List<Point> getPoints() {
-            return points;
-        }
+        @Value.Auxiliary
+        List<Point> getPoints();
 
-        public void setPoints(List<Point> points) {
-            this.points = points;
-        }
-
-        public List<Integer> getStops() {
-            return stops;
-        }
-
-        public void setStops(List<Integer> stops) {
-            this.stops = stops;
-        }
+        @Value.Auxiliary
+        List<Integer> getStops();
     }
 
+    @Value.Immutable
+    @JsonDeserialize(builder = PointBuilder.class)
     @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class Point {
+    public static interface Point {
+
         @JsonProperty("stop_id")
-        private String stopId;
-        private float latitude;
-        private float longitude;
+        int getStopId();
 
-        public String getStopId() {
-            return stopId;
-        }
+        @Value.Auxiliary
+        float getLatitude();
 
-        public void setStopId(String stopId) {
-            this.stopId = stopId;
-        }
+        @Value.Auxiliary
+        float getLongitude();
 
-        public float getLatitude() {
-            return latitude;
-        }
-
-        public void setLatitude(float latitude) {
-            this.latitude = latitude;
-        }
-
-        public float getLongitude() {
-            return longitude;
-        }
-
-        public void setLongitude(float longitude) {
-            this.longitude = longitude;
-        }
     }
 }

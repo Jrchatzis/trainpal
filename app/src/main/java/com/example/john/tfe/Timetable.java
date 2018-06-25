@@ -1,43 +1,27 @@
 package com.example.john.tfe;
 
+import android.support.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import org.immutables.value.Value;
 
 import java.util.List;
 
+@Value.Immutable
+@JsonDeserialize(builder = TimetableBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Timetable {
+public interface Timetable {
 
     @JsonProperty("stop_id")
-    private int stopId;
+    int getStopId();
 
-    @JsonProperty("stop_name")
-    private String stopName;
+    @Nullable @Value.Auxiliary @JsonProperty("stop_name")
+    String getStopName();
 
-    private List<Departure> departures;
-
-    public int getStopId() {
-        return stopId;
-    }
-
-    public void setStopId(int stopId) {
-        this.stopId = stopId;
-    }
-
-    public String getStopName() {
-        return stopName;
-    }
-
-    public void setStopName(String stopName) {
-        this.stopName = stopName;
-    }
-
-    public List<Departure> getDepartures() {
-        return departures;
-    }
-
-    public void setDepartures(List<Departure> departures) {
-        this.departures = departures;
-    }
+    @Value.Auxiliary
+    List<Departure> getDepartures();
 
 }

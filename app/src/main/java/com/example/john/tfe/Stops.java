@@ -2,30 +2,20 @@ package com.example.john.tfe;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import org.immutables.value.Value;
 
 import java.util.List;
 
+@Value.Immutable
+@JsonDeserialize(builder = StopsBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Stops {
+public interface Stops {
 
     @JsonProperty("last_updated")
-    private int lastUpdated;
+    int getLastUpdated();
 
-    private List<Stop> stops;
+    List<Stop> getStops();
 
-    public int getLastUpdated() {
-        return lastUpdated;
-    }
-
-    public void setLastUpdated(int lastUpdated) {
-        this.lastUpdated = lastUpdated;
-    }
-
-    public List<Stop> getStops() {
-        return stops;
-    }
-
-    public void setStops(List<Stop> stops) {
-        this.stops = stops;
-    }
 }

@@ -1,71 +1,35 @@
 package com.example.john.tfe;
 
+import android.support.annotation.Nullable;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+import org.immutables.value.Value;
+
+@Value.Immutable
+@JsonDeserialize(builder = DepartureBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Departure {
+public interface Departure {
 
+    @Nullable
     @JsonProperty("service_name")
-    private String serviceName;
+    String getServiceName();
 
-    private String time;
+    @Nullable
+    String getTime();
 
-    private String destination;
+    @Nullable
+    String getDestination();
 
-    private int day;
+    int getDay();
 
+    @Nullable
     @JsonProperty("note_id")
-    private String noteId;
+    String getNoteId();
 
     @JsonProperty("valid_from")
-    private int validFrom;
+    int getValidFrom();
 
-    public String getServiceName() {
-        return serviceName;
-    }
-
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
-
-    public void setDestination(String destination) {
-        this.destination = destination;
-    }
-
-    public int getDay() {
-        return day;
-    }
-
-    public void setDay(int day) {
-        this.day = day;
-    }
-
-    public String getNoteId() {
-        return noteId;
-    }
-
-    public void setNoteId(String noteId) {
-        this.noteId = noteId;
-    }
-
-    public int getValidFrom() {
-        return validFrom;
-    }
-
-    public void setValidFrom(int validFrom) {
-        this.validFrom = validFrom;
-    }
 }

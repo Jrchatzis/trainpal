@@ -9,7 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
+import com.example.john.config.TrainStationInfo;
 
 import java.util.List;
 import java.util.stream.Collectors;

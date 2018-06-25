@@ -39,4 +39,9 @@ dependencies {
     implementation 'com.google.code.ksoap2-android:ksoap2-android:3.6.2'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-jackson:2.4.0'
+    implementation 'com.codepoetics:protonpack:1.13'
+    annotationProcessor "org.immutables:value:2.6.1"
+    compileOnly "org.immutables:value:2.6.1"
+    compileOnly "org.immutables:builder:2.6.1"
+
 }
