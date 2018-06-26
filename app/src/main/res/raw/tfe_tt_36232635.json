@@ -1,0 +1,164 @@
+{
+  "stop_id": 36232635,
+  "stop_name": "Haymarket Station",
+  "departures": [
+    {
+      "service_name": "N25",
+      "time": "00:15",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "00:45",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "01:20",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "01:40",
+      "destination": "Riccarton"
+    },{
+      "service_name": "N25",
+      "time": "02:12",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "02:34",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:23",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:55",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:24",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:45",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "04:20",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "04:46",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "05:10",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "05:34",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "06:11",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "06:44",
+      "destination": "Riccarton"
+    },
+    {
+      "service_name": "N25",
+      "time": "00:13",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "00:42",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "01:18",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "01:38",
+      "destination": "Leith Street"
+    },{
+      "service_name": "N25",
+      "time": "02:10",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "02:30",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:20",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:50",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:22",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "03:43",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "04:18",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "04:43",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "05:07",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "05:30",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "06:10",
+      "destination": "Leith Street"
+    },
+    {
+      "service_name": "N25",
+      "time": "06:42",
+      "destination": "Leith Street"
+    }
+  ]
+}

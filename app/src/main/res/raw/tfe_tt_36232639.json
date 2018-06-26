@@ -1,0 +1,254 @@
+{
+  "stop_id": 36232639,
+  "stop_name": "Haymarket",
+  "departures": [
+    {
+      "service_name": "100",
+      "time": "00:32",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "00:46",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "01:29",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "01:39",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "02:17",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "02:45",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:52",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:11",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "04:21",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "04:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "05:25",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "05:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "06:26",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "06:55",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "07:19",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "07:35",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "08:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "08:58",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "09:19",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "09:29",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "10:13",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "10:45",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "11:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "11:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "12:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "12:50",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "13:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "13:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "14:28",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "14:56",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "15:22",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "15:46",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "16:03",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "16:53",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "17:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "17:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "18:20",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "18:54",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "19:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "19:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "20:17",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "20:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "21:01",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "21:42",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "22:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "22:38",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "23:16",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "23:52",
+      "destination": "Airport"
+    }
+  ]
+}

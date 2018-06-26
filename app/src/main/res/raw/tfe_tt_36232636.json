@@ -1,0 +1,169 @@
+{
+  "stop_id": 36232636,
+  "stop_name": "W Maitland",
+  "departures": [
+    {
+      "service_name": "31",
+      "time": "07:12",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "07:53",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "08:13",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "08:53",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "09:17",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "09:44",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "10:21",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "10:59",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "11:13",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "11:59",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "12:18",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "12:54",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "13:03",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "13:48",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "14:14",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "14:56",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "15:28",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "15:54",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "16:28",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "16:56",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "17:23",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "17:53",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "18:17",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "18:38",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "19:24",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "19:56",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "20:16",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "20:53",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "21:23",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "21:47",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "22:25",
+      "destination": "East Craigs"
+    },{
+      "service_name": "31",
+      "time": "22:52",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "23:19",
+      "destination": "East Craigs"
+    },
+    {
+      "service_name": "31",
+      "time": "23:44",
+      "destination": "East Craigs"
+    }
+  ]
+}
