@@ -1,0 +1,490 @@
+{
+  "stop_id": 36245858,
+  "stop_name": "Edinburgh Park Street",
+  "departures": [
+    {
+      "service_name": "N22",
+      "time": "00:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "00:41",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "01:24",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "01:49",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "02:07",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "02:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:21",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:58",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:14",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:42",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "04:28",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "04:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "05:20",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "05:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "06:21",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "06:54",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "07:05",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "07:59",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "08:26",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "08:49",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "09:17",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "09:58",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "10:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "10:59",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "11:33",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "11:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "12:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "12:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "13:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "13:54",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "14:14",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "14:57",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "15:32",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "15:45",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "16:20",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "16:45",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "17:13",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "17:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "18:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "18:39",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "19:25",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "19:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "20:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "20:53",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "21:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "21:54",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "22:33",
+      "destination": "Airport"
+    },{
+      "service_name": "N22",
+      "time": "22:59",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "23:19",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "23:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "N22",
+      "time": "00:09",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "00:32",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "01:20",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "01:48",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "02:15",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "02:39",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:15",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:55",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:29",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "03:53",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "04:28",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "04:53",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "05:17",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "05:39",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "06:18",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "06:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "07:23",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "07:58",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "08:25",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "08:49",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "09:23",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "09:41",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "10:09",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "10:54",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "11:32",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "11:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "12:34",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "12:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "13:06",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "13:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "14:32",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "14:53",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "15:28",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "15:56",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "16:24",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "16:42",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "17:31",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "17:59",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "18:14",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "18:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "19:28",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "19:42",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "20:24",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "20:48",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "21:19",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "21:52",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "22:31",
+      "destination": "Ocean Terminal"
+    },{
+      "service_name": "N22",
+      "time": "22:42",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "23:24",
+      "destination": "Ocean Terminal"
+    },
+    {
+      "service_name": "N22",
+      "time": "23:42",
+      "destination": "Ocean Terminal"
+    }
+  ]
+}
