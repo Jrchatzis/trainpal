@@ -2,6 +2,8 @@ package com.example.john.routing.services;
 
 import android.content.Context;
 
+import android.util.Log;
+import com.esri.arcgisruntime.concurrent.ListenableFuture;
 import com.esri.arcgisruntime.geometry.Point;
 import com.esri.arcgisruntime.loadable.LoadStatus;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityParameters;
@@ -10,6 +12,7 @@ import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityTask;
 import com.esri.arcgisruntime.tasks.networkanalysis.Facility;
 import com.esri.arcgisruntime.tasks.networkanalysis.Incident;
 
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.stream.StreamSupport;
 
@@ -42,18 +45,41 @@ public class EsriService {
             }
             if (closestFacilityTask.getLoadStatus() != LoadStatus.LOADED) {
                 throw new RuntimeException("got load status " + closestFacilityTask.getLoadStatus());
-            }
-            ClosestFacilityParameters closestFacilityParameters = closestFacilityTask.createDefaultParametersAsync().get();
-            closestFacilityParameters.setReturnDirections(true);
-            closestFacilityParameters.setReturnRoutes(true);
-            //closestFacilityParameters.setTravelMode(TravelMode.createFromInternal(CoreTravelMode.a(5l)));
+            } else {
+                Log.d("facilityTask", "Loaded " + closestFacilityTask.getLoadStatus());
+                ListenableFuture<ClosestFacilityParameters> closestFacilityParametersFuture = closestFacilityTask.createDefaultParametersAsync();
 
-            closestFacilityParameters.setIncidents(StreamSupport.stream(incidents.spliterator(), false).map(Incident::new)::iterator);
-            closestFacilityParameters.setFacilities(StreamSupport.stream(facilities.spliterator(), false).map(Facility::new)::iterator);
-            return closestFacilityTask.solveClosestFacilityAsync(closestFacilityParameters).get();
+                closestFacilityParametersFuture.addDoneListener(() -> {
+                    try {
+                        ClosestFacilityParameters closestFacilityParameters = closestFacilityParametersFuture.get();
+                        closestFacilityParameters.setReturnDirections(true);
+                        closestFacilityParameters.setReturnRoutes(true);
+
+                        closestFacilityParameters.setIncidents(StreamSupport.stream(incidents.spliterator(), false).map(Incident::new)::iterator);
+                        closestFacilityParameters.setFacilities(StreamSupport.stream(facilities.spliterator(), false).map(Facility::new)::iterator);
+
+                        ListenableFuture<ClosestFacilityResult> closestFacilityResultFuture = closestFacilityTask.solveClosestFacilityAsync(closestFacilityParameters);
+                        closestFacilityResultFuture.addDoneListener(() -> {
+                            try {
+
+                                // here's the result
+                                ClosestFacilityResult closestFacilityResult = closestFacilityResultFuture.get();
+
+                                Log.d("result", closestFacilityResult.getFacilities().get(0).getName());
+                            } catch (InterruptedException | ExecutionException e) {
+                                Log.e("facilityResult", e.getMessage());
+                            }
+                        });
+                    } catch (InterruptedException | ExecutionException e) {
+                        Log.e("facilityParameters", e.getMessage());
+                    }
+                });
+
+            }
         } catch (Exception e) {
             e.getCause().printStackTrace();
             throw new RuntimeException(e);
         }
+        return null;
     }
 }
