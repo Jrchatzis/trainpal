@@ -44,6 +44,12 @@ public class HomeActivity extends AppCompatActivity  implements View.OnClickList
             case R.id.reportCard : i = new Intent(this,ReportActivity.class);
                 startActivity(i);
                 break;
+            case R.id.aboutCard : i = new Intent(this,InfoActivity.class);
+                startActivity(i);
+                break;
+            case R.id.stationCard : i = new Intent(this,PoiWaverley.class);
+                startActivity(i);
+                break;
             default:
                 break;
         }

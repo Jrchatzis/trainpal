@@ -40,31 +40,6 @@ public class WaitingLobbyActivity extends AppCompatActivity {
     //public static final String ACCESS_TOKEN = "c894167b-8296-4071-8797-e3fa421f8ff6";
 
 
-    {
-        mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.navigation_home:
-                        mTextMessage.setText("Lobby");
-                        break;
-                    case R.id.navigation_preference:
-                        mTextMessage.setText("Preferences");
-                        Intent goToPreferences = new Intent(WaitingLobbyActivity.this, MainActivity.class);
-                        startActivity(goToPreferences);
-                        break;
-                    case R.id.navigation_about:
-                        mTextMessage.setText("Starting Screen");
-                        Intent goToStart = new Intent(WaitingLobbyActivity.this, HomeActivity.class);
-                        startActivity(goToStart);
-                        break;
-                }
-                return false;
-            }
-        };
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

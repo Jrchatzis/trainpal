@@ -28,4 +28,8 @@
     <string name="title_activity_wait_lobby">WaitLobby</string>
     <string name="estimated_time">Estimated time</string>
     <string name="location_permission_denied">LocationDisplayManager cannot run because location permission was denied</string>
+    <string name="title_activity_po_i">PoIActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_poi">PoiActivity</string>
+    <string name="WaverleyCoffee"><a href=""></a></string>
 </resources>
