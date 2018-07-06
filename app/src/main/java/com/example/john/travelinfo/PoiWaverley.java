@@ -3,8 +3,11 @@ package com.example.john.travelinfo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class PoiWaverley extends AppCompatActivity {
 
@@ -23,6 +26,7 @@ public class PoiWaverley extends AppCompatActivity {
                 startActivity(new Intent(PoiWaverley.this,PoiHaymarket.class));
             }
         });
+
     }
 
     @Override

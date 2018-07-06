@@ -1,5 +1,6 @@
 package com.example.john.routing.services;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -79,10 +80,10 @@ public class BusRoutingService implements RoutingService {
      * Constructor
      * @param ctx
      */
-    public BusRoutingService(Context ctx) {
-        this.res = ctx.getResources();
-        this.ctx = ctx;
-        this.esriService = new EsriService(ctx);
+    public BusRoutingService(Activity activity) {
+        this.res = activity.getApplicationContext().getResources();
+        this.ctx = activity.getApplicationContext();
+        this.esriService = new EsriService(activity);
         this.busService = TfeOpenDataServiceFactory.getLocalService(ctx);
         try (InputStream is = res.openRawResource(R.raw.bus_services)) {
             this.servicesByStationPair = (Map<String,List<String>>)new ObjectMapper().readValue(is, Map.class);

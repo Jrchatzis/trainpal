@@ -1,5 +1,6 @@
 package com.example.john.travelinfo;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -188,11 +189,12 @@ public class RouteAnalysisActivity extends AppCompatActivity {
 
         });
 
+        Activity activity = this;
         timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                drawAlternativeRoute(new BusRoutingService(getApplicationContext()));
+                drawAlternativeRoute(new BusRoutingService(activity));
             }
         }, 0L);
 

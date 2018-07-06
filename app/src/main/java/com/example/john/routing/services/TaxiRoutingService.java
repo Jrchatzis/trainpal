@@ -1,5 +1,6 @@
 package com.example.john.routing.services;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 
@@ -16,10 +17,10 @@ public class TaxiRoutingService implements RoutingService {
     private final Context ctx;
     private final EsriService esriService;
 
-    public TaxiRoutingService(Resources res, Context ctx) {
-        this.res = res;
-        this.ctx = ctx;
-        this.esriService = new EsriService(ctx);
+    public TaxiRoutingService(Activity activity) {
+        this.res = activity.getApplicationContext().getResources();
+        this.ctx = activity.getApplicationContext();
+        this.esriService = new EsriService(activity);
     }
 
     @Override

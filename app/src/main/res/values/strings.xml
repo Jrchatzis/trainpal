@@ -31,5 +31,4 @@
     <string name="title_activity_po_i">PoIActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_poi">PoiActivity</string>
-    <string name="WaverleyCoffee"><a href=""></a></string>
 </resources>
