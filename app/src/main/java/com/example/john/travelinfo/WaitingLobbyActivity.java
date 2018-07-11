@@ -159,6 +159,9 @@ public class WaitingLobbyActivity extends AppCompatActivity {
     }
 
     private TrainService getTrainServiceUpdate() throws Exception {
+        if (selectedTrain.getId().equals("dummy")) {
+            return selectedTrain;
+        }
         DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
         DAAAccessToken accessToken = new DAAAccessToken();
         accessToken.TokenValue = ACCESS_TOKEN;

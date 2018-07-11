@@ -9,25 +9,39 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.esri.arcgisruntime.geometry.Envelope;
+import com.esri.arcgisruntime.geometry.Point;
+import com.esri.arcgisruntime.geometry.PointCollection;
+import com.esri.arcgisruntime.geometry.Polyline;
+import com.esri.arcgisruntime.geometry.SpatialReferences;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
+import com.esri.arcgisruntime.mapping.MobileMapPackage;
+import com.esri.arcgisruntime.mapping.Viewpoint;
+import com.esri.arcgisruntime.mapping.view.Graphic;
 import com.esri.arcgisruntime.mapping.view.GraphicsOverlay;
 import com.esri.arcgisruntime.mapping.view.LocationDisplay;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.esri.arcgisruntime.symbology.LineSymbol;
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol;
 import com.example.john.config.TrainStationInfo;
 import com.example.john.routing.services.BusRoutingService;
 import com.example.john.routing.api.RoutingResult;
 import com.example.john.routing.api.RoutingService;
+import com.example.john.routing.services.EsriService;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.ExecutionException;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class RouteAnalysisActivity extends AppCompatActivity {
 
@@ -39,8 +53,8 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     private Spinner mSpinner;
 
     private int requestCode = 2;
-    String[] reqPermissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission
-            .ACCESS_COARSE_LOCATION};
+    String[] reqPermissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
+    private EsriService esriService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,49 +64,43 @@ public class RouteAnalysisActivity extends AppCompatActivity {
         departure = (TrainStationInfo)bundle.get("departure");
         destination = (TrainStationInfo)bundle.get("destination");
 
-        //AlertDialog.Builder builderDelay = new AlertDialog.Builder(RouteAnalysisActivity.this);
-        //builderDelay.setCancelable(true);
-        //builderDelay.setTitle("Mode of transportation decision");
-        //builderDelay.setMessage("Which mode of transportation, apart from walking, would you like to use?");
-        //builderDelay.setPositiveButton("Bus",
-                //new DialogInterface.OnClickListener() {
-                    //@Override
-                    //public void onClick(DialogInterface dialog, int which) {
-                    //}
-                //});
-        //builderDelay.setNegativeButton("Taxi",
-                //new DialogInterface.OnClickListener() {
-                    //@Override
-                    //public void onClick(DialogInterface dialog, int which) {
-                    //}
-                //});
-        //builderDelay.create().show();
-
-// Get the Spinner from layout
+        // Get the Spinner from layout
         mSpinner = (Spinner) findViewById(R.id.spinner);
 
-        // Get the MapView from layout and set a map with the BasemapType Imagery
-        mMapView = (MapView) findViewById(R.id.mapView);
-        ArcGISMap mMap = new ArcGISMap(Basemap.createImagery());
-        mMapView.setMap(mMap);
+        if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            int requestCode = 2;
+            ActivityCompat.requestPermissions(RouteAnalysisActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, requestCode);
+        }
 
+        mMapView = (MapView) findViewById(R.id.mapView);
         // get the MapView's LocationDisplay
         mLocationDisplay = mMapView.getLocationDisplay();
 
-        // Open a StreetMap Premium mobile map package
-        //MobileMapPackage mobileMapPackage = new MobileMapPackage("../../../../../United_Kingdom.mmpk");
+        esriService = new EsriService(this);
+        esriService.getMobileMapPackage().thenAccept(mmpk -> {
+            runOnUiThread(() ->{
+                ArcGISMap navigationMap = mmpk.getMaps().get(0);
+                mMapView.setMap(navigationMap);
+                Log.i(RouteAnalysisActivity.class.getSimpleName(), "added test overlay");
+                //addTestOverlay();
 
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        drawAlternativeRoute(new BusRoutingService(RouteAnalysisActivity.this, esriService));
+                    }
+                }, 0L);
 
-        //mobileMapPackage.addDoneLoadingListener(() -> {
-            //if (mobileMapPackage.getLoadStatus() == LoadStatus.LOADED && mobileMapPackage.getMaps().size() > 0) {
-                // Get the first map, which is the navigation map
-                //ArcGISMap navigationMap = mobileMapPackage.getMaps().get(0);
-
-
-                // Add it to the map view
-                //mMapView.setMap(navigationMap);
-            //}
-        //});
+                /*
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        drawAlternativeRoute(new TaxiRoutingService(getApplicationContext(), esriService));
+                    }
+                }, 0L);
+                */
+            });
+        });
 
         // Listen to changes in the status of the location data source.
         mLocationDisplay.addDataSourceStatusChangedListener(new LocationDisplay.DataSourceStatusChangedListener() {
@@ -191,33 +199,35 @@ public class RouteAnalysisActivity extends AppCompatActivity {
 
         Activity activity = this;
         timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                drawAlternativeRoute(new BusRoutingService(activity));
-            }
-        }, 0L);
 
-        /*
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                drawAlternativeRoute(new TaxiRoutingService(getApplicationContext()));
-            }
-        }, 0L);
-        */
+    }
+
+    private void addTestOverlay() {
+        GraphicsOverlay testOverlay = new GraphicsOverlay();
+        LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GRAY, 2.0f);
+
+        Point point1 = new Point(departure.getLon(),departure.getLat(), SpatialReferences.getWgs84());
+        Point point2 = new Point(destination.getLon(),destination.getLat(), SpatialReferences.getWgs84());
+        // travel with the bus
+        Polyline busStopGeometry = new Polyline(new PointCollection(Stream.of(point1, point2).collect(Collectors.toList())));
+        testOverlay.getGraphics().add(new Graphic(busStopGeometry, busRouteSymbol));
+        mMapView.getGraphicsOverlays().add(testOverlay);
+        mMapView.setViewpointGeometryAsync(busStopGeometry, 10);
+        Log.i(RouteAnalysisActivity.class.getSimpleName(), "added test overlay");
     }
 
     private void drawAlternativeRoute(RoutingService routingService) {
         try {
             RoutingResult route = routingService.route(departure, destination);
             runOnUiThread(()->{
+                mMapView.setViewpointGeometryAsync(route.getFullExtent(), 10);
                 mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
             });
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         // If request is cancelled, the result arrays are empty.

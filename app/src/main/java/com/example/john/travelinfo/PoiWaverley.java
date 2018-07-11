@@ -27,6 +27,35 @@ public class PoiWaverley extends AppCompatActivity {
             }
         });
 
+        TextView food =(TextView)findViewById(R.id.WaverleyFood);
+        food.setClickable(true);
+        food.setMovementMethod(LinkMovementMethod.getInstance());
+        String foodlink = "<a href='https://foursquare.com/explore?mode=url&near=Waverley%20Station%2C%20Edinburgh%2C%20United%20Kingdom&nearGeoId=79804&q=food'>Food</a>";
+        food.setText(Html.fromHtml(foodlink,0));
+
+        TextView coffee =(TextView)findViewById(R.id.WaverleyCoffee);
+        coffee.setClickable(true);
+        coffee.setMovementMethod(LinkMovementMethod.getInstance());
+        String coffeelink = "<a href='https://foursquare.com/explore?mode=url&near=Waverley%20Station%2C%20Edinburgh%2C%20United%20Kingdom&nearGeoId=79804&q=coffee'>Coffee</a>";
+        coffee.setText(Html.fromHtml(coffeelink,0));
+
+        TextView shops =(TextView)findViewById(R.id.WaverleyShops);
+        shops.setClickable(true);
+        shops.setMovementMethod(LinkMovementMethod.getInstance());
+        String shopslink = "<a href='https://foursquare.com/explore?mode=url&near=Waverley%20Station%2C%20Edinburgh%2C%20United%20Kingdom&nearGeoId=79804&q=shops'>Shops</a>";
+        shops.setText(Html.fromHtml(shopslink,0));
+
+        TextView fun =(TextView)findViewById(R.id.WaverleyFun);
+        fun.setClickable(true);
+        fun.setMovementMethod(LinkMovementMethod.getInstance());
+        String funlink = "<a href='https://foursquare.com/explore?mode=url&near=Waverley%20Station%2C%20Edinburgh%2C%20United%20Kingdom&nearGeoId=79804&q=Fun'>Fun</a>";
+        fun.setText(Html.fromHtml(funlink,0));
+
+        TextView nightlife =(TextView)findViewById(R.id.WaverleyNightlife);
+        nightlife.setClickable(true);
+        nightlife.setMovementMethod(LinkMovementMethod.getInstance());
+        String nightlifelink = "<a href='https://foursquare.com/explore?mode=url&near=Waverley%20Station%2C%20Edinburgh%2C%20United%20Kingdom&nearGeoId=79804&q=Nightlife'>Nightlife</a>";
+        nightlife.setText(Html.fromHtml(nightlifelink,0));
     }
 
     @Override

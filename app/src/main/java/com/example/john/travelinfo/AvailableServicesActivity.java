@@ -13,6 +13,7 @@ import com.example.travelinfo.ldbws.*;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -39,6 +40,15 @@ public class AvailableServicesActivity extends AppCompatActivity {
         TimeString timeString = (TimeString)bundle.get("timeString");
 
         List<TrainService> trainServices = getAvailableTrains(departure, destination, timeString);
+
+        if (trainServices.isEmpty()) {
+            TrainService dummyTrainService = new TrainService();
+            dummyTrainService.setId("dummy");
+            dummyTrainService.setEta("00:00");
+            dummyTrainService.setSta(new TimeString("00:00"));
+            dummyTrainService.setDelayReason("Delayed");
+            trainServices = Arrays.asList(dummyTrainService);
+        }
 
         //List creation for the selected timeString
         final ListView listView = findViewById(R.id.Schedules);

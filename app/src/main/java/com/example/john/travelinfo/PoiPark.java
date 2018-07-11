@@ -3,8 +3,11 @@ package com.example.john.travelinfo;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class PoiPark extends AppCompatActivity {
 
@@ -26,5 +29,35 @@ public class PoiPark extends AppCompatActivity {
                 startActivity(new Intent(PoiPark.this,HomeActivity.class));
             }
         });
+
+        TextView food =(TextView)findViewById(R.id.ParkFood);
+        food.setClickable(true);
+        food.setMovementMethod(LinkMovementMethod.getInstance());
+        String foodlink = "<a href='https://foursquare.com/explore?mode=url&ne=55.932051%2C-3.291317&q=Food&sw=55.921147%2C-3.317538'>Food</a>";
+        food.setText(Html.fromHtml(foodlink,0));
+
+        TextView coffee =(TextView)findViewById(R.id.ParkCoffee);
+        coffee.setClickable(true);
+        coffee.setMovementMethod(LinkMovementMethod.getInstance());
+        String coffeelink = "<a href='https://foursquare.com/explore?mode=url&ne=55.932051%2C-3.291317&q=coffee&sw=55.921147%2C-3.317538'>Coffee</a>";
+        coffee.setText(Html.fromHtml(coffeelink,0));
+
+        TextView shops =(TextView)findViewById(R.id.ParkShops);
+        shops.setClickable(true);
+        shops.setMovementMethod(LinkMovementMethod.getInstance());
+        String shopslink = "<a href='https://foursquare.com/explore?mode=url&ne=55.932051%2C-3.291317&q=shops&sw=55.921147%2C-3.317538'>Shops</a>";
+        shops.setText(Html.fromHtml(shopslink,0));
+
+        TextView fun =(TextView)findViewById(R.id.ParkFun);
+        fun.setClickable(true);
+        fun.setMovementMethod(LinkMovementMethod.getInstance());
+        String funlink = "<a href='https://foursquare.com/explore?mode=url&ne=55.932051%2C-3.291317&q=Fun&sw=55.921147%2C-3.317538'>Fun</a>";
+        fun.setText(Html.fromHtml(funlink,0));
+
+        TextView nightlife =(TextView)findViewById(R.id.ParkNightlife);
+        nightlife.setClickable(true);
+        nightlife.setMovementMethod(LinkMovementMethod.getInstance());
+        String nightlifelink = "<a href='https://foursquare.com/explore?mode=url&ne=55.932051%2C-3.291317&q=Nightlife&sw=55.921147%2C-3.317538'>Nightlife</a>";
+        nightlife.setText(Html.fromHtml(nightlifelink,0));
     }
 }

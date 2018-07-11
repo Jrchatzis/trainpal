@@ -53,7 +53,7 @@
         android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ParkNighlife"
+        app:layout_constraintTop_toBottomOf="@+id/ParkNightlife"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textParkSecond" />
 
     <TextView
-        android:id="@+id/WavereleyCoffee"
+        android:id="@+id/ParkCoffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -103,11 +103,11 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/WavereleyCoffee"
-        app:layout_constraintStart_toEndOf="@+id/WavereleyCoffee" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/ParkCoffee"
+        app:layout_constraintStart_toEndOf="@+id/ParkCoffee" />
 
     <TextView
-        android:id="@+id/ParkNighlife"
+        android:id="@+id/ParkNightlife"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

@@ -5,8 +5,13 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.codepoetics.protonpack.StreamUtils;
+import com.esri.arcgisruntime.geometry.CoordinateFormatter;
+import com.esri.arcgisruntime.geometry.Envelope;
+import com.esri.arcgisruntime.geometry.Geometry;
+import com.esri.arcgisruntime.geometry.GeometryEngine;
 import com.esri.arcgisruntime.geometry.Point;
 import com.esri.arcgisruntime.geometry.PointCollection;
 import com.esri.arcgisruntime.geometry.Polyline;
@@ -76,14 +81,14 @@ public class BusRoutingService implements RoutingService {
     private Map<String, Service> allServices;
     private TfeOpenDataService busService;
 
-    /**
-     * Constructor
-     * @param ctx
-     */
-    public BusRoutingService(Activity activity) {
+    ///**
+     //* Constructor
+     //* @param ctx
+     //*/
+    public BusRoutingService(Activity activity, EsriService esriService) {
         this.res = activity.getApplicationContext().getResources();
         this.ctx = activity.getApplicationContext();
-        this.esriService = new EsriService(activity);
+        this.esriService = esriService;
         this.busService = TfeOpenDataServiceFactory.getLocalService(ctx);
         try (InputStream is = res.openRawResource(R.raw.bus_services)) {
             this.servicesByStationPair = (Map<String,List<String>>)new ObjectMapper().readValue(is, Map.class);
@@ -129,14 +134,14 @@ public class BusRoutingService implements RoutingService {
                         .map(si -> new Point(
                                 si.getLon(),
                                 si.getLat(),
-                                SpatialReferences.getWebMercator()))
+                                SpatialReferences.getWgs84()))
                         ::iterator,
                 // facilities
                 allowedStops.stream()
                         .map(s -> new Point(
                                 s.getLongitude(),
                                 s.getLatitude(),
-                                SpatialReferences.getWebMercator()))
+                                SpatialReferences.getWgs84()))
                         ::iterator);
 
         List<DepartureFacility> departures = new ArrayList<>();
@@ -169,9 +174,17 @@ public class BusRoutingService implements RoutingService {
                 .map(departureFacility -> {
 
                     ClosestFacilityRoute route  = closestFacilityResult.getRoute(departureFacility.getIndex(), 0);
+                    if (route == null) {
+                        return null;
+                    }
                     LocalDateTime arrivalTimeToFacility = toLocalDateTime(route.getEndTime());
                     LocalTime nbf = arrivalTimeToFacility.toLocalTime(); // not before
+
                     Timetable departureTimetable = busService.getTimetable(departureFacility.getStop().getStopId());
+                    if (departureTimetable == null) {
+                        Log.w(BusRoutingService.class.getSimpleName(), "No timetable exists for departing stop " + departureFacility.getStop().getStopId());
+                        return null;
+                    }
                     List<DepartingService> hydratedDepartingServices = departureFacility.getDepartingServices()
                             .stream()
                             .map(departingService -> {
@@ -179,9 +192,15 @@ public class BusRoutingService implements RoutingService {
                                 LocalDateTime departureTime = nextArrival(departingService, departureTimetable, nbf);
                                 // Calculate arrival time
                                 Timetable destinationTimetable = busService.getTimetable(departingService.getLastPoint().getStopId());
+                                if (destinationTimetable == null) {
+                                    Log.w(BusRoutingService.class.getSimpleName(), "No timetable exists for arriving stop " + departingService.getLastPoint().getStopId());
+                                    return null;
+                                }
                                 LocalDateTime arrivalTime = nextArrival(departingService, destinationTimetable, nbf);
                                 ClosestFacilityRoute route2  = closestFacilityResult.getRoute(stopIdToStopIndex.get(departingService.getLastPoint().getStopId()), 1);
-
+                                if (route2 == null) {
+                                    return null;
+                                }
                                 return new DepartingServiceBuilder()
                                         .from(departingService)
                                         .firstRoute(route)
@@ -191,13 +210,16 @@ public class BusRoutingService implements RoutingService {
                                         .build();
 
                             })
+                            .filter(Objects::nonNull)
                             .collect(toList());
+
                     return new DepartureFacilityBuilder()
                             .from(departureFacility)
                             .arrivalTime(arrivalTimeToFacility)
                             .departingServices(hydratedDepartingServices)
                             .build();
                 })
+                .filter(Objects::nonNull)
                 .collect(Collectors.toList());
 
         // Now we should be able to rank the departure facilities...
@@ -206,27 +228,31 @@ public class BusRoutingService implements RoutingService {
                 .findFirst()
                 .get();
         GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
-        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.DASH_DOT, Color.LTGRAY, 2.0f);
-        LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GRAY, 2.0f);
+        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.DASH_DOT, Color.GRAY, 5.0f);
+        LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 5.0f);
 
         // walk to the closest bus station
-        graphicsOverlay.getGraphics().add(new Graphic(fastestDeparture.getFastestDepartingService().getFirstRoute().getRouteGeometry(), pedestrianRouteSymbol));
+        Polyline firstRouteGeometry = fastestDeparture.getFastestDepartingService().getFirstRoute().getRouteGeometry();
+        graphicsOverlay.getGraphics().add(new Graphic(firstRouteGeometry, pedestrianRouteSymbol));
 
         // travel with the bus
         Polyline busStopGeometry = new Polyline(
                                         new PointCollection(
-                                                fastestDeparture
-                                                        .getFastestDepartingService()
-                                                        .getPoints()
-                                                        .stream()
-                                                        .map(stop -> new Point(stop.getLongitude(), stop.getLatitude(), SpatialReferences.getWebMercator()))
-                                                        ::iterator
+                                                Stream.concat(
+                                                        Stream.of(fastestDeparture.getStop()),
+                                                        fastestDeparture.getFastestDepartingService()
+                                                            .getPoints()
+                                                            .stream()
+                                                    )
+                                                    .map(stop -> new Point(stop.getLongitude(), stop.getLatitude(), SpatialReferences.getWgs84()))
+                                                    .collect(toList())
                                         ));
         graphicsOverlay.getGraphics().add(new Graphic(busStopGeometry, busRouteSymbol));
 
         // walk from the bus station to the destination train station
-        graphicsOverlay.getGraphics().add(new Graphic(fastestDeparture.getFastestDepartingService().getSecondRoute().getRouteGeometry(), pedestrianRouteSymbol));
-
+        Geometry secondRouteGeometry = fastestDeparture.getFastestDepartingService().getSecondRoute().getRouteGeometry();
+        graphicsOverlay.getGraphics().add(new Graphic(secondRouteGeometry, pedestrianRouteSymbol));
+        Envelope fullExtent = GeometryEngine.union(Stream.of(firstRouteGeometry, busStopGeometry, secondRouteGeometry).collect(toList())).getExtent();
         List<DirectionManeuver> directionManeuvers = Stream
                 .concat(
                     // directions for walking to the closest bus station
@@ -240,6 +266,7 @@ public class BusRoutingService implements RoutingService {
         return new RoutingResultBuilder()
                 .graphicsOverlay(graphicsOverlay)
                 .directionManeuvers(directionManeuvers)
+                .fullExtent(fullExtent)
                 .build();
     }
 
@@ -279,13 +306,17 @@ public class BusRoutingService implements RoutingService {
     private DepartingService toDepartingService(Service service, Stop departure, List<Stop> allowedDestinations) {
         for (Service.Route route : service.getRoutes()) {
             // start from the next point after the departure
-            List<Stop> stops = StreamUtils.skipUntilInclusive(route.getPoints().stream(), point -> point.getStopId() == departure.getStopId())
+            List<Stop> stops = StreamUtils.skipUntilInclusive(
+                            route.getPoints().stream(),
+                            point -> point.getStopId() == departure.getStopId().intValue()
+                    )
                     .map(point -> allStops.get(point.getStopId()))
+                    .filter(Objects::nonNull)
                     .collect(toList());
 
             for (Stop allowedDestination : allowedDestinations) {
                 if (stops.indexOf(allowedDestination) != -1) {
-                    stops = stops.subList(0, stops.indexOf(allowedDestination));
+                    stops = stops.subList(0, stops.indexOf(allowedDestination)+1);
                     break;
                 }
             }

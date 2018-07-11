@@ -70,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textGatewaySecond" />
 
     <TextView
-        android:id="@+id/WavereleyCoffee"
+        android:id="@+id/GatewayCoffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -103,8 +103,8 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/WavereleyCoffee"
-        app:layout_constraintStart_toEndOf="@+id/WavereleyCoffee" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/GatewayCoffee"
+        app:layout_constraintStart_toEndOf="@+id/GatewayCoffee" />
 
     <TextView
         android:id="@+id/GatewayNighlife"

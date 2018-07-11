@@ -1,6 +1,7 @@
 package com.example.john.tfe;
 
 import android.content.res.Resources;
+import android.util.Log;
 
 import com.example.john.travelinfo.R;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,12 +30,13 @@ public class TfeOpenDataServiceLocal implements TfeOpenDataService {
 
     @Override
     public Timetable getTimetable(int stopId) {
-        String fieldName = String.format("tfe_tt_%i", stopId);
+        String fieldName = String.format("tfe_tt_%d", stopId);
         try {
             int resourceId = R.raw.class.getDeclaredField(fieldName).getInt(null);
             return readJson(resourceId, Timetable.class);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Log.e(TfeOpenDataServiceLocal.class.getSimpleName(), "Failed to get timetable", e);
+            return null;
         }
     }
 

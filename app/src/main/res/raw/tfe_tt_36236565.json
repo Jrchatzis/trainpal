@@ -1,0 +1,490 @@
+{
+  "stop_id": 36236565,
+  "stop_name": "Shandwick",
+  "departures": [
+    {
+      "service_name": "100",
+      "time": "00:12",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "00:48",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "01:25",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "01:43",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "02:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "02:35",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:28",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:57",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "03:48",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "04:24",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "04:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "05:10",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "05:34",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "06:11",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "06:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "07:15",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "07:57",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "08:23",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "08:43",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "09:07",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "09:54",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "10:01",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "10:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "11:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "11:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "12:28",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "12:54",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "13:01",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "13:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "14:04",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "14:55",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "15:22",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "15:50",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "16:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "16:55",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "17:23",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "17:59",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "18:10",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "18:34",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "19:20",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "19:53",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "20:06",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "20:43",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "21:13",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "21:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "22:23",
+      "destination": "Airport"
+    },{
+      "service_name": "100",
+      "time": "22:55",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "23:09",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "23:34",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "100",
+      "time": "00:13",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "00:42",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "01:18",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "01:38",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "02:10",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "02:30",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "03:20",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "03:50",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "03:22",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "03:43",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "04:18",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "04:43",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "05:07",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "05:30",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "06:10",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "06:42",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "07:13",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "07:54",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "08:20",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "08:40",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "09:03",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "09:51",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "10:00",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "10:44",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "11:22",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "11:42",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "12:24",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "12:50",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "13:00",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "13:42",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "14:02",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "14:53",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "15:18",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "15:46",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "16:14",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "16:52",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "17:21",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "17:54",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "18:04",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "18:32",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "19:18",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "19:52",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "20:04",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "20:40",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "21:10",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "21:42",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "22:21",
+      "destination": "Waverley Bridge"
+    },{
+      "service_name": "100",
+      "time": "22:52",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "23:04",
+      "destination": "Waverley Bridge"
+    },
+    {
+      "service_name": "100",
+      "time": "23:32",
+      "destination": "Waverley Bridge"
+    }
+  ]
+}

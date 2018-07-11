@@ -1,0 +1,490 @@
+{
+  "stop_id": 36290126,
+  "stop_name": "Murrayfield Stadium",
+  "departures": [
+    {
+      "service_name": "T50",
+      "time": "00:17",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "00:42",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "01:24",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "01:42",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "02:18",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "02:36",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:28",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:57",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:26",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "04:24",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "04:48",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "05:15",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "05:39",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "06:17",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "06:46",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "07:15",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "07:57",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "08:28",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "08:48",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "09:17",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "09:59",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "10:11",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "10:39",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "11:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "11:59",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "12:24",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "12:44",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "13:11",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "13:48",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "14:14",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "14:57",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "15:32",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "15:56",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "16:58",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "16:58",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "17:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "17:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "18:17",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "18:39",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "19:27",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "19:56",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "20:16",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "20:47",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "21:15",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "21:49",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "22:26",
+      "destination": "Airport"
+    },{
+      "service_name": "T50",
+      "time": "22:53",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "23:04",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "23:38",
+      "destination": "Airport"
+    },
+    {
+      "service_name": "T50",
+      "time": "00:15",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "00:47",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "01:13",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "01:35",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "02:17",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "02:38",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:23",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:57",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:25",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "03:46",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "04:13",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "04:45",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "05:17",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "05:38",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "06:15",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "06:47",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "07:17",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "07:44",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "08:28",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "08:45",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "09:13",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "09:57",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "10:09",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "10:47",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "11:25",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "11:48",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "12:25",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "12:57",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "13:04",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "13:47",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "14:07",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "14:56",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "15:15",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "15:43",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "16:24",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "16:58",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "17:25",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "17:57",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "18:14",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "18:38",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "19:28",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "19:57",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "20:14",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "20:46",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "21:14",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "21:48",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "22:24",
+      "destination": "York Place"
+    },{
+      "service_name": "T50",
+      "time": "22:58",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "23:14",
+      "destination": "York Place"
+    },
+    {
+      "service_name": "T50",
+      "time": "23:36",
+      "destination": "York Place"
+    }
+  ]
+}

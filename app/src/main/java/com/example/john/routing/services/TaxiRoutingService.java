@@ -17,10 +17,10 @@ public class TaxiRoutingService implements RoutingService {
     private final Context ctx;
     private final EsriService esriService;
 
-    public TaxiRoutingService(Activity activity) {
+    public TaxiRoutingService(Activity activity, EsriService esriService) {
         this.res = activity.getApplicationContext().getResources();
         this.ctx = activity.getApplicationContext();
-        this.esriService = new EsriService(activity);
+        this.esriService = esriService;
     }
 
     @Override
