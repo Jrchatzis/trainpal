@@ -1,0 +1,513 @@
+{
+  "stop_id": 36236587,
+  "stop_name": "Glebe Road,
+  "departures": [
+    {
+      "service_name": "12",
+      "time": "07:17",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "07:45",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "08:12",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "08:48",
+      "destination": "Seafield"
+    },{
+      "service_name": "12",
+      "time": "09:29",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "09:19",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "10:16",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "10:47",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "11:12",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "11:47",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "12:15",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "12:57",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "13:29",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "13:39",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "14:12",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "14:59",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "15:24",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "15:48",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "16:13",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "16:57",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "17:09",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "17:44",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "18:12",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "18:56",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "19:29",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "19:42",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "20:17",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "20:46",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "21:11",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "21:46",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "12:19",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "12:48",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "23:18",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "12",
+      "time": "23:56",
+      "destination": "Seafield"
+    },
+    {
+      "service_name": "31",
+      "time": "07:17",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "07:45",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "08:31",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "08:48",
+      "destination": "Hopefield"
+    },{
+      "service_name": "31",
+      "time": "09:29",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "09:19",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "10:16",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "10:47",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "11:31",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "11:47",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "31:15",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "31:57",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "13:29",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "13:39",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "14:31",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "14:59",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "15:24",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "15:48",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "16:13",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "16:57",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "17:09",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "17:44",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "18:31",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "18:56",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "19:29",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "19:42",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "20:17",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "20:46",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "21:11",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "21:46",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "31:19",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "31:48",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "23:18",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "31",
+      "time": "23:56",
+      "destination": "Hopefield"
+    },
+    {
+      "service_name": "26",
+      "time": "07:17",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "07:45",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "08:26",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "08:48",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "09:29",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "09:19",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "10:16",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "10:47",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "11:26",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "11:47",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "26:15",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "26:57",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "13:29",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "13:39",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "14:26",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "14:59",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "15:24",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "15:48",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "16:13",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "16:57",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "17:09",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "17:44",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "18:26",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "18:56",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "19:29",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "19:42",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "20:17",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "20:46",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "21:11",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "21:46",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "26:19",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "26:48",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "23:18",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "23:56",
+      "destination": "Seton Sands"
+    }
+      ]
+}

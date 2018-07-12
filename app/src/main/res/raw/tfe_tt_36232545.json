@@ -1,0 +1,510 @@
+{
+  "stop_id": 36232545,
+  "stop_name": "Princess Street",
+  "departures": [
+    {
+      "service_name": "12",
+      "time": "07:17",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "07:45",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "08:26",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "08:48",
+      "destination": "Gyle"
+    },{
+      "service_name": "12",
+      "time": "09:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "09:19",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "10:16",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "10:47",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "11:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "11:47",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "12:15",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "12:57",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "13:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "13:39",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "14:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "14:59",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "15:24",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "15:48",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "16:13",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "16:57",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "17:09",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "17:44",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "18:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "18:56",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "19:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "19:42",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "20:17",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "20:46",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "21:11",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "21:46",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "22:19",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "22:48",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "12",
+      "time": "23:18",
+      "destination": "Gyle"
+    },
+
+    {
+      "service_name": "31",
+      "time": "07:17",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "07:45",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "08:26",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "08:48",
+      "destination": "Gyle"
+    },{
+      "service_name": "31",
+      "time": "09:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "09:19",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "10:16",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "10:47",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "11:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "11:47",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "12:15",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "12:57",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "13:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "13:39",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "14:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "14:59",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "15:24",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "15:48",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "16:13",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "16:57",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "17:09",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "17:44",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "18:25",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "18:56",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "19:29",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "19:42",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "20:17",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "20:46",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "21:11",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "21:46",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "31:19",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "31:48",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "23:18",
+      "destination": "Gyle"
+    },
+    {
+      "service_name": "31",
+      "time": "23:56",
+      "destination": "Gyle"
+    },
+
+    {
+      "service_name": "26",
+      "time": "07:17",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "07:45",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "08:26",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "08:48",
+      "destination": "Clerwood"
+    },{
+      "service_name": "26",
+      "time": "09:29",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "09:19",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "10:16",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "10:47",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "11:25",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "11:47",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "12:15",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "12:57",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "13:29",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "13:39",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "14:25",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "14:59",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "15:24",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "15:48",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "16:13",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "16:57",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "17:09",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "17:44",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "18:25",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "18:56",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "19:29",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "19:42",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "20:17",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "20:46",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "21:11",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "21:46",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "26:19",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "26:48",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "23:18",
+      "destination": "Clerwood"
+    },
+    {
+      "service_name": "26",
+      "time": "23:56",
+      "destination": "Clerwood"
+    }
+  ]
+}
