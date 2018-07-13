@@ -1,0 +1,248 @@
+{
+  "stop_id": 36232496,
+    "stop_name": "South St Da",
+  "departures": [
+    {
+      "service_name": "26",
+      "time": "00:12",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "00:48",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "01:25",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "01:43",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "02:18",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "02:35",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "03:28",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "03:57",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "03:27",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "03:48",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "04:24",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "04:49",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "05:10",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "05:34",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "06:11",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "06:44",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "07:15",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "07:57",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "08:23",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "08:43",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "09:07",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "09:54",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "10:01",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "10:49",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "11:23",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "11:49",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "12:28",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "12:54",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "13:01",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "13:44",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "14:04",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "14:55",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "15:22",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "15:50",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "16:18",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "16:55",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "17:23",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "17:59",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "18:10",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "18:34",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "19:20",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "19:53",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "20:06",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "20:43",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "21:13",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "21:44",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "22:23",
+      "destination": "Seton Sands"
+    },{
+      "service_name": "26",
+      "time": "22:55",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "23:09",
+      "destination": "Seton Sands"
+    },
+    {
+      "service_name": "26",
+      "time": "23:34",
+      "destination": "Seton Sands"
+    }
+  ]
+}
