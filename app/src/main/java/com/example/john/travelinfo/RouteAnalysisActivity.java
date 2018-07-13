@@ -2,7 +2,10 @@ package com.example.john.travelinfo;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.Manifest;
@@ -29,12 +32,14 @@ import com.esri.arcgisruntime.mapping.view.GraphicsOverlay;
 import com.esri.arcgisruntime.mapping.view.LocationDisplay;
 import com.esri.arcgisruntime.mapping.view.MapView;
 import com.esri.arcgisruntime.symbology.LineSymbol;
+import com.esri.arcgisruntime.symbology.PictureMarkerSymbol;
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol;
 import com.example.john.config.TrainStationInfo;
 import com.example.john.routing.services.BusRoutingService;
 import com.example.john.routing.api.RoutingResult;
 import com.example.john.routing.api.RoutingService;
 import com.example.john.routing.services.EsriService;
+import com.example.john.routing.services.TaxiRoutingService;
 
 import java.util.ArrayList;
 import java.util.Timer;
@@ -51,6 +56,8 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     private MapView mMapView;
     private LocationDisplay mLocationDisplay;
     private Spinner mSpinner;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private DrawerLayout mDrawerLayout;
 
     private int requestCode = 2;
     String[] reqPermissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -87,18 +94,10 @@ public class RouteAnalysisActivity extends AppCompatActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
+                        drawAlternativeRoute(new TaxiRoutingService(RouteAnalysisActivity.this, esriService));
                         drawAlternativeRoute(new BusRoutingService(RouteAnalysisActivity.this, esriService));
                     }
                 }, 0L);
-
-                /*
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        drawAlternativeRoute(new TaxiRoutingService(getApplicationContext(), esriService));
-                    }
-                }, 0L);
-                */
             });
         });
 
@@ -222,6 +221,7 @@ public class RouteAnalysisActivity extends AppCompatActivity {
             runOnUiThread(()->{
                 mMapView.setViewpointGeometryAsync(route.getFullExtent(), 10);
                 mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
+
             });
         } catch (Exception e) {
             e.printStackTrace();
@@ -246,6 +246,8 @@ public class RouteAnalysisActivity extends AppCompatActivity {
             mSpinner.setSelection(0, true);
         }
     }
+
+
 
     @Override
     protected void onPause() {

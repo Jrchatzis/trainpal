@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.codepoetics.protonpack.StreamUtils;
@@ -18,7 +20,9 @@ import com.esri.arcgisruntime.geometry.Polyline;
 import com.esri.arcgisruntime.geometry.SpatialReferences;
 import com.esri.arcgisruntime.mapping.view.Graphic;
 import com.esri.arcgisruntime.mapping.view.GraphicsOverlay;
+import com.esri.arcgisruntime.mapping.view.MapView;
 import com.esri.arcgisruntime.symbology.LineSymbol;
+import com.esri.arcgisruntime.symbology.PictureMarkerSymbol;
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityParameters;
 import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityResult;
@@ -58,6 +62,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.TimeZone;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -80,6 +85,10 @@ public class BusRoutingService implements RoutingService {
     private Map<Integer, Stop> allStops;
     private Map<String, Service> allServices;
     private TfeOpenDataService busService;
+    private Point mSourcePoint;
+    private Point msourcePoint2;
+    private GraphicsOverlay mGraphicsOverlay;
+    private MapView mMapView;
 
     ///**
      //* Constructor
@@ -108,14 +117,15 @@ public class BusRoutingService implements RoutingService {
     @Override
     public RoutingResult route(TrainStationInfo departureStation, TrainStationInfo destinationStation) throws Exception {
 
+        // calculate key to find candidate service names from bus_services.json
         String stationPairKey = Stream
                 .of(
                     departureStation.name(),
                     destinationStation.name())
                 .sorted()
                 .collect(joining("_"));
-
         List<String> allowedServiceNames = servicesByStationPair.get(stationPairKey);
+
         Predicate<Service> allowedServiceFilter = service -> allowedServiceNames.contains(service.getName());
         Map<String,Service> allowedServices = allServices.values().stream().filter(allowedServiceFilter).collect(toMap(Service::getName, java.util.function.Function.identity()));
         List<Integer> allowedStopIds = allowedServices.values().stream().flatMap(Service::getStopIds).distinct().collect(toList());
@@ -228,8 +238,9 @@ public class BusRoutingService implements RoutingService {
                 .findFirst()
                 .get();
         GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
-        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.DASH_DOT, Color.GRAY, 5.0f);
+        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GREEN, 5.0f);
         LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 5.0f);
+
 
         // walk to the closest bus station
         Polyline firstRouteGeometry = fastestDeparture.getFastestDepartingService().getFirstRoute().getRouteGeometry();

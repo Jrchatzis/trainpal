@@ -31,4 +31,7 @@
     <string name="title_activity_po_i">PoIActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_poi">PoiActivity</string>
+    <!-- Drawer strings-->
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>
