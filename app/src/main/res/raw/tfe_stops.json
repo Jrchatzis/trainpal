@@ -32,7 +32,7 @@
       ]
     },
     {
-      "stop_id": 362379299,
+      "stop_id": 36245858,
       "name": "Edinburgh Park Street",
       "latitude": 55.927810,
       "longitude": -3.308246,
@@ -47,7 +47,7 @@
     },
     {
       "stop_id": 36232635,
-      "name": "Haymarket Station",
+      "name": "West Maitland",
       "latitude": 55.945571,
       "longitude": -3.217324,
       "service_type": "bus",
@@ -193,6 +193,3144 @@
       ],
       "services": [
         "N25"
+      ]
+    },
+    {
+      "stop_id": 36236565,
+      "name": "Shandwick",
+      "latitude": 55.949945,
+      "longitude": -3.208636,
+      "service_type": "bus",
+      "destinations": [
+        "Airport",
+        "Waverley Bridge"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36232645,
+      "name": "Wester Coates",
+      "latitude":55.945706 ,
+      "longitude": -3.228126,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36239682,
+      "name": "Murrayfield",
+      "latitude": 55.945667,
+      "longitude": -3.240051,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236578,
+      "name": "Western corner",
+      "latitude": 55.944596,
+      "longitude": -3.252493,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235756,
+      "name": "Edinburgh Zoo",
+      "latitude": 55.942074,
+      "longitude": -3.268043,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235764,
+      "name": "Drum Brae South",
+      "latitude": 55.942853,
+      "longitude": -3.291389,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232425,
+      "name": "Airport hotel",
+      "latitude": 55.943496,
+      "longitude": -3.361071,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "100",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36232426,
+      "name": "Airport stance",
+      "latitude": 55.948365,
+      "longitude": -3.363188,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36232427,
+      "name": "Airport Hotel",
+      "latitude": 55.942973,
+      "longitude": -3.360620,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "100",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236596,
+      "name": "Maybury",
+      "latitude": 55.940838,
+      "longitude": -3.311675,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36243478,
+      "name": "Drum Brae South",
+      "latitude": 55.942899,
+      "longitude": -3.291850,
+      "service_type": "bus",
+      "destinations": [
+        "Airport",
+        "Waverley Bridge",
+        "Gyle Seafield",
+        "East Craigs",
+        "Hopefield",
+        "Clerwood",
+        "Seton Sands"
+
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36253682,
+      "name": "Edinburgh Zoo",
+      "latitude": 55.942341,
+      "longitude": -3.267008,
+      "service_type": "bus",
+      "destinations": [
+        "Airport",
+        "Waverley Bridge"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36236585,
+      "name": "	Western Corner",
+      "latitude": 55.944969,
+      "longitude": -3.250150,
+      "service_type": "bus",
+      "destinations": [
+        "Airport",
+        "Waverley Bridge",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "26",
+        "31"
+      ]
+    },
+    {
+      "stop_id": 36232652,
+      "name": "Murrayfield",
+      "latitude": 55.945734,
+      "longitude": -3.240397,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232654,
+      "name": "Wester Coates",
+      "latitude": 55.945790,
+      "longitude": -3.228850,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport",
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "100",
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236568,
+      "name": "	Shandwick",
+      "latitude": 55.949844,
+      "longitude": -3.208995,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36253282,
+      "name": "Princess Street",
+      "latitude": 55.951489,
+      "longitude": -3.200135,
+      "service_type": "bus",
+      "destinations": [
+        "Waverley Bridge",
+        "Airport"
+      ],
+      "services": [
+        "100"
+      ]
+    },
+    {
+      "stop_id": 36298792,
+      "name": "North Station",
+      "latitude": 55.952249,
+      "longitude": -3.194964,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36232545,
+      "name": "Princess street",
+      "latitude": 55.951016,
+      "longitude":-3.201942,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "31",
+        "12",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236567,
+      "name": "Shandwick",
+      "latitude": 55.949517,
+      "longitude": -3.209420,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236576,
+      "name": "Atholl Crescent",
+      "latitude": 55.947844,
+      "longitude": -3.213370,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Leith Street",
+        "Riccarton",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "N25",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232643,
+      "name": "Magdala Crescent",
+      "latitude": 55.945893,
+      "longitude": -3.224804,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232646,
+      "name": "Kew Terrace",
+      "latitude": 55.945593,
+      "longitude": -3.230163,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232647,
+      "name": "Roseburn Gardens",
+      "latitude": 55.945932,
+      "longitude": -3.236236,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232649,
+      "name": "Murrayfield Road",
+      "latitude": 55.945162,
+      "longitude": -3.245281,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236579,
+      "name": "Balgreen Road",
+      "latitude": 55.943322,
+      "longitude": -3.259150,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236582,
+      "name": "Pinkhill",
+      "latitude": 55.942404,
+      "longitude": 	-3.264566,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235757,
+      "name": "Forestry Commission",
+      "latitude": 55.941725,
+      "longitude": -3.271099,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235758,
+      "name": "Belgrave Road",
+      "latitude": 55.941897,
+      "longitude": -3.275181,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235759,
+      "name": "St John’s Terrace",
+      "latitude": 55.942215,
+      "longitude": -3.277861,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235762,
+      "name": "Kirk Loan",
+      "latitude": 55.942683,
+      "longitude": -3.281797,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235763,
+      "name": "St Ninian’s Road",
+      "latitude": 55.943047,
+      "longitude": -3.286809,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+
+      ]
+    },
+    {
+      "stop_id": 36235765,
+      "name": "Meadowplace Road",
+      "latitude": 55.941966,
+      "longitude": -3.292876,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36235767,
+      "name": "Gylemuir Road",
+      "latitude": 55.940902,
+      "longitude": -3.292416,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236786,
+      "name": "Broomhall",
+      "latitude": 55.937562,
+      "longitude": -3.291708,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236787,
+      "name": "Western Broom",
+      "latitude": 55.935561,
+      "longitude": -3.289718,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236793,
+      "name": "Forrester Park Avenue",
+      "latitude": 55.932513,
+      "longitude": -3.287154,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36237972,
+      "name": "	Broomhouse Road",
+      "latitude": 55.929296,
+      "longitude": -3.287173,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236828,
+      "name": "Bankhead",
+      "latitude":55.929010 ,
+      "longitude": -3.290031,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36253274,
+      "name": "South Gyle Access",
+      "latitude": 55.929868,
+      "longitude": 	-3.292053,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236829,
+      "name": "	Forrester High Street",
+      "latitude": 55.931855,
+      "longitude": -3.293476,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236858,
+      "name": "	South Gyle Wynd",
+      "latitude": 55.932583,
+      "longitude": 	-3.295733,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236859,
+      "name": "South Gyle",
+      "latitude": 55.932927,
+      "longitude": -3.297624,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236862,
+      "name": "South Gyle Broad",
+      "latitude":55.934130 ,
+      "longitude": 	-3.304111,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36243989,
+      "name": "Redheughs Avenue",
+      "latitude":55.933115 ,
+      "longitude": -3.308959,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36247457,
+      "name": "Lochside Place",
+      "latitude": 55.933268,
+      "longitude": -3.314292,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id":36247456 ,
+      "name": "Lochside Crescent",
+      "latitude": 55.934704,
+      "longitude": -3.316105,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36242468,
+      "name": "Gyle Centre",
+      "latitude": 55.938125,
+      "longitude": -3.314322,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36247694,
+      "name": "Lochside Crescent",
+      "latitude": 55.934683,
+      "longitude":-3.315999 ,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36247426,
+      "name": "Lochside Place",
+      "latitude": 55.933132,
+      "longitude": -3.313473,
+      "service_type": "bus",
+      "destinations": [
+        "Gyle",
+        "Seafield",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36245242,
+      "name": "Redheughs Avenue",
+      "latitude": 55.933153,
+      "longitude": -3.309346,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236839,
+      "name": "Redheughs Avenue",
+      "latitude": 55.934033,
+      "longitude": -3.307646,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236854,
+      "name": "South Gyle Park",
+      "latitude":55.934258 ,
+      "longitude": -3.303914,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236856,
+      "name": "South Gyle Mains",
+      "latitude": 55.933531,
+      "longitude": -3.300022,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236857,
+      "name": "South Gyle Wynd",
+      "latitude": 55.933081,
+      "longitude": -3.297571,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22"
+      ]
+    },
+    {
+      "stop_id": 36236863,
+      "name": "Forrester High Street",
+      "latitude": 55.931253,
+      "longitude": 	-3.292708,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Airport",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36253275,
+      "name": "Bankhead Drive",
+      "latitude": 55.929813,
+      "longitude": -3.291722,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236827,
+      "name": "Broomhouse Round",
+      "latitude": 55.929422,
+      "longitude": -3.286730,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Airport",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236792,
+      "name": "Forrester Park Avenue",
+      "latitude": 55.933331,
+      "longitude": -3.287899,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236789,
+      "name": "Western Broom",
+      "latitude": 55.936353,
+      "longitude": -3.290622,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236785,
+      "name": "Broomhall",
+      "latitude": 55.938384,
+      "longitude": -3.292640,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36242835,
+      "name": "Meadowplace Road",
+      "latitude": 55.941946,
+      "longitude": -3.293025,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle"
+      ],
+      "services": [
+        "12"
+      ]
+    },
+    {
+      "stop_id": 36236589,
+      "name": "St Ninian’s Road",
+      "latitude": 55.943184,
+      "longitude":-3.286985 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236587,
+      "name": "Glebe Road",
+      "latitude": 55.942922,
+      "longitude": -3.283664,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "East Craigs",
+        "Hopefield",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36238768,
+      "name": "Station Road",
+      "latitude": 55.942487,
+      "longitude":-3.279260 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "East Craigs",
+        "Hopefield",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236586,
+      "name": "Belgrave Road",
+      "latitude": 55.941867,
+      "longitude": -3.273383,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "East Craigs",
+        "Hopefield",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235925,
+      "name": "	Edinburgh Zoo",
+      "latitude": 55.942289,
+      "longitude": -3.267316,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236583,
+      "name": "Pinkhill",
+      "latitude": 55.942492,
+      "longitude":-3.265268 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236584,
+      "name": "Balgreen Road",
+      "latitude": 55.944025,
+      "longitude": -3.257338,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36238343,
+      "name": "Belmont Crescent",
+      "latitude":55.944457 ,
+      "longitude": -3.254704,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36239658,
+      "name": "Murrayfield Road",
+      "latitude": 55.945322,
+      "longitude": -3.244503,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232653,
+      "name": "Roseburn Gardens",
+      "latitude": 55.945755,
+      "longitude": -3.235131,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232656,
+      "name": "Magdala Crescent",
+      "latitude": 55.946016,
+      "longitude":-3.222793 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232637,
+      "name": "Maitland",
+      "latitude":55.949627 ,
+      "longitude": -3.209498,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Hopefield",
+        "East Craigs",
+        "Clerwood",
+        "Seton Sands"
+      ],
+      "services": [
+        "12",
+        "31",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236572,
+      "name": "Shandwick",
+      "latitude": 55.950938,
+      "longitude": -3.203272,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Leith Street",
+        "Riccarton",
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "12",
+        "N25",
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36235973,
+      "name": "Princess Street",
+      "latitude": 55.953213,
+      "longitude": -3.199687,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal",
+        "Airport",
+        "Riccarton",
+        "Leith Street"
+      ],
+      "services": [
+        "12",
+        "N22",
+        "N25",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36253729,
+      "name": "George Street",
+      "latitude": 55.953935,
+      "longitude": -3.195451,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "12",
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36232379,
+      "name": "George Street",
+      "latitude": 55.953924,
+      "longitude": -3.195489,
+      "service_type": "bus",
+      "destinations": [
+        "Seafield",
+        "Gyle",
+        "Ocean Terminal"
+      ],
+      "services": [
+        "12",
+        "22"
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
+      ]
+    },
+    {
+      "stop_id": ,
+      "name": "",
+      "latitude": ,
+      "longitude": ,
+      "service_type": "bus",
+      "destinations": [
+        "",
+        ""
+      ],
+      "services": [
+        ""
       ]
     }
   ]
