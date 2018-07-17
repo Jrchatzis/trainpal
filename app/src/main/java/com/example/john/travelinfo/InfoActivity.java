@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 public class InfoActivity extends AppCompatActivity {
 
+    //Screen presenting information concerning the application
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

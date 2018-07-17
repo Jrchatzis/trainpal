@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity  implements View.OnClickList
         reportCard.setOnClickListener(this);
         offCard.setOnClickListener(this);
     }
-
+    //Selection of different screens from the home screen
     @Override
     public void onClick(View v) {
         Intent i;

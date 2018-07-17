@@ -63,7 +63,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
                 startActivity(intent);
             });
     }
-
+    //Populate list with the available trains based in a timewindow of 2 hours from the time the user makes the search
     public List<TrainService> getAvailableTrains(TrainStationInfo departure, TrainStationInfo destination, TimeString timeString){
         DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
         int offset = 0;

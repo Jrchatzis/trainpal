@@ -2,6 +2,7 @@ package com.example.john.travelinfo;
 
 import java.io.Serializable;
 
+//Class containing information about the train services
 public class TrainService implements Serializable {
 
     private String delayReason;
@@ -10,7 +11,7 @@ public class TrainService implements Serializable {
     private String eta;
     private String ata;
 
-
+    //Setter for
     public void setAta(String ata) {
         this.ata = ata;
     }
@@ -68,6 +69,6 @@ public class TrainService implements Serializable {
     @Override
     public String toString() {
 
-        return id + ": " + sta;
+        return "                                      " + sta ;
     }
 }

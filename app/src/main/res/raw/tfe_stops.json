@@ -424,7 +424,7 @@
     },
     {
       "stop_id": 36236585,
-      "name": "	Western Corner",
+      "name": "Western Corner",
       "latitude": 55.944969,
       "longitude": -3.250150,
       "service_type": "bus",
@@ -493,7 +493,7 @@
     },
     {
       "stop_id": 36236568,
-      "name": "	Shandwick",
+      "name": "Shandwick",
       "latitude": 55.949844,
       "longitude": -3.208995,
       "service_type": "bus",
@@ -894,7 +894,7 @@
     },
     {
       "stop_id": 36237972,
-      "name": "	Broomhouse Road",
+      "name": "Broomhouse Road",
       "latitude": 55.929296,
       "longitude": -3.287173,
       "service_type": "bus",
@@ -948,7 +948,7 @@
     },
     {
       "stop_id": 36236829,
-      "name": "	Forrester High Street",
+      "name": "Forrester High Street",
       "latitude": 55.931855,
       "longitude": -3.293476,
       "service_type": "bus",
@@ -966,7 +966,7 @@
     },
     {
       "stop_id": 36236858,
-      "name": "	South Gyle Wynd",
+      "name": "South Gyle Wynd",
       "latitude": 55.932583,
       "longitude": 	-3.295733,
       "service_type": "bus",
@@ -1394,7 +1394,7 @@
     },
     {
       "stop_id": 36235925,
-      "name": "	Edinburgh Zoo",
+      "name": "Edinburgh Zoo",
       "latitude": 55.942289,
       "longitude": -3.267316,
       "service_type": "bus",
@@ -1626,1711 +1626,2544 @@
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36236592 ,
+      "name": "Craigs Avenue",
+      "latitude": 55.942224,
+      "longitude": -3.295717,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236593,
+      "name": "Craigs Gardens",
+      "latitude": 55.941734,
+      "longitude": -3.299128,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236594,
+      "name": "North Gyle Road",
+      "latitude": 55.941399,
+      "longitude": -3.302540,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236595,
+      "name": "Dechmont Road",
+      "latitude": 55.940988,
+      "longitude": -3.307384,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232436,
+      "name": "South Maybury",
+      "latitude": 55.941829,
+      "longitude": -3.312872,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232437,
+      "name": "Craig Road",
+      "latitude": 55.947871,
+      "longitude": -3.314363,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232438,
+      "name": "Almond Green",
+      "latitude": 55.949511,
+      "longitude":-3.312183 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232439,
+      "name": "Hayfield",
+      "latitude": 55.949776,
+      "longitude": -3.308784,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232458,
+      "name": "Bughtlin Drive",
+      "latitude": 55.954112,
+      "longitude": -3.306872,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232452,
+      "name": "N Bughtlin Gate",
+      "latitude": 55.954100,
+      "longitude":-3.306866 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36253593,
+      "name": "East Craigs Cent",
+      "latitude": 55.952148,
+      "longitude": -3.303580,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232454,
+      "name": "Bughtlin Park",
+      "latitude": 55.952112,
+      "longitude": -3.304005,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232456,
+      "name": "Burnside",
+      "latitude": 55.951876,
+      "longitude": -3.307051,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232457,
+      "name": "Almond Green",
+      "latitude": 55.949338,
+      "longitude": -3.312145,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235898,
+      "name": "Craigs Road",
+      "latitude": 55.946984,
+      "longitude":-3.314167 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36235923 ,
+      "name": "Noth Gyle Terrace",
+      "latitude":55.941937 ,
+      "longitude": -3.312688,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36237924,
+      "name": "Dechmont Road",
+      "latitude": 55.941198,
+      "longitude": -3.35962,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36237926,
+      "name": "North Gyle Road",
+      "latitude": 55.941645,
+      "longitude": -3.300986,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36237925,
+      "name": "Craigs Avenue",
+      "latitude": 55.942263,
+      "longitude": -3.296291,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232636,
+      "name": "W Maitland",
+      "latitude": 55.946741,
+      "longitude": -3.216031,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236573,
+      "name": "Shandwick",
+      "latitude": 55.949633,
+      "longitude": -3.209477,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235969,
+      "name": "Princess Street",
+      "latitude":55.950972 ,
+      "longitude":-3.203203 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232534,
+      "name": "Princess Street",
+      "latitude": 55.952416,
+      "longitude":-3.194736 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235979,
+      "name": "Elm Row",
+      "latitude":55.958859 ,
+      "longitude": -3.184047,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234754,
+      "name": "North Bridge",
+      "latitude": 55.952514,
+      "longitude": -3.188589,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Hopefield",
+        "East Craigs"
       ],
       "services": [
-        ""
+        "31"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232523,
+      "name": "York Place",
+      "latitude": 55.956401,
+      "longitude":-3.188778 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36237983,
+      "name": "Princess Street",
+      "latitude": 55.952121,
+      "longitude":-3.195700 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36232546 ,
+      "name": "Princess Street",
+      "latitude": 55.950572,
+      "longitude": -3.204425,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232547,
+      "name": "Lothian Road",
+      "latitude": 55.949506,
+      "longitude": -3.206796,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236754,
+      "name": "The Exchange",
+      "latitude": 55.947772,
+      "longitude": -3.207890,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36253269,
+      "name": "Morrison Crescent",
+      "latitude": 55.943440,
+      "longitude": -3.214824,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36243498,
+      "name": "Fountainpark",
+      "latitude": 55.941234,
+      "longitude": -3.219006,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36238932,
+      "name": "Roseburn Street",
+      "latitude":55.940308 ,
+      "longitude":-3.239224 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36245456 ,
+      "name": "Elvanbank",
+      "latitude":55.938994 ,
+      "longitude": -3.241074,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236542,
+      "name": "Westfield Avenue",
+      "latitude": 55.937392,
+      "longitude": -3.242986,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36238784,
+      "name": "Stevenson Grove",
+      "latitude": 55.935927,
+      "longitude": -3.245341,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36235872 ,
+      "name": "Balgreen Primary",
+      "latitude":55.936842 ,
+      "longitude": -3.249789,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235869,
+      "name": "Whitson Crescent",
+      "latitude": 55.935417,
+      "longitude": -3.253379,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235868,
+      "name": "Whitson Grove",
+      "latitude": 55.933857,
+      "longitude": -3.257225,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36235867 ,
+      "name": "Stenhouse Cross",
+      "latitude": -3.259275,
+      "longitude": 55.932871,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36243453,
+      "name": "Stenhouse Grove",
+      "latitude":55.933268 ,
+      "longitude": -3.262010,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235864,
+      "name": "Saughton Mains S",
+      "latitude": 55.933580,
+      "longitude": -3.265841,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235863,
+      "name": "Saughton Road No",
+      "latitude":55.932517 ,
+      "longitude": -3.271688,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236798,
+      "name": "Saughton House",
+      "latitude":55.931279 ,
+      "longitude": -3.277117,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36243975,
+      "name": "Broohouse Garden",
+      "latitude": 55.930978,
+      "longitude": -3.280808,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36236795 ,
+      "name": "Broomhouse Avenue",
+      "latitude":55.929861 ,
+      "longitude": -3.284384,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36247257,
+      "name": "Lochside Court",
+      "latitude": 55.931693,
+      "longitude": -3.311293,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36247463,
+      "name": "Lochside Court",
+      "latitude": 55.931675,
+      "longitude":-3.311421 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36237985,
+      "name": "Gogar Roundabout",
+      "latitude": 55.938752,
+      "longitude": -3.325548,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232428,
+      "name": "Gogarburn A8",
+      "latitude": 55.936531,
+      "longitude": -3.338431,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236597,
+      "name": "Gogarstone",
+      "latitude": 55.936656,
+      "longitude": -3.352150,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232423,
+      "name": "Eastfield Road a",
+      "latitude": 55.938544,
+      "longitude": -3.358672,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36253272,
+      "name": "Airport Stance",
+      "latitude":55.948045 ,
+      "longitude": -3.364237,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232424,
+      "name": "Eastfield Road a",
+      "latitude": 55.939307,
+      "longitude": -3.358617,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236598,
+      "name": "Gogarstone",
+      "latitude": 55.936903,
+      "longitude": -3.350538,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232429,
+      "name": "Gogarburn A8",
+      "latitude": 55.938359,
+      "longitude": -3.329616,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36238935 ,
+      "name": "Gogar Roundabout",
+      "latitude": 55.939102,
+      "longitude":-3.325998 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236794,
+      "name": "Broomhouse Avenue",
+      "latitude": 55.930292,
+      "longitude": -3.284227,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236796,
+      "name": "Broomhouse Garden",
+      "latitude": 55.931091,
+      "longitude": -3.280686,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236797,
+      "name": "Saughton House",
+      "latitude": 55.931380,
+      "longitude": -3.276287,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235787,
+      "name": "Saughton Road No",
+      "latitude": 55.932541,
+      "longitude": -3.272010,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235792,
+      "name": "Saughton Mains S",
+      "latitude": 55.933677,
+      "longitude": 	-3.265358,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235793,
+      "name": "Saughton Mains S",
+      "latitude": 55.933677,
+      "longitude":	-3.265358 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235794,
+      "name": "Stenhouse Cross",
+      "latitude":55.933016 ,
+      "longitude": -3.259275,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235795,
+      "name": "Whitson Grove",
+      "latitude": 55.934645,
+      "longitude": 	-3.255616,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235796,
+      "name": "Whitson Crescent",
+      "latitude": 55.935949,
+      "longitude": -3.252290,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36235873,
+      "name": "Balgreen Primary",
+      "latitude": 55.936430,
+      "longitude": -3.247859,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232687,
+      "name": "Stevenson Grove",
+      "latitude": 55.935907,
+      "longitude": -3.245563,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232689,
+      "name": "Westfield Avenue",
+      "latitude": 55.937391,
+      "longitude":	-3.243192 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36245439,
+      "name": "Elvanbank",
+      "latitude": 55.939188,
+      "longitude": -3.241003,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36238934,
+      "name": "Roseburn Street",
+      "latitude":55.940432,
+      "longitude":-3.239254 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36243526,
+      "name": "Fountainpark",
+      "latitude": 55.941531,
+      "longitude": -3.218803,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36253268,
+      "name": "Morrison Crescent",
+      "latitude": 55.943874,
+      "longitude": -3.214221,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236753,
+      "name": "The Exchange",
+      "latitude": 55.948028,
+      "longitude":-3.207068 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232692,
+      "name": "Lothian Road",
+      "latitude": 55.949210,
+      "longitude": -3.206784,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Gyle"
       ],
       "services": [
-        ""
+        "N22",
+        "22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36253279,
+      "name": "Princess Street",
+      "latitude": 55.952504,
+      "longitude": -3.194231,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport",
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N22",
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232497,
+      "name": "Dublin Street",
+      "latitude": 55.956122,
+      "longitude":-3.191759 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Ocean Terminal",
+        "Airport"
       ],
       "services": [
-        ""
+        "N22"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236783,
+      "name": "Waterloo",
+      "latitude": 55.953588,
+      "longitude":-3.187362 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36246256,
+      "name": "Princess Street",
+      "latitude": 55.950722,
+      "longitude": -3.203627,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36238748,
+      "name": "Shandwick",
+      "latitude": 55.949161,
+      "longitude": -3.210286,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36232658 ,
+      "name": "Haymarket",
+      "latitude": 55.942545,
+      "longitude": -3.221432,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232672,
+      "name": "Caledonian Village",
+      "latitude": 55.941409,
+      "longitude": -3.223079,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232673,
+      "name": "Dalry Primary",
+      "latitude": 55.939603,
+      "longitude": -3.225641,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232674,
+      "name": "Murieston Crescent",
+      "latitude": 55.93605,
+      "longitude":-3.225631 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232675,
+      "name": "Gorgie City Farm",
+      "latitude": 55.938790,
+      "longitude": -3.228529,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232676,
+      "name": "Tynecastle",
+      "latitude": 55.937830,
+      "longitude":-3.232141 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232678,
+      "name": "Stewart Terrace",
+      "latitude": 55.937258,
+      "longitude": -3.234742,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232679,
+      "name": "Gorgie Primary Street",
+      "latitude": 55.936367,
+      "longitude": -3.240280,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232682,
+      "name": "Balgreen Road",
+      "latitude": 55.933980,
+      "longitude": -3.244593,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232684,
+      "name": "Chesser Cottages",
+      "latitude": 55.932983,
+      "longitude": -3.246420,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232683,
+      "name": "Chesser House",
+      "latitude": 55.932278,
+      "longitude": -3.248829,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36242373,
+      "name": "Chesser Avenue",
+      "latitude": 55.931636,
+      "longitude": -3.250913,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232685,
+      "name": "Chesser Avenue",
+      "latitude": 55.930719,
+      "longitude": -3.253874,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232594,
+      "name": "Stenhouse Mill",
+      "latitude": 55.929732,
+      "longitude": -3.257536,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232592,
+      "name": "HMP Edinburgh",
+      "latitude": 55.929590,
+      "longitude": -3.260733,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232686,
+      "name": "Saughton Mains",
+      "latitude": 55.928241,
+      "longitude": -3.265536,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234858,
+      "name": "Parkhead Terrace",
+      "latitude": 55.925967,
+      "longitude": -3.271670,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234859,
+      "name": "Sighthill Post",
+      "latitude": 55.924722,
+      "longitude":-3.276653 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234862,
+      "name": "Sighthill Garden",
+      "latitude": 55.922840,
+      "longitude": -3.287608,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234863,
+      "name": "Napier University",
+      "latitude": 55.922840,
+      "longitude": -3.287608,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234864,
+      "name": "Bankhead Roundabout",
+      "latitude": 55.921885,
+      "longitude": -3.292865,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234867,
+      "name": "Calder View",
+      "latitude": 55.920883,
+      "longitude": -3.298340,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36246389,
+      "name": "Hermiston",
+      "latitude": 55.917154,
+      "longitude": -3.314114,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234873,
+      "name": "Riccarton",
+      "latitude": 55.910156,
+      "longitude": -3.317559,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234874,
+      "name": "Riccarton Campus",
+      "latitude": 55.909009,
+      "longitude": -3.319762,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234875,
+      "name": "Riccarton",
+      "latitude": 55.910270,
+      "longitude": -3.317492,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36246365 ,
+      "name": "Hermiston",
+      "latitude":55.917278 ,
+      "longitude":-3.314049 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36234893,
+      "name": "Burtons Biscuits",
+      "latitude": 55.921489,
+      "longitude": -3.296141,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236876,
+      "name": "Napier University",
+      "latitude": 55.922692,
+      "longitude": -3.290017,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id":36236878 ,
+      "name": "Broomhouse Road",
+      "latitude": 55.923330,
+      "longitude": -3.285294,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236879,
+      "name": "Sighthill Post",
+      "latitude": 55.924328,
+      "longitude": -3.279392,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36236892,
+      "name": "Saughton Mains",
+      "latitude": 55.925110,
+      "longitude":-3.276107 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232589,
+      "name": "Saughton Mains",
+      "latitude":55.926837 ,
+      "longitude": -3.268828,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36239469,
+      "name": "HMP Edinburgh",
+      "latitude": 55.928605,
+      "longitude": -3.265355,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232595,
+      "name": "Stenhouse Mill",
+      "latitude": 55.929684,
+      "longitude": -3.260965,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232593,
+      "name": "Chesser House",
+      "latitude": 55.929838,
+      "longitude": -3.257528,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232596,
+      "name": "Chesser Cottages",
+      "latitude": 55.931907,
+      "longitude": -3.250448,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232597,
+      "name": "Balgreen Road",
+      "latitude": 55.932812,
+      "longitude":-3.247360 ,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232624,
+      "name": "Westfield Road",
+      "latitude": 55.934257,
+      "longitude": -3.244371,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232625,
+      "name": "Stewart Terrace",
+      "latitude": 55.936469,
+      "longitude": -3.240257,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232626,
+      "name": "Tynecastle",
+      "latitude": 55.937238,
+      "longitude": -3.235220,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
       ]
     },
     {
-      "stop_id": ,
-      "name": "",
-      "latitude": ,
-      "longitude": ,
+      "stop_id": 36232627,
+      "name": "Gorgie City Farm",
+      "latitude": 55.938360,
+      "longitude": -3.230668,
       "service_type": "bus",
       "destinations": [
-        "",
-        ""
+        "Leith Street",
+        "Riccarton"
       ],
       "services": [
-        ""
+        "N25"
+      ]
+    },
+    {
+      "stop_id":36232628 ,
+      "name": "Murieston",
+      "latitude": 55.938929,
+      "longitude": -3.228225,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36232629,
+      "name": "Sprinwell Place",
+      "latitude": 55.939756,
+      "longitude":-3.225596 ,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id":36232632,
+      "name": "Orwell Place",
+      "latitude": 55.941506,
+      "longitude": -3.223142,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36232634,
+      "name": "Haymarket",
+      "latitude":55.943225 ,
+      "longitude": -3.219863,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36235974,
+      "name": "Waterloo Place",
+      "latitude": 55.953116,
+      "longitude":-3.190529 ,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36236782,
+      "name": "Waterloo Place",
+      "latitude":55.953749 ,
+      "longitude": -3.187135,
+      "service_type": "bus",
+      "destinations": [
+        "Leith Street",
+        "Riccarton"
+      ],
+      "services": [
+        "N25"
+      ]
+    },
+    {
+      "stop_id": 36237593,
+      "name": "Templeland Road",
+      "latitude": 55.948705,
+      "longitude": -3.295007,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237595,
+      "name": "Pearce Road",
+      "latitude": 55.951319,
+      "longitude": -3.296352,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237596,
+      "name": "Drum Brae Garden",
+      "latitude": 55.953200,
+      "longitude":-3.297324 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237623,
+      "name": "Drum Brae Avenue",
+      "latitude": 55.953939,
+      "longitude":-3.296427 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237579,
+      "name": "Duart Crescent",
+      "latitude": 55.954755,
+      "longitude": -3.292944,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237625,
+      "name": "Drum Brae North",
+      "latitude": -3.288273,
+      "longitude": 55.955517,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237627,
+      "name": "Drum Brae Drive",
+      "latitude":55.955782 ,
+      "longitude": -3.286126,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237629,
+      "name": "Hoseason Gardens",
+      "latitude": 55.956245,
+      "longitude": -3.283009,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237634,
+      "name": "Drum Brae Hub",
+      "latitude": 55.956659,
+      "longitude": -3.280170,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id":36237585 ,
+      "name": "Clermiston Crescent",
+      "latitude": 55.954495,
+      "longitude": -3.278379,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36238287,
+      "name": "Clerwood Park",
+      "latitude": 55.948667,
+      "longitude": -3.279239,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36238285,
+      "name": "Clerwood",
+      "latitude": 55.949903,
+      "longitude": -3.279006,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36238286,
+      "name": "Rannoch Road ",
+      "latitude": 55.953670,
+      "longitude": -3.278392,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237636,
+      "name": "Clermiston Crescent",
+      "latitude": 55.956312,
+      "longitude": -3.281345,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237632,
+      "name": "Drum Brae Hub",
+      "latitude": 55.955595,
+      "longitude": -3.286825,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237626,
+      "name": "Drum Brae Drive",
+      "latitude": 55.954445,
+      "longitude":-3.293834 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237624,
+      "name": "Drum Brae North",
+      "latitude": 55.953748,
+      "longitude": -3.296917,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237578,
+      "name": "Duart Crescent",
+      "latitude": 55.952515,
+      "longitude": -3.296813,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237598,
+      "name": "Drum Brae Park",
+      "latitude": 55.949640,
+      "longitude": -3.295290,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id":36237597,
+      "name": "Drum Brae Garden",
+      "latitude":55.948639 ,
+      "longitude":-3.294798 ,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36237594,
+      "name": "Templeland Road",
+      "latitude": 55.945213,
+      "longitude": -3.293938,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id":36235972 ,
+      "name": "Princes Street",
+      "latitude": 55.951252,
+      "longitude": -3.201492,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36232496,
+      "name": "South St Da",
+      "latitude": 55.953120,
+      "longitude": -3.193674,
+      "service_type": "bus",
+      "destinations": [
+        "Seton Sands",
+        "Clerwood"
+      ],
+      "services": [
+        "26"
+      ]
+    },
+    {
+      "stop_id": 36236832,
+      "name": "Gyle Square",
+      "latitude": 55.931393,
+      "longitude": -3.295144,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236834,
+      "name": "South Gyle Trade",
+      "latitude": 55.930042,
+      "longitude":-3.299310 ,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236835,
+      "name": "South Gyle Crescent",
+      "latitude":55.929745 ,
+      "longitude": -3.302014,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236836,
+      "name": "Teviot House",
+      "latitude": 55.931112,
+      "longitude":-3.305581 ,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236837,
+      "name": "Drummond House",
+      "latitude": 55.932236,
+      "longitude": -3.306418,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36253695,
+      "name": "Gyle Centre",
+      "latitude": 55.938015,
+      "longitude": -3.314937,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36242462,
+      "name": "Gyle Centre",
+      "latitude": 55.938132,
+      "longitude":-3.314304 ,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236838,
+      "name": "Drummond House",
+      "latitude": 55.932893,
+      "longitude": -3.306766,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236848,
+      "name": "Teviot House",
+      "latitude": 55.931234,
+      "longitude": -3.305549,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236849,
+      "name": "South Gyle Crescent",
+      "latitude": 55.929774,
+      "longitude": -3.302564,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236852,
+      "name": "South Gyle Trade",
+      "latitude": 55.930081,
+      "longitude": -3.299581,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36236853,
+      "name": "Gyle Square",
+      "latitude": 55.930700,
+      "longitude": -3.296170,
+      "service_type": "bus",
+      "destinations": [
+        "Ocean Terminal",
+        "Gyle"
+      ],
+      "services": [
+        "22"
+      ]
+    },
+    {
+      "stop_id": 36290145,
+      "name": "York Place",
+      "latitude": 55.956455,
+      "longitude": -3.188917,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290143,
+      "name": "St Andrew Square",
+      "latitude": 55.954576,
+      "longitude": -3.192224,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290140,
+      "name": "Shandwick Place",
+      "latitude": 55.948452,
+      "longitude": -3.212066,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290119,
+      "name": "Haymarket",
+      "latitude": 55.945873,
+      "longitude": -3.219720,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290126,
+      "name": "Murrayfield Stadium",
+      "latitude": 55.941871,
+      "longitude": -3.237080,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290104,
+      "name": "Balgreen",
+      "latitude": 55.938139,
+      "longitude":-3.252014 ,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290137,
+      "name": "Saughton",
+      "latitude": 55.929098,
+      "longitude":-3.293511 ,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id":36290107 ,
+      "name": "Bankhead",
+      "latitude": 55.928826,
+      "longitude":-3.293409 ,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290116,
+      "name": "Gyle Centre",
+      "latitude": 55.937916,
+      "longitude": -3.318175,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290113,
+      "name": "Gogarburn",
+      "latitude": 55.940383,
+      "longitude": -3.321765,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290122,
+      "name": "Ingliston",
+      "latitude": 55.939894,
+      "longitude":-3.333703 ,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290101,
+      "name": "Edinburgh Airport",
+      "latitude": 55.947553,
+      "longitude": -3.360521,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
+      ]
+    },
+    {
+      "stop_id": 36290128,
+      "name": "Edinburgh Park",
+      "latitude": 55.931357,
+      "longitude": -3.314614,
+      "service_type": "tram",
+      "destinations": [
+        "York Place",
+        "Airport"
+      ],
+      "services": [
+        "T50"
       ]
     }
   ]

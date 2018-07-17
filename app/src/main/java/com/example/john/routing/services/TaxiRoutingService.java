@@ -77,18 +77,19 @@ public class TaxiRoutingService implements RoutingService {
 
 
         GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
-        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.DASH_DOT, Color.GRAY, 5.0f);
-        LineSymbol taxiRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.RED, 5.0f);
+        LineSymbol taxiRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.RED, 4.0f);
+        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GREEN, 2.0f);
 
-        // walk to the closest taxi rank
-        Polyline firstRouteGeometry = walkingRoute.getRouteGeometry();
-        graphicsOverlay.getGraphics().add(new Graphic(firstRouteGeometry, pedestrianRouteSymbol));
 
         List<Polyline> taxiGeometries = taxiRoute.getRoutes().stream().map(Route::getRouteGeometry).collect(Collectors.toList());
         // get the taxi
         taxiGeometries.forEach(g -> {
             graphicsOverlay.getGraphics().add(new Graphic(g, taxiRouteSymbol));
         });
+
+        // walk to the closest taxi rank
+        Polyline firstRouteGeometry = walkingRoute.getRouteGeometry();
+        graphicsOverlay.getGraphics().add(new Graphic(firstRouteGeometry, pedestrianRouteSymbol));
 
         Envelope fullExtent = GeometryEngine.union(Stream.concat(Stream.of(firstRouteGeometry), taxiGeometries.stream()).collect(toList())).getExtent();
         List<DirectionManeuver> directionManeuvers = Stream

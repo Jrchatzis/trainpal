@@ -11,6 +11,8 @@ import org.immutables.value.Value;
 @Value.Immutable
 @JsonDeserialize(builder = DepartureBuilder.class)
 @JsonIgnoreProperties(ignoreUnknown = true)
+
+//Setting the interface for the departing buses and trams
 public interface Departure {
 
     @Nullable

@@ -1,5 +1,6 @@
 package com.example.john.config;
 
+//Location of taxi ranks
 public enum TaxiRankInfo {
     
     TaxiRank1(55.952669,-3.174778),
@@ -39,11 +40,12 @@ public enum TaxiRankInfo {
         this.lat = lat;
         this.lon = lon;
     }
-
+//Method geetting the latitude of the taxi ranks
     public double getLat() {
         return lat;
     }
 
+//Method getting the longitude of the taxi ranks
     public double getLon() {
         return lon;
     }

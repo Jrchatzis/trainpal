@@ -1,5 +1,6 @@
 package com.example.john.travelinfo;
 
+
 public class ItemData {
     private final String text;
     private final Integer imageId;

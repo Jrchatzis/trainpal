@@ -85,10 +85,6 @@ public class BusRoutingService implements RoutingService {
     private Map<Integer, Stop> allStops;
     private Map<String, Service> allServices;
     private TfeOpenDataService busService;
-    private Point mSourcePoint;
-    private Point msourcePoint2;
-    private GraphicsOverlay mGraphicsOverlay;
-    private MapView mMapView;
 
     ///**
      //* Constructor
@@ -238,9 +234,9 @@ public class BusRoutingService implements RoutingService {
                 .findFirst()
                 .get();
         GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
-        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GREEN, 5.0f);
-        LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 5.0f);
 
+        LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 5.0f);
+        LineSymbol pedestrianRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GREEN, 2.0f);
 
         // walk to the closest bus station
         Polyline firstRouteGeometry = fastestDeparture.getFastestDepartingService().getFirstRoute().getRouteGeometry();
@@ -279,6 +275,7 @@ public class BusRoutingService implements RoutingService {
                 .directionManeuvers(directionManeuvers)
                 .fullExtent(fullExtent)
                 .build();
+
     }
 
     /**
