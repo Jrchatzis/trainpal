@@ -35,7 +35,7 @@ public class TfeOpenDataServiceLocal implements TfeOpenDataService {
             int resourceId = R.raw.class.getDeclaredField(fieldName).getInt(null);
             return readJson(resourceId, Timetable.class);
         } catch (Exception e) {
-            Log.e(TfeOpenDataServiceLocal.class.getSimpleName(), "Failed to get timetable", e);
+            Log.e(TfeOpenDataServiceLocal.class.getSimpleName(), "No timetable exists for stop " + stopId);
             return null;
         }
     }

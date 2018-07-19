@@ -121,13 +121,16 @@ public class BusRoutingService implements RoutingService {
                 .sorted()
                 .collect(joining("_"));
         List<String> allowedServiceNames = servicesByStationPair.get(stationPairKey);
+        Log.i(BusRoutingService.class.getSimpleName(), "allowedServiceNames: " + allowedServiceNames);
 
         Predicate<Service> allowedServiceFilter = service -> allowedServiceNames.contains(service.getName());
         Map<String,Service> allowedServices = allServices.values().stream().filter(allowedServiceFilter).collect(toMap(Service::getName, java.util.function.Function.identity()));
         List<Integer> allowedStopIds = allowedServices.values().stream().flatMap(Service::getStopIds).distinct().collect(toList());
+        Log.i(BusRoutingService.class.getSimpleName(), String.format("allowedStopIds (%s): %s", allowedStopIds.size(), allowedStopIds));
         List<Stop> allowedStops = allStops.values().stream()
                 .filter(stop -> allowedStopIds.contains(stop.getStopId()))
                 .collect(toList());
+        Log.i(BusRoutingService.class.getSimpleName(), String.format("allowedStops (%s): %s", allowedStops.size(), allowedStops));
 
         Map<Integer,Integer> stopIdToStopIndex = new HashMap<>();
         for (int i=0; i<allowedStops.size(); i++) {
@@ -153,6 +156,7 @@ public class BusRoutingService implements RoutingService {
         List<DepartureFacility> departures = new ArrayList<>();
 
         List<Stop> rankedDestinationStops = closestFacilityResult.getRankedFacilityIndexes(1).stream().map(allowedStops::get).collect(Collectors.toList());
+        Log.i(BusRoutingService.class.getSimpleName(), "rankedDestinationStops: " + rankedDestinationStops);
 
         for (int i=0; i<allowedStops.size(); i++) {
             Stop stop = allowedStops.get(i);
@@ -175,12 +179,15 @@ public class BusRoutingService implements RoutingService {
         }
 
         // Hydrate departures list with departure and arrival times using ESRI's service and timetables
+
+        Log.i(BusRoutingService.class.getSimpleName(), String.format("Trying to hydrate %s departure facilities", departures.size()));
         List<DepartureFacility> hydratedDepartures = departures
                 .stream()
                 .map(departureFacility -> {
-
+                    String stopIdentity = String.format("[id: %s, name: %s]", departureFacility.getStop().getStopId(), departureFacility.getStop().getName());
                     ClosestFacilityRoute route  = closestFacilityResult.getRoute(departureFacility.getIndex(), 0);
                     if (route == null) {
+                        //Log.w(BusRoutingService.class.getSimpleName(), String.format("Ignoring departure facility for stop %s since there is no ClosestFacilityRoute for that stop", stopIdentity));
                         return null;
                     }
                     LocalDateTime arrivalTimeToFacility = toLocalDateTime(route.getEndTime());
@@ -188,21 +195,28 @@ public class BusRoutingService implements RoutingService {
 
                     Timetable departureTimetable = busService.getTimetable(departureFacility.getStop().getStopId());
                     if (departureTimetable == null) {
-                        Log.w(BusRoutingService.class.getSimpleName(), "No timetable exists for departing stop " + departureFacility.getStop().getStopId());
+                        Log.w(BusRoutingService.class.getSimpleName(), String.format("Ignoring departure facility for stop %s since there is no timetable for that stop", stopIdentity));
                         return null;
                     }
                     List<DepartingService> hydratedDepartingServices = departureFacility.getDepartingServices()
                             .stream()
                             .map(departingService -> {
+                                String departingServiceIdentity = String.format("[name: %s, destination: %s]", departingService.getName(), departingService.getDestination());
                                 // Calculate departure time
                                 LocalDateTime departureTime = nextArrival(departingService, departureTimetable, nbf);
+                                if (departureTime == null) {
+                                    return null;
+                                }
                                 // Calculate arrival time
                                 Timetable destinationTimetable = busService.getTimetable(departingService.getLastPoint().getStopId());
                                 if (destinationTimetable == null) {
-                                    Log.w(BusRoutingService.class.getSimpleName(), "No timetable exists for arriving stop " + departingService.getLastPoint().getStopId());
+                                    Log.w(BusRoutingService.class.getSimpleName(), String.format("Ignoring departure facility for stop %s since there is no timetable for the destination stop %s", stopIdentity, departingService.getLastPoint().getStopId()));
                                     return null;
                                 }
                                 LocalDateTime arrivalTime = nextArrival(departingService, destinationTimetable, nbf);
+                                if (arrivalTime == null) {
+                                    return null;
+                                }
                                 ClosestFacilityRoute route2  = closestFacilityResult.getRoute(stopIdToStopIndex.get(departingService.getLastPoint().getStopId()), 1);
                                 if (route2 == null) {
                                     return null;
@@ -219,6 +233,11 @@ public class BusRoutingService implements RoutingService {
                             .filter(Objects::nonNull)
                             .collect(toList());
 
+                    if (hydratedDepartingServices.size() == 0) {
+                        Log.w(BusRoutingService.class.getSimpleName(),
+                                String.format("Ignoring departure facility for stop %s since the hydrated departing services list is empty (timetable issue?)", stopIdentity));
+                        return null;
+                    }
                     return new DepartureFacilityBuilder()
                             .from(departureFacility)
                             .arrivalTime(arrivalTimeToFacility)
@@ -228,11 +247,20 @@ public class BusRoutingService implements RoutingService {
                 .filter(Objects::nonNull)
                 .collect(Collectors.toList());
 
+        Log.i(BusRoutingService.class.getSimpleName(), String.format("Hydrated %s departure facilities", hydratedDepartures.size()));
+
+        if (hydratedDepartures.size() == 0) {
+            Log.e(BusRoutingService.class.getSimpleName(),
+                    String.format("No bus route could be calculated due to missing/corrupted data..."));
+            return null;
+        }
+
         // Now we should be able to rank the departure facilities...
         DepartureFacility fastestDeparture = hydratedDepartures.stream()
                 .sorted(Comparator.comparing(d -> d.getFastestDepartingService().getTravelEndTime()))
                 .findFirst()
                 .get();
+
         GraphicsOverlay graphicsOverlay = new GraphicsOverlay();
 
         LineSymbol busRouteSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.BLUE, 5.0f);
@@ -297,7 +325,11 @@ public class BusRoutingService implements RoutingService {
                 //})
                 .filter(d -> LocalTime.parse(d.getTime(), dtf).isAfter(nbf))
                 .findFirst()
-                .get();
+                .orElse(null);
+        if (departure == null) {
+            Log.e(BusRoutingService.class.getSimpleName(), String.format("no timetable entry found for service %s in stop %s", departingService.getName() + "(dest: "+departingService.getDestination()+")",  timetable.getStopId()));
+            return null;
+        }
         LocalTime arrivalTime = LocalTime.parse(departure.getTime(), dtf);
         LocalDateTime arrivalDateTime = LocalDateTime.now().withHour(arrivalTime.getHour()).withMinute(arrivalTime.getMinute());
         return arrivalDateTime;
@@ -312,6 +344,9 @@ public class BusRoutingService implements RoutingService {
      */
     @Nullable
     private DepartingService toDepartingService(Service service, Stop departure, List<Stop> allowedDestinations) {
+        if (service == null) {
+            return null;
+        }
         for (Service.Route route : service.getRoutes()) {
             // start from the next point after the departure
             List<Stop> stops = StreamUtils.skipUntilInclusive(

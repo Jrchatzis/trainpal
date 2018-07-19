@@ -93,7 +93,7 @@ public class EsriService {
                     try {
                         Log.d(EsriService.class.getSimpleName(), "done closestFacilityParametersFuture");
                         ClosestFacilityParameters closestFacilityParameters = closestFacilityParametersFuture.get();
-                        closestFacilityParameters.setDefaultTargetFacilityCount(5);
+                        closestFacilityParameters.setDefaultTargetFacilityCount(50);
                         closestFacilityParameters.setTravelDirection(TravelDirection.TO_FACILITY);
                         TravelMode travelMode = closestFacilityTask.getClosestFacilityTaskInfo().getTravelModes()
                                 .stream()

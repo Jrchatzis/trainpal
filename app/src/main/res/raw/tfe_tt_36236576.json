@@ -352,7 +352,7 @@
     },
     {
       "service_name": "N25",
-      "time": "08:N25",
+      "time": "08:25",
       "destination": "Riccarton"
     },
     {
@@ -391,12 +391,12 @@
     },
     {
       "service_name": "N25",
-      "time": "N25:15",
+      "time": "22:15",
       "destination": "Riccarton"
     },
     {
       "service_name": "N25",
-      "time": "N25:57",
+      "time": "22:57",
       "destination": "Riccarton"
     },
     {
@@ -491,12 +491,12 @@
     },
     {
       "service_name": "N25",
-      "time": "N25:19",
+      "time": "22:19",
       "destination": "Riccarton"
     },
     {
       "service_name": "N25",
-      "time": "N25:48",
+      "time": "22:48",
       "destination": "Riccarton"
     },
     {

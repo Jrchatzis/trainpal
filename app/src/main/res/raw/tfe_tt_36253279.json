@@ -256,7 +256,7 @@
     },
     {
       "service_name": "N25",
-      "time": "08:N25",
+      "time": "08:25",
       "destination": "Leith Street"
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "service_name": "N25",
-      "time": "11:N25",
+      "time": "11:25",
       "destination": "Leith Street"
     },
     {
@@ -295,12 +295,12 @@
     },
     {
       "service_name": "N25",
-      "time": "N25:15",
+      "time": "22:15",
       "destination": "Leith Street"
     },
     {
       "service_name": "N25",
-      "time": "N25:57",
+      "time": "22:57",
       "destination": "Leith Street"
     },
     {
@@ -315,7 +315,7 @@
     },
     {
       "service_name": "N25",
-      "time": "14:N25",
+      "time": "14:25",
       "destination": "Leith Street"
     },
     {
@@ -355,7 +355,7 @@
     },
     {
       "service_name": "N25",
-      "time": "18:N25",
+      "time": "18:25",
       "destination": "Leith Street"
     },
     {
@@ -395,12 +395,12 @@
     },
     {
       "service_name": "N25",
-      "time": "N25:19",
+      "time": "22:19",
       "destination": "Leith Street"
     },
     {
       "service_name": "N25",
-      "time": "N25:48",
+      "time": "22:48",
       "destination": "Leith Street"
     },
     {

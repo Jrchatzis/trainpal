@@ -15,6 +15,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.CompoundButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -47,6 +48,7 @@ import java.util.TimerTask;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import android.widget.CheckBox;
 
 public class RouteAnalysisActivity extends AppCompatActivity {
 
@@ -56,8 +58,11 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     private MapView mMapView;
     private LocationDisplay mLocationDisplay;
     private Spinner mSpinner;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private DrawerLayout mDrawerLayout;
+    private CheckBox checkbox;
+    private CheckBox checkbox2;
+
+
+
 
     private int requestCode = 2;
     String[] reqPermissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -98,6 +103,7 @@ public class RouteAnalysisActivity extends AppCompatActivity {
                         drawAlternativeRoute(new BusRoutingService(RouteAnalysisActivity.this, esriService));
                     }
                 }, 0L);
+
             });
         });
 
@@ -199,6 +205,33 @@ public class RouteAnalysisActivity extends AppCompatActivity {
         Activity activity = this;
         timer = new Timer();
 
+
+        checkbox = (CheckBox) findViewById(R.id.checkBox);
+
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked==true) {
+                    mMapView.getGraphicsOverlays().get(1).setVisible(true);
+                } else {
+                    mMapView.getGraphicsOverlays().get(1).setVisible(false);
+                }
+            }
+        });
+
+
+        checkbox2 = (CheckBox) findViewById(R.id.checkBox2);
+
+        checkbox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked==true) {
+                    mMapView.getGraphicsOverlays().get(0).setVisible(true);
+                } else {
+                    mMapView.getGraphicsOverlays().get(0).setVisible(false);
+                }
+            }
+        });
     }
 
     private void addTestOverlay() {
@@ -218,11 +251,13 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     private void drawAlternativeRoute(RoutingService routingService) {
         try {
             RoutingResult route = routingService.route(departure, destination);
-            runOnUiThread(()->{
-                mMapView.setViewpointGeometryAsync(route.getFullExtent(), 10);
-                mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
+            if (route != null) {
+                runOnUiThread(() -> {
+                    mMapView.setViewpointGeometryAsync(route.getFullExtent(), 10);
+                    mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
 
-            });
+                });
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -260,4 +295,7 @@ public class RouteAnalysisActivity extends AppCompatActivity {
         super.onResume();
         mMapView.resume();
     }
+
+
+
 }

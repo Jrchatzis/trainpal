@@ -2200,8 +2200,8 @@
     {
       "stop_id":36235867 ,
       "name": "Stenhouse Cross",
-      "latitude": -3.259275,
-      "longitude": 55.932871,
+      "latitude": 55.932871,
+      "longitude": -3.259275,
       "service_type": "bus",
       "destinations": [
         "Ocean Terminal",
