@@ -7,16 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".WaitingLobbyActivity">
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:background="?android:attr/windowBackground"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/navigation" />
-
 
     <TextView
         android:id="@+id/lobbyTitle"
@@ -120,9 +110,11 @@
         android:textColor="@android:color/holo_blue_light"
         android:textSize="22sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/estimatedTimeText" />
+        app:layout_constraintTop_toBottomOf="@+id/estimatedTimeText"
+        app:layout_constraintVertical_bias="0.063" />
 
 </android.support.constraint.ConstraintLayout>

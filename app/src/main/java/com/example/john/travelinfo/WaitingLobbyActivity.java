@@ -46,8 +46,6 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_waiting_lobby);
 
         mTextMessage = findViewById(R.id.message);
-        BottomNavigationView navigation = findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         Bundle bundle = getIntent().getExtras();
         selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));

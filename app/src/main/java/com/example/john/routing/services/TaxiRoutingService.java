@@ -21,10 +21,15 @@ import com.esri.arcgisruntime.tasks.networkanalysis.Route;
 import com.esri.arcgisruntime.tasks.networkanalysis.RouteResult;
 import com.example.john.config.TaxiRankInfo;
 import com.example.john.config.TrainStationInfo;
+import com.example.john.routing.api.Direction;
+import com.example.john.routing.api.DirectionBuilder;
 import com.example.john.routing.api.RoutingResult;
 import com.example.john.routing.api.RoutingResultBuilder;
 import com.example.john.routing.api.RoutingService;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -51,14 +56,14 @@ public class TaxiRoutingService implements RoutingService {
     public RoutingResult route(TrainStationInfo departureStation, TrainStationInfo destinationStation) throws Exception {
 
         ClosestFacilityResult closestTaxiRankResult = esriService.getClosestFacilityResult(
-                // incidents
+                // // Create a list of incidents accompanied by their lat and lon
                 Stream.of(departureStation)
                         .map(si -> new Point(
                                 si.getLon(),
                                 si.getLat(),
                                 SpatialReferences.getWgs84()))
                         ::iterator,
-                // facilities
+                // // Create a list of facilities accompanied by their lat and lon
                 Stream.of(TaxiRankInfo.values())
                         .map(t -> new Point(
                                 t.getLon(),
@@ -92,18 +97,27 @@ public class TaxiRoutingService implements RoutingService {
         graphicsOverlay.getGraphics().add(new Graphic(firstRouteGeometry, pedestrianRouteSymbol));
 
         Envelope fullExtent = GeometryEngine.union(Stream.concat(Stream.of(firstRouteGeometry), taxiGeometries.stream()).collect(toList())).getExtent();
-        List<DirectionManeuver> directionManeuvers = Stream
+
+
+        Double arrivalTime = taxiRoute;
+        Stream<Direction> taxiDirections = Stream.of(
+                new DirectionBuilder().mode("taxi").description(String.format("You will reach your destination at %s", arrivalTime)).build()
+        );
+
+
+        List<Direction> directionManeuvers = Stream
                 .concat(
+
                     // directions for walking to the closest taxi rank
-                        walkingRoute.getDirectionManeuvers().stream(),
+                        walkingRoute.getDirectionManeuvers().stream().map(dm -> new DirectionBuilder().mode("walk").description(dm.getDirectionText()).build()),
                     // directions for traveling with the taxi
-                        taxiRoute.getRoutes().stream().map(Route::getDirectionManeuvers).flatMap(List::stream)
-                )
+                        taxiRoute.getRoutes().stream().map(Route::getDirectionManeuvers).flatMap(List::stream).map(dm -> new DirectionBuilder().mode("taxi").description(dm.getDirectionText()).build()))
+
                 .collect(toList());
 
         return new RoutingResultBuilder()
                 .graphicsOverlay(graphicsOverlay)
-                .directionManeuvers(directionManeuvers)
+                .directions(directionManeuvers)
                 .fullExtent(fullExtent)
                 .build();
     }

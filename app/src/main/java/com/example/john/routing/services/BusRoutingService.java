@@ -31,6 +31,8 @@ import com.esri.arcgisruntime.tasks.networkanalysis.ClosestFacilityTask;
 import com.esri.arcgisruntime.tasks.networkanalysis.DirectionManeuver;
 import com.esri.arcgisruntime.tasks.networkanalysis.Facility;
 import com.esri.arcgisruntime.tasks.networkanalysis.Incident;
+import com.example.john.routing.api.Direction;
+import com.example.john.routing.api.DirectionBuilder;
 import com.example.john.routing.api.RoutingResult;
 import com.example.john.routing.api.RoutingResultBuilder;
 import com.example.john.routing.api.RoutingService;
@@ -123,29 +125,35 @@ public class BusRoutingService implements RoutingService {
         List<String> allowedServiceNames = servicesByStationPair.get(stationPairKey);
         Log.i(BusRoutingService.class.getSimpleName(), "allowedServiceNames: " + allowedServiceNames);
 
+        //Collect the names of the allowed services
         Predicate<Service> allowedServiceFilter = service -> allowedServiceNames.contains(service.getName());
+        //Collect the allowed services based on the train station combination key
         Map<String,Service> allowedServices = allServices.values().stream().filter(allowedServiceFilter).collect(toMap(Service::getName, java.util.function.Function.identity()));
+        //Collect the ids of the allowed stops based on the allowed services
         List<Integer> allowedStopIds = allowedServices.values().stream().flatMap(Service::getStopIds).distinct().collect(toList());
         Log.i(BusRoutingService.class.getSimpleName(), String.format("allowedStopIds (%s): %s", allowedStopIds.size(), allowedStopIds));
+        //Collect the allowed stops based on their ids
         List<Stop> allowedStops = allStops.values().stream()
                 .filter(stop -> allowedStopIds.contains(stop.getStopId()))
                 .collect(toList());
         Log.i(BusRoutingService.class.getSimpleName(), String.format("allowedStops (%s): %s", allowedStops.size(), allowedStops));
 
+        //Connect stop ids with their values
         Map<Integer,Integer> stopIdToStopIndex = new HashMap<>();
         for (int i=0; i<allowedStops.size(); i++) {
             stopIdToStopIndex.put(allowedStops.get(i).getStopId(), i);
         }
 
+        //Calculate the closest facility
         ClosestFacilityResult closestFacilityResult = esriService.getClosestFacilityResult(
-                // incidents
+                // Create a list of incidents accompanied by their lat and lon
                 Stream.of(departureStation, destinationStation)
                         .map(si -> new Point(
                                 si.getLon(),
                                 si.getLat(),
                                 SpatialReferences.getWgs84()))
                         ::iterator,
-                // facilities
+                // Create a list of facilities accompanied by their lat and lon
                 allowedStops.stream()
                         .map(s -> new Point(
                                 s.getLongitude(),
@@ -153,11 +161,14 @@ public class BusRoutingService implements RoutingService {
                                 SpatialReferences.getWgs84()))
                         ::iterator);
 
+        //Create new array list of departures
         List<DepartureFacility> departures = new ArrayList<>();
 
+        //Create list of ranked destination stops
         List<Stop> rankedDestinationStops = closestFacilityResult.getRankedFacilityIndexes(1).stream().map(allowedStops::get).collect(Collectors.toList());
         Log.i(BusRoutingService.class.getSimpleName(), "rankedDestinationStops: " + rankedDestinationStops);
 
+        //
         for (int i=0; i<allowedStops.size(); i++) {
             Stop stop = allowedStops.get(i);
             List<DepartingService> departingServices = stop.getServices()
@@ -179,7 +190,6 @@ public class BusRoutingService implements RoutingService {
         }
 
         // Hydrate departures list with departure and arrival times using ESRI's service and timetables
-
         Log.i(BusRoutingService.class.getSimpleName(), String.format("Trying to hydrate %s departure facilities", departures.size()));
         List<DepartureFacility> hydratedDepartures = departures
                 .stream()
@@ -288,19 +298,33 @@ public class BusRoutingService implements RoutingService {
         Geometry secondRouteGeometry = fastestDeparture.getFastestDepartingService().getSecondRoute().getRouteGeometry();
         graphicsOverlay.getGraphics().add(new Graphic(secondRouteGeometry, pedestrianRouteSymbol));
         Envelope fullExtent = GeometryEngine.union(Stream.of(firstRouteGeometry, busStopGeometry, secondRouteGeometry).collect(toList())).getExtent();
-        List<DirectionManeuver> directionManeuvers = Stream
+
+        DepartingService fastestDepartingService = fastestDeparture.getFastestDepartingService();
+        String departingStop = fastestDeparture.getStop().getName();
+        String serviceName = fastestDepartingService.getName();
+        LocalDateTime serviceDeparture = fastestDepartingService.getDepartureTime();
+        String dropoffStop = fastestDepartingService.getLastPoint().getName();
+        LocalDateTime arrivalTime = fastestDepartingService.getTravelEndTime();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        Stream<Direction> busDirections = Stream.of(
+                new DirectionBuilder().mode("bus").description(String.format("Take service %s arriving at %s at bus stop %s", serviceName, timeFormatter.format(serviceDeparture) ,departingStop)).build(),
+                new DirectionBuilder().mode("bus").description(String.format("Dropoff at bus stop %s. You will reach your destination at %s", dropoffStop, timeFormatter.format(arrivalTime))).build()
+        );
+        List<Direction> directionManeuvers = Stream
                 .concat(
-                    // directions for walking to the closest bus station
-                    fastestDeparture.getFastestDepartingService().getFirstRoute().getDirectionManeuvers().stream(),
-                    // TODO: add custom direction maneuvers, eg. 'take bus service 12 arriving at 12:00'
-                    // directions for walking from the bus station to the destination train station
-                    fastestDeparture.getFastestDepartingService().getSecondRoute().getDirectionManeuvers().stream()
+                        Stream.concat(
+                                // directions for walking to the closest bus station
+                                fastestDeparture.getFastestDepartingService().getFirstRoute().getDirectionManeuvers().stream().map(dm -> new DirectionBuilder().mode("walk").description(dm.getDirectionText()).build()),
+                                // bus directions
+                                busDirections),
+                                // directions for walking from the bus station to the destination train station
+                                fastestDeparture.getFastestDepartingService().getSecondRoute().getDirectionManeuvers().stream().map(dm -> new DirectionBuilder().mode("walk").description(dm.getDirectionText()).build())
                 )
                 .collect(toList());
 
         return new RoutingResultBuilder()
                 .graphicsOverlay(graphicsOverlay)
-                .directionManeuvers(directionManeuvers)
+                .directions(directionManeuvers)
                 .fullExtent(fullExtent)
                 .build();
 
@@ -441,6 +465,7 @@ public class BusRoutingService implements RoutingService {
 
         @Nullable
         ClosestFacilityRoute getSecondRoute();
+
 
         @Value.Lazy
         default LocalDateTime getTravelEndTime() {

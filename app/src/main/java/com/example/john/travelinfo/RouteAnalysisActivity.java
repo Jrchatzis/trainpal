@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.esri.arcgisruntime.geometry.Envelope;
@@ -36,13 +37,16 @@ import com.esri.arcgisruntime.symbology.LineSymbol;
 import com.esri.arcgisruntime.symbology.PictureMarkerSymbol;
 import com.esri.arcgisruntime.symbology.SimpleLineSymbol;
 import com.example.john.config.TrainStationInfo;
+import com.example.john.routing.api.Direction;
 import com.example.john.routing.services.BusRoutingService;
 import com.example.john.routing.api.RoutingResult;
 import com.example.john.routing.api.RoutingService;
 import com.example.john.routing.services.EsriService;
 import com.example.john.routing.services.TaxiRoutingService;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutionException;
@@ -60,7 +64,9 @@ public class RouteAnalysisActivity extends AppCompatActivity {
     private Spinner mSpinner;
     private CheckBox checkbox;
     private CheckBox checkbox2;
-
+    private TextView service;
+    private TextView dropOffStop;
+    private TextView taxiArrival;
 
 
 
@@ -250,12 +256,35 @@ public class RouteAnalysisActivity extends AppCompatActivity {
 
     private void drawAlternativeRoute(RoutingService routingService) {
         try {
+
             RoutingResult route = routingService.route(departure, destination);
+            List<Direction> busDirections = route.getDirections().stream()
+                    .filter(d -> d.getMode().equals("bus"))
+                    .collect(Collectors.toList());
+
+
+            List<Direction> taxiDirections = route.getDirections().stream()
+                    .filter(d -> d.getMode().equals("taxi"))
+                    .collect(Collectors.toList());
+
             if (route != null) {
                 runOnUiThread(() -> {
                     mMapView.setViewpointGeometryAsync(route.getFullExtent(), 10);
                     mMapView.getGraphicsOverlays().add(route.getGraphicsOverlay());
+                    if (!busDirections.isEmpty()) {
+                        String busDepartureDirection = busDirections.get(0).getDescription();
+                        String dropoffDirection = busDirections.get(1).getDescription();
 
+                        // TODO: update the textviews or whatever!
+                        TextView service = findViewById(R.id.service);
+                        service.setText(busDepartureDirection);
+                        TextView dropOffStop = findViewById(R.id.dropOffStop);
+                        dropOffStop.setText(dropoffDirection);
+
+                        String taxiArrival = taxiDirections.get(0).getDescription();
+                        TextView taxi = findViewById(R.id.taxiArrival);
+                        taxi.setText(taxiArrival);
+                    }
                 });
             }
         } catch (Exception e) {

@@ -92,6 +92,7 @@ public class EsriService {
                 closestFacilityParametersFuture.addDoneListener(() -> {
                     try {
                         Log.d(EsriService.class.getSimpleName(), "done closestFacilityParametersFuture");
+                        //Set values for analysis parameters
                         ClosestFacilityParameters closestFacilityParameters = closestFacilityParametersFuture.get();
                         closestFacilityParameters.setDefaultTargetFacilityCount(50);
                         closestFacilityParameters.setTravelDirection(TravelDirection.TO_FACILITY);
@@ -167,6 +168,7 @@ public class EsriService {
                 ListenableFuture<RouteParameters> defaultParametersAsync = routeTask.createDefaultParametersAsync();
                 defaultParametersAsync.addDoneListener(()->{
                     try {
+                        //Set values for analysis parameters
                         RouteParameters routeParameters = defaultParametersAsync.get();
                         routeParameters.setOutputSpatialReference(SpatialReferences.getWgs84());
                         routeParameters.setStartTime(startTime);

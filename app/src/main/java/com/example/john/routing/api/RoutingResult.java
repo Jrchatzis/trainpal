@@ -19,6 +19,6 @@ public interface RoutingResult {
 
     GraphicsOverlay getGraphicsOverlay();
     Envelope getFullExtent();
-    List<DirectionManeuver> getDirectionManeuvers();
+    List<Direction> getDirections();
 
 }
