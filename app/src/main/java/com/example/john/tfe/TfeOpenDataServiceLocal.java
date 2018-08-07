@@ -9,6 +9,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.io.InputStream;
 
+
+//Connect to the local files and read them to extract their information
 public class TfeOpenDataServiceLocal implements TfeOpenDataService {
 
     private ObjectMapper om = new ObjectMapper();
@@ -40,6 +42,7 @@ public class TfeOpenDataServiceLocal implements TfeOpenDataService {
         }
     }
 
+    //Method reading the file
     private <T> T readJson(int resourceId, Class<T> clazz) {
         try (InputStream is = res.openRawResource(resourceId)) {
             return om.readValue(is, clazz);

@@ -98,13 +98,7 @@ public class TaxiRoutingService implements RoutingService {
 
         Envelope fullExtent = GeometryEngine.union(Stream.concat(Stream.of(firstRouteGeometry), taxiGeometries.stream()).collect(toList())).getExtent();
 
-
-        Double arrivalTime = taxiRoute;
-        Stream<Direction> taxiDirections = Stream.of(
-                new DirectionBuilder().mode("taxi").description(String.format("You will reach your destination at %s", arrivalTime)).build()
-        );
-
-
+        //Create a list with the direction instructions
         List<Direction> directionManeuvers = Stream
                 .concat(
 
@@ -115,6 +109,7 @@ public class TaxiRoutingService implements RoutingService {
 
                 .collect(toList());
 
+        //Builder of instructions and routes
         return new RoutingResultBuilder()
                 .graphicsOverlay(graphicsOverlay)
                 .directions(directionManeuvers)

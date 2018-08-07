@@ -13,6 +13,7 @@ import retrofit2.converter.jackson.JacksonConverterFactory;
 
 public class TfeOpenDataServiceFactory {
 
+    //Connect to the tfe api via an authentication token
     public static TfeOpenDataService getRemoteService(String token) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://tfe-opendata.com/api/v1")

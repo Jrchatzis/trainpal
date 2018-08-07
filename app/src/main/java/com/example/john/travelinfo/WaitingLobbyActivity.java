@@ -47,6 +47,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
 
         mTextMessage = findViewById(R.id.message);
 
+        //Get data from previous screen
         Bundle bundle = getIntent().getExtras();
         selectedTrain = TrainService.class.cast(bundle.get("selectedTrain"));
         departure = (TrainStationInfo)bundle.get("departure");
@@ -54,6 +55,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         TextView sta = findViewById(R.id.selectedTime);
         sta.setText(selectedTrain.getSta().toString());
 
+        //Chronometer used to countdown until the arrival of the train
         Chronometer countdown = findViewById(R.id.countdown);
         countdown.setCountDown(true);
         countdown.setBase(SystemClock.elapsedRealtime() + millisUntilArrival());
@@ -65,9 +67,13 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                 updateService();
             }
         }, 0L, 600L);
+
+        //Set action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
+
+    //Go back
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -83,12 +89,14 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         return ChronoUnit.MILLIS.between(LocalTime.now(), selectedTrain.getSta().getTime());
     }
 
+    //Update the information provided to the user
     private void updateService() {
 
         try {
             TrainService serviceUpdate = getTrainServiceUpdate();
             runOnUiThread(()->{
                 TextView eta = findViewById(R.id.estimatedTime);
+                //Alert dialog appeared in the event of train's arrival on time
                 if (serviceUpdate.isArrived()) {
                     timer.cancel();
                     eta.setText("Arrived: " + serviceUpdate.getAta());
@@ -104,7 +112,9 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                                     moveTaskToBack(true);
                                 }
                             });
-                } else if (serviceUpdate.isDelayed()) {
+                }
+                //In the event of train's delay or cancellation
+                else if (serviceUpdate.isDelayed()) {
                     timer.cancel();
                     eta.setText("Delayed: " + serviceUpdate.getDelayReason());
 
@@ -139,6 +149,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
                             });
                     builderDelay.create().show();
 
+                   //Set a vibrator for the application in the event of train delay or arrival
                     Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
                     v.vibrate(VibrationEffect.createOneShot(500,VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
@@ -156,6 +167,7 @@ public class WaitingLobbyActivity extends AppCompatActivity {
         }
     }
 
+    //Access the train service and refresh data
     private TrainService getTrainServiceUpdate() throws Exception {
         if (selectedTrain.getId().equals("dummy")) {
             return selectedTrain;

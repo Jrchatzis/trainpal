@@ -39,7 +39,7 @@ public class EsriService {
     private final Context ctx;
     private CompletableFuture<MobileMapPackage> mmpk;
 
-
+    //EsriService constructor
     public EsriService(Activity activity) {
         this.activity = activity;
         this.ctx = activity.getApplicationContext();
@@ -56,6 +56,7 @@ public class EsriService {
         });
     }
 
+    // Get the provided mmpk file
     public CompletableFuture<MobileMapPackage> getMobileMapPackage() {
         return mmpk;
     }
@@ -80,6 +81,7 @@ public class EsriService {
 
             final ClosestFacilityTask closestFacilityTask = new ClosestFacilityTask(ctx, transportationNetwork.get());
 
+            //Add done loading lister to fire when the closest facility is ready
             closestFacilityTask.loadAsync();
             closestFacilityTask.addDoneLoadingListener(() -> {
                 if (closestFacilityTask.getLoadStatus() != LoadStatus.LOADED) {
@@ -109,6 +111,7 @@ public class EsriService {
                         closestFacilityParameters.setIncidents(StreamSupport.stream(incidents.spliterator(), false).map(Incident::new)::iterator);
                         closestFacilityParameters.setFacilities(StreamSupport.stream(facilities.spliterator(), false).map(Facility::new)::iterator);
 
+                        //Get a ranked list of facilities based on their proximity
                         ListenableFuture<ClosestFacilityResult> closestFacilityResultFuture = closestFacilityTask.solveClosestFacilityAsync(closestFacilityParameters);
                         closestFacilityResultFuture.addDoneListener(() -> {
                             try {
@@ -156,6 +159,7 @@ public class EsriService {
             List<TransportationNetworkDataset> transportationNetworks = maps.get(0).getTransportationNetworks();
             transportationNetwork.complete(transportationNetworks.get(0));
 
+            //Add done loading lister to fire when the route is ready
             RouteTask routeTask = new RouteTask(ctx, transportationNetwork.get());
             routeTask.loadAsync();
             routeTask.addDoneLoadingListener(() -> {
@@ -202,6 +206,7 @@ public class EsriService {
         }
     }
 
+    //Methods returning the absolute path of the mmpk file
     private String getMmpkPath() {
         File f = new File("/mnt/user/0/primary/Download/United_Kingdom.mmpk");
         if (!f.exists()) {

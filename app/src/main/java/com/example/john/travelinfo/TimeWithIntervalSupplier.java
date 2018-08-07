@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 /**
  *
  */
+//Add a standard time to local time of the device
 public class TimeWithIntervalSupplier implements Supplier<TimeString> {
 
     private TimeString next = new TimeString(LocalTime.now());

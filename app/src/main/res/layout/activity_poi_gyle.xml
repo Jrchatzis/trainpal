@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PoiGateway">
+    tools:context=".PoiGyle">
 
     <ImageView
-        android:id="@+id/Gateway"
+        android:id="@+id/Gyle"
         android:layout_width="0dp"
         android:layout_height="173dp"
         android:layout_marginTop="8dp"
@@ -15,33 +15,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gateway" />
+        app:srcCompat="@drawable/gyle" />
 
     <TextView
-        android:id="@+id/textGateway"
+        android:id="@+id/textGyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Edinburgh Gateway"
+        android:text="South Gyle"
         android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Gateway" />
+        app:layout_constraintTop_toBottomOf="@+id/Gyle" />
 
     <TextView
-        android:id="@+id/textGatewaySecond"
+        android:id="@+id/textGyleSecond"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="This new interchange hub offers transfers from the ScotRail network directly onto Edinburgh Trams for travel to Edinburgh Airport. The station provides frequent links to Edinburgh Business Park, The Gyle Shopping Centre - with covered access from the station - and Edinburgh Haymarket and Waverley stations."
+        android:text="South Gyle is an area lying on the western edge of the city. It can be neatly divided into two main zones – a residential one; and a commercial/business one which incorporates the Gyle Shopping Centre, Edinburgh Park, Gyle Park, and South Gyle Crescent."
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textGateway" />
+        app:layout_constraintTop_toBottomOf="@+id/textGyle" />
 
     <Button
         android:id="@+id/buttonToPark"
@@ -53,11 +53,11 @@
         android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GatewayNighlife"
+        app:layout_constraintTop_toBottomOf="@+id/GyleNighlife"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
-        android:id="@+id/textGatewayThird"
+        android:id="@+id/textGyleThird"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -67,10 +67,10 @@
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textGatewaySecond" />
+        app:layout_constraintTop_toBottomOf="@+id/textGyleSecond" />
 
     <TextView
-        android:id="@+id/GatewayCoffee"
+        android:id="@+id/GyleCoffee"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -78,11 +78,11 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/GatewayFood"
-        app:layout_constraintStart_toEndOf="@+id/GatewayFood" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/GyleFood"
+        app:layout_constraintStart_toEndOf="@+id/GyleFood" />
 
     <TextView
-        android:id="@+id/GatewayFood"
+        android:id="@+id/GyleFood"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -92,10 +92,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textGatewayThird" />
+        app:layout_constraintTop_toBottomOf="@+id/textGyleThird" />
 
     <TextView
-        android:id="@+id/GatewayShops"
+        android:id="@+id/GyleShops"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -103,11 +103,11 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/GatewayCoffee"
-        app:layout_constraintStart_toEndOf="@+id/GatewayCoffee" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/GyleCoffee"
+        app:layout_constraintStart_toEndOf="@+id/GyleCoffee" />
 
     <TextView
-        android:id="@+id/GatewayNighlife"
+        android:id="@+id/GyleNighlife"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -116,12 +116,12 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/GatewayFun"
+        app:layout_constraintBaseline_toBaselineOf="@+id/GyleFun"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/GatewayFun" />
+        app:layout_constraintStart_toEndOf="@+id/GyleFun" />
 
     <TextView
-        android:id="@+id/GatewayFun"
+        android:id="@+id/GyleFun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -129,8 +129,8 @@
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/GatewayShops"
-        app:layout_constraintStart_toEndOf="@+id/GatewayShops" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/GyleShops"
+        app:layout_constraintStart_toEndOf="@+id/GyleShops" />
 
     <TextView
         android:id="@+id/counterFirst"

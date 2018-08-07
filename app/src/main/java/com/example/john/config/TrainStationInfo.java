@@ -6,13 +6,13 @@ public enum TrainStationInfo {
     EDB("Waverley station", 55.951962f,-3.189944f),
     HYM("Haymarket station",55.945598f,-3.218281f),
     EDP("Edinburgh Park", 55.927663f,-3.307743f),
-    EGY("Edinburgh Gateway", 55.940933f,-3.320274f);
+    SGL("South Gyle", 55.936392f,-3.298936f);
 
     private String station;
     private float lat;
     private float lon;
 
-    //Method referring to the train stations informations
+    //Constructor of Train stations
     TrainStationInfo(String station, float lat, float lon) {
         this.station = station;
         this.lat = lat;
@@ -33,7 +33,7 @@ public enum TrainStationInfo {
 
         return lon;
     }
-
+    //Method returning train station name as string
     @Override
     public String toString() {
         return station;

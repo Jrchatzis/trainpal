@@ -3,6 +3,7 @@ package com.example.john.tfe;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
+//Interface of extracting stops, services and timetables from tfe
 public interface TfeOpenDataService {
 
     @GET("/stops")

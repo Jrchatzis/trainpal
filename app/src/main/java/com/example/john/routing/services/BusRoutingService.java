@@ -168,7 +168,7 @@ public class BusRoutingService implements RoutingService {
         List<Stop> rankedDestinationStops = closestFacilityResult.getRankedFacilityIndexes(1).stream().map(allowedStops::get).collect(Collectors.toList());
         Log.i(BusRoutingService.class.getSimpleName(), "rankedDestinationStops: " + rankedDestinationStops);
 
-        //
+        //Create list with the remaining stops of the service
         for (int i=0; i<allowedStops.size(); i++) {
             Stop stop = allowedStops.get(i);
             List<DepartingService> departingServices = stop.getServices()
@@ -217,20 +217,24 @@ public class BusRoutingService implements RoutingService {
                                 if (departureTime == null) {
                                     return null;
                                 }
-                                // Calculate arrival time
+                                // Get stop ID of service's destination
                                 Timetable destinationTimetable = busService.getTimetable(departingService.getLastPoint().getStopId());
                                 if (destinationTimetable == null) {
                                     Log.w(BusRoutingService.class.getSimpleName(), String.format("Ignoring departure facility for stop %s since there is no timetable for the destination stop %s", stopIdentity, departingService.getLastPoint().getStopId()));
                                     return null;
                                 }
+                                // Calculate arrival time
                                 LocalDateTime arrivalTime = nextArrival(departingService, destinationTimetable, nbf);
                                 if (arrivalTime == null) {
                                     return null;
                                 }
+                                //Second route to be followed by the user after dropping off at the destined bus station
                                 ClosestFacilityRoute route2  = closestFacilityResult.getRoute(stopIdToStopIndex.get(departingService.getLastPoint().getStopId()), 1);
                                 if (route2 == null) {
                                     return null;
                                 }
+
+                                //Builder of the total route followed by the user
                                 return new DepartingServiceBuilder()
                                         .from(departingService)
                                         .firstRoute(route)
@@ -248,6 +252,7 @@ public class BusRoutingService implements RoutingService {
                                 String.format("Ignoring departure facility for stop %s since the hydrated departing services list is empty (timetable issue?)", stopIdentity));
                         return null;
                     }
+                    //Builder of the departure facilities
                     return new DepartureFacilityBuilder()
                             .from(departureFacility)
                             .arrivalTime(arrivalTimeToFacility)
@@ -299,6 +304,7 @@ public class BusRoutingService implements RoutingService {
         graphicsOverlay.getGraphics().add(new Graphic(secondRouteGeometry, pedestrianRouteSymbol));
         Envelope fullExtent = GeometryEngine.union(Stream.of(firstRouteGeometry, busStopGeometry, secondRouteGeometry).collect(toList())).getExtent();
 
+        //Produce the instructions to direct users about the services they should select and the time of the arrival to the terminal station
         DepartingService fastestDepartingService = fastestDeparture.getFastestDepartingService();
         String departingStop = fastestDeparture.getStop().getName();
         String serviceName = fastestDepartingService.getName();
@@ -308,7 +314,7 @@ public class BusRoutingService implements RoutingService {
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
         Stream<Direction> busDirections = Stream.of(
                 new DirectionBuilder().mode("bus").description(String.format("Take service %s arriving at %s at bus stop %s", serviceName, timeFormatter.format(serviceDeparture) ,departingStop)).build(),
-                new DirectionBuilder().mode("bus").description(String.format("Dropoff at bus stop %s. You will reach your destination at %s", dropoffStop, timeFormatter.format(arrivalTime))).build()
+                new DirectionBuilder().mode("bus").description(String.format("Drop off at bus stop %s. \n You will reach your destination at %s", dropoffStop, timeFormatter.format(arrivalTime))).build()
         );
         List<Direction> directionManeuvers = Stream
                 .concat(
@@ -342,11 +348,6 @@ public class BusRoutingService implements RoutingService {
         Departure departure = timetable.getDepartures().stream()
                 .filter(d -> d.getServiceName().equals(departingService.getName()))
                 .filter(d -> d.getDestination().equals(departingService.getDestination()))
-                //.filter(d -> {
-                //    // TODO: 0-6?
-                //    int day = LocalDate.now().getDayOfWeek().ordinal();
-                //    return d.getDay() == day;
-                //})
                 .filter(d -> LocalTime.parse(d.getTime(), dtf).isAfter(nbf))
                 .findFirst()
                 .orElse(null);

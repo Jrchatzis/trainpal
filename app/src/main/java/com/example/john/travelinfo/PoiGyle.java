@@ -9,25 +9,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class PoiGateway extends AppCompatActivity {
+public class PoiGyle extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_poi_gateway);
+        setContentView(R.layout.activity_poi_gyle);
 
         //Button leading Edinburgh park screen
         Button nextButton = findViewById(R.id.buttonToPark);
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(PoiGateway.this,PoiPark.class));
+                startActivity(new Intent(PoiGyle.this,PoiPark.class));
             }
         });
         //Button leading to Haymarket screen
         Button previousButton = findViewById(R.id.buttonBackHaymarket);
         previousButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(PoiGateway.this,PoiHaymarket.class));
+                startActivity(new Intent(PoiGyle.this,PoiHaymarket.class));
             }
         });
         //Hypertext leading to points of interest concerning food

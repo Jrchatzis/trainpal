@@ -20,7 +20,7 @@ public class PoiHaymarket extends AppCompatActivity {
         Button nextButton = findViewById(R.id.buttonToGateway);
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(PoiHaymarket.this,PoiGateway.class));
+                startActivity(new Intent(PoiHaymarket.this,PoiGyle.class));
             }
         });
 

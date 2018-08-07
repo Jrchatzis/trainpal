@@ -275,15 +275,11 @@ public class RouteAnalysisActivity extends AppCompatActivity {
                         String busDepartureDirection = busDirections.get(0).getDescription();
                         String dropoffDirection = busDirections.get(1).getDescription();
 
-                        // TODO: update the textviews or whatever!
                         TextView service = findViewById(R.id.service);
                         service.setText(busDepartureDirection);
                         TextView dropOffStop = findViewById(R.id.dropOffStop);
                         dropOffStop.setText(dropoffDirection);
 
-                        String taxiArrival = taxiDirections.get(0).getDescription();
-                        TextView taxi = findViewById(R.id.taxiArrival);
-                        taxi.setText(taxiArrival);
                     }
                 });
             }

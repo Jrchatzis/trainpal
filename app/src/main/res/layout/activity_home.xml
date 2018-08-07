@@ -150,7 +150,7 @@
             </LinearLayout>
         </android.support.v7.widget.CardView>
         <android.support.v7.widget.CardView
-            android:id="@+id/guideCard"
+            android:id="@+id/legendCard"
             android:layout_width="160dp"
             android:layout_height="160dp"
             android:layout_margin="5dp"
@@ -175,7 +175,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="5dp"
-                    android:text="Guide"/>
+                    android:text="Legend"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -185,7 +185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Learn how to use the application"
+                    android:text="Symbology of objects in the map"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
             </LinearLayout>

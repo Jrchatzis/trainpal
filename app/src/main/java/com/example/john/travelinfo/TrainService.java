@@ -2,7 +2,7 @@ package com.example.john.travelinfo;
 
 import java.io.Serializable;
 
-//Class containing information about the train services
+//Class containing information about the train services - setters and getters
 public class TrainService implements Serializable {
 
     private String delayReason;
@@ -11,7 +11,6 @@ public class TrainService implements Serializable {
     private String eta;
     private String ata;
 
-    //Setter for
     public void setAta(String ata) {
         this.ata = ata;
     }

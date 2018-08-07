@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // departing station
+        // Set departing station options and allow the selection by the user
         final Spinner departureSpinner = Spinner.class.cast(findViewById(R.id.startingSpinner));
         ArrayAdapter<TrainStationInfo> departureAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this, android.R.layout.simple_list_item_1, TrainStationInfo.values());
         departureAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // destination station
+        // Set destination station options and allow the selection by the user
         final Spinner destinationSpinner = findViewById(R.id.goingSpinner);
         ArrayAdapter<TrainStationInfo> destinationAdapter = new ArrayAdapter<TrainStationInfo>(MainActivity.this, android.R.layout.simple_list_item_1, TrainStationInfo.values());
         destinationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Departure timeString
+        //Create time intervals based on the local time of the device and enable the selection from the user
         final Spinner departureTimeSpinner = findViewById(R.id.beforeSpinner);
         TimeWithIntervalSupplier timeWithIntervalSupplier = new TimeWithIntervalSupplier(30);
         List<TimeString> timeStrings = Stream.generate(timeWithIntervalSupplier).limit(4).collect(Collectors.toList());
@@ -85,13 +85,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Back button
+        //Set the action bar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         //Proceed button
         Button proceedButton = findViewById(R.id.buttonProceed);
         proceedButton.setOnClickListener(view -> {
+                //Transfer the selected information from the current screen to another
                 String dep = TrainStationInfo.class.cast(departureSpinner.getSelectedItem()).name();
                 String dest = TrainStationInfo.class.cast(destinationSpinner.getSelectedItem()).name();
                 if (!dep.equals(dest)) {
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //Back button on action bar
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

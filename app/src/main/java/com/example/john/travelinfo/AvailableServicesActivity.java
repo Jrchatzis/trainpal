@@ -30,7 +30,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         setContentView(R.layout.activity_timer);
-        //Back button
+        //Create actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Get selections from previous activity
@@ -39,6 +39,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
         TrainStationInfo destination = (TrainStationInfo)bundle.get("destination");
         TimeString timeString = (TimeString)bundle.get("timeString");
 
+        //Create list of train services
         List<TrainService> trainServices = getAvailableTrains(departure, destination, timeString);
 
         if (trainServices.isEmpty()) {
@@ -65,15 +66,19 @@ public class AvailableServicesActivity extends AppCompatActivity {
     }
     //Populate list with the available trains based in a timewindow of 2 hours from the time the user makes the search
     public List<TrainService> getAvailableTrains(TrainStationInfo departure, TrainStationInfo destination, TimeString timeString){
+        //Client creation
         DAALDBServiceSoap12 soapClient = new DAALDBServiceSoap12();
         int offset = 0;
+        //Get the local time of the device
         LocalTime now = LocalTime.now();
         if (timeString.getTime().isAfter(now)) {
             offset = (int)ChronoUnit.MINUTES.between(now, timeString.getTime());
         }
+        //Provide the token to access the service
         DAAAccessToken accessToken = new DAAAccessToken();
         accessToken.TokenValue = ACCESS_TOKEN;
         try {
+            //Pass the parameters
             DAAStationBoardWithDetails_2 soapResponse = soapClient.GetArrBoardWithDetails(10, departure.name(), destination.name(), DAAEnums.FilterType.to, offset, 120, accessToken);
             if (soapResponse.trainServices == null) {
                 Toast.makeText(AvailableServicesActivity.this, "Couldn't find any results for your preferences. Please change them on the previous screen.", Toast.LENGTH_LONG).show();
@@ -81,6 +86,7 @@ public class AvailableServicesActivity extends AppCompatActivity {
                 return Collections.emptyList();
             }
 
+            //Create a stream the responses gained from the service
             return soapResponse.trainServices.stream()
                     .map( serviceItem -> {
                         TrainService trainService = new TrainService();

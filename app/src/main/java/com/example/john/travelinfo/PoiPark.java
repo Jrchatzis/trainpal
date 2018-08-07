@@ -20,7 +20,7 @@ public class PoiPark extends AppCompatActivity {
         Button previousButton = findViewById(R.id.buttonBackGateway);
         previousButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                startActivity(new Intent(PoiPark.this,PoiGateway.class));
+                startActivity(new Intent(PoiPark.this,PoiGyle.class));
             }
         });
         //Button leading to home screen

@@ -36,11 +36,12 @@ public enum TaxiRankInfo {
     private double lat;
     private double lon;
 
+    //Constructor of coordinates
     TaxiRankInfo (double lat, double lon) {
         this.lat = lat;
         this.lon = lon;
     }
-//Method geetting the latitude of the taxi ranks
+//Method getting the latitude of the taxi ranks
     public double getLat() {
         return lat;
     }

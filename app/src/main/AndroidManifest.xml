@@ -20,25 +20,46 @@
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Trainpal - Train search parameters"/>
         <activity
             android:name=".AvailableServicesActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="Trainpal - Available services"/>
         <activity
             android:name=".WaitingLobbyActivity"
-            android:label="@string/title_activity_waiting_lobby" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".RouteAnalysisActivity" />
-        <activity android:name=".ReportActivity" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".PoiWaverley" />
-        <activity android:name=".PoiHaymarket" />
-        <activity android:name=".PoiGateway" />
-        <activity android:name=".PoiPark"></activity>
+            android:label="Trainpal - Waiting lobby" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="Trainpal - Home"/>
+        <activity
+            android:name=".RouteAnalysisActivity"
+            android:label="Trainpal - Navigation"/>
+        <activity
+            android:name=".ReportActivity"
+            android:label="Trainpal - Report"/>
+        <activity
+            android:name=".InfoActivity"
+            android:label="Trainpal - Additional Information"/>
+        <activity
+            android:name=".PoiWaverley"
+            android:label="Trainpal - Waverley PoIs"/>
+        <activity
+            android:name=".PoiHaymarket"
+            android:label="Trainpal - Haymarket PoIs"/>/>
+        <activity
+            android:name=".PoiGyle"
+            android:label="Trainpal - South Gyle PoIs"/>/>
+        <activity
+            android:name=".PoiPark"
+            android:label="Trainpal - Edinburgh Park PoIs"/>/>
+        <activity
+            android:name=".LegendActivity"
+            android:label = "Trainpal - Legend"></activity>
     </application>
 
 </manifest>

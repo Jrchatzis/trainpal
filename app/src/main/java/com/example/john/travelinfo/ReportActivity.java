@@ -21,17 +21,18 @@ public class ReportActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
 
+        //Default text of fields
         String email = "jrchatzis@gmail.com";
         emailSubject = (EditText) findViewById(R.id.emailSubject);
         emailMessage = (EditText) findViewById(R.id.emailMessage);
         emailButton = (Button) findViewById(R.id.emailButton);
 
+        //Enable button to pass the information written in the fields to the wanted mail service
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String Subject = emailSubject.getText().toString();
                 String Message = emailMessage.getText().toString();
-
 
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.putExtra(Intent.EXTRA_EMAIL, new String[]{email});
@@ -44,9 +45,12 @@ public class ReportActivity extends AppCompatActivity {
             }
         }
         );
+
+        //Create actionbars
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
     }
+    //Back button on action bar
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

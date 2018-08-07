@@ -145,10 +145,10 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonToStart"
         app:layout_constraintEnd_toStartOf="@+id/buttonToStart"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toEndOf="@+id/buttonBackGateway" />
+        app:layout_constraintStart_toEndOf="@+id/buttonBackGyle" />
 
     <Button
-        android:id="@+id/buttonBackGateway"
+        android:id="@+id/buttonBackGyle"
         android:layout_width="wrap_content"
         android:layout_height="38dp"
         android:layout_marginStart="16dp"

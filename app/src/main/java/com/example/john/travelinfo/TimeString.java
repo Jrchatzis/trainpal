@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-
+//Change time's format
 public class TimeString implements Serializable {
 
     private LocalTime time;
