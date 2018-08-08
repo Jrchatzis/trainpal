@@ -31,35 +31,35 @@ public class PoiGyle extends AppCompatActivity {
             }
         });
         //Hypertext leading to points of interest concerning food
-        TextView food =(TextView)findViewById(R.id.GatewayFood);
+        TextView food =(TextView)findViewById(R.id.GyleFood);
         food.setClickable(true);
         food.setMovementMethod(LinkMovementMethod.getInstance());
         String foodlink = "<a href='https://foursquare.com/explore?mode=url&ne=55.945042%2C-3.299772&q=Food&sw=55.934142%2C-3.325993'>Food</a>";
         food.setText(Html.fromHtml(foodlink,0));
 
         //Hypertext leading to points of interest concerning coffee
-        TextView coffee =(TextView)findViewById(R.id.GatewayCoffee);
+        TextView coffee =(TextView)findViewById(R.id.GyleCoffee);
         coffee.setClickable(true);
         coffee.setMovementMethod(LinkMovementMethod.getInstance());
         String coffeelink = "<a href='https://foursquare.com/explore?mode=url&ne=55.945042%2C-3.299772&q=coffee&sw=55.934142%2C-3.325993'>Coffee</a>";
         coffee.setText(Html.fromHtml(coffeelink,0));
 
         //Hypertext leading to points of interest concerning shops
-        TextView shops =(TextView)findViewById(R.id.GatewayShops);
+        TextView shops =(TextView)findViewById(R.id.GyleShops);
         shops.setClickable(true);
         shops.setMovementMethod(LinkMovementMethod.getInstance());
         String shopslink = "<a href='https://foursquare.com/explore?mode=url&ne=55.945042%2C-3.299772&q=shops&sw=55.934142%2C-3.325993'>Shops</a>";
         shops.setText(Html.fromHtml(shopslink,0));
 
         //Hypertext leading to points of interest concerning fun places
-        TextView fun =(TextView)findViewById(R.id.GatewayFun);
+        TextView fun =(TextView)findViewById(R.id.GyleFun);
         fun.setClickable(true);
         fun.setMovementMethod(LinkMovementMethod.getInstance());
         String funlink = "<a href='https://foursquare.com/explore?mode=url&ne=55.945042%2C-3.299772&q=Fun&sw=55.934142%2C-3.325993'>Fun</a>";
         fun.setText(Html.fromHtml(funlink,0));
 
         //Hypertext leading to points of interest concerning nightlife
-        TextView nightlife =(TextView)findViewById(R.id.GatewayNighlife);
+        TextView nightlife =(TextView)findViewById(R.id.GyleNighlife);
         nightlife.setClickable(true);
         nightlife.setMovementMethod(LinkMovementMethod.getInstance());
         String nightlifelink = "<a href='https://foursquare.com/explore?mode=url&ne=55.945042%2C-3.299772&q=Nightlife&sw=55.934142%2C-3.325993'>Nightlife</a>";

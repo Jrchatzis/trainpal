@@ -17,7 +17,7 @@ public class PoiHaymarket extends AppCompatActivity {
         setContentView(R.layout.activity_poi_haymarket);
 
         //Button leading Edinburgh Gateway screen
-        Button nextButton = findViewById(R.id.buttonToGateway);
+        Button nextButton = findViewById(R.id.buttonToGyle);
         nextButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(PoiHaymarket.this,PoiGyle.class));

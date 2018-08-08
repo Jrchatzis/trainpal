@@ -17,7 +17,7 @@ public class PoiPark extends AppCompatActivity {
         setContentView(R.layout.activity_poi_park);
 
         //Button leading Edinburgh Gateway screen
-        Button previousButton = findViewById(R.id.buttonBackGateway);
+        Button previousButton = findViewById(R.id.buttonBackGyle);
         previousButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(PoiPark.this,PoiGyle.class));

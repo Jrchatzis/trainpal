@@ -313,8 +313,8 @@ public class BusRoutingService implements RoutingService {
         LocalDateTime arrivalTime = fastestDepartingService.getTravelEndTime();
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
         Stream<Direction> busDirections = Stream.of(
-                new DirectionBuilder().mode("bus").description(String.format("Take service %s arriving at %s at bus stop %s", serviceName, timeFormatter.format(serviceDeparture) ,departingStop)).build(),
-                new DirectionBuilder().mode("bus").description(String.format("Drop off at bus stop %s. \n You will reach your destination at %s", dropoffStop, timeFormatter.format(arrivalTime))).build()
+                new DirectionBuilder().mode("bus").description(String.format(" Take service %s arriving at %s at bus stop %s", serviceName, timeFormatter.format(serviceDeparture) ,departingStop)).build(),
+                new DirectionBuilder().mode("bus").description(String.format(" Drop off at bus stop %s. \n You will reach your destination at %s", dropoffStop, timeFormatter.format(arrivalTime))).build()
         );
         List<Direction> directionManeuvers = Stream
                 .concat(
